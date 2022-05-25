@@ -1,22 +1,19 @@
-\documentclass[12pt,a4paper,oneside]{book}
+\documentclass[12pt,oneside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx} %input gambar
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
-% change languange dan pemenggalan kata
-%\usepackage[bahasa]{babel}
-\sloppy
-
-%
+%Mengatur ke font times new rouman
 \usepackage{mathptmx}
+
 \usepackage[T1]{fontenc}
 %
 \usepackage{pdfpages}
 
 % Garis tepi (margin)
-\usepackage{geometry}
+\usepackage[paperheight=28cm,paperwidth=21.5cm]{geometry}
  \geometry{
  left=4cm,
  top=4cm,
@@ -31,7 +28,8 @@
 % Mengkompres cite
 \usepackage[numbers]{natbib}
 
-% Mengatur header dan foother
+
+% Mengatur page number
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead[L]{}  %mengosongkan head kiri
@@ -39,33 +37,44 @@
 \renewcommand{\headrulewidth}{0pt} %menghilangkan garis
 \fancyfoot{} % menghilangkan footer
 
+
 % change name Daftar Isi, Daftar Pustaka jadi section
-%\renewcommand{\contentsname}{DAFTAR ISI}
-%\renewcommand{\bibsection}{\section{Daftar Pustaka}}
-\renewcommand{\bibname}{DAFTAR PUSTAKA}
-\renewcommand{\chaptername}{BAB}
+
 \renewcommand{\contentsname}{DAFTAR ISI}
+
+%\renewcommand{\bibsection}{\section{DAFTAR PUSTAKA}}
+\renewcommand{\chaptername}{BAB}
+
+\renewcommand{\bibname}{DAFTAR PUSTAKA}
+
 \renewcommand{\listfigurename}{DAFTAR GAMBAR}
 
+% change languange dan pemenggalan kata
+%\usepackage[indonesian]{babel}
+\sloppy 
+
 % numbering on section
-\renewcommand\thesection{\Alph{section}.}
-\renewcommand\thesubsection{\thesection\arabic{subsection}.}
-\renewcommand\thechapter{\arabic{chapter}}
+\renewcommand{\thechapter}{\Roman{chapter}} %Peringkat 1
+\renewcommand{\thesection}{\Alph{section}.} %Peringkat 2
+\renewcommand{\thesubsection}{\arabic{subsection}.} %Peringkat 3
+
+
 
 % baris antar paragraf
-\linespread{1.5}
+\linespread{2.0}
 
-% mengatur title section dan chapter
+% mengatur title section
 \usepackage{titlesec}
 \titleformat{\chapter}[display]   
-{\centering\normalfont\large\bfseries}{\MakeUppercase{\chaptertitlename}\ \thechapter}{0pt}{\large}
+{\centering\normalfont\large\bfseries}
+{\MakeUppercase{\chaptertitlename}\ \thechapter}{0pt}{\large}   
 \titlespacing*{\chapter}{0pt}{-50pt}{40pt}
 % ukuran section dan subsection
 \titleformat{\section}
   {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}
   {\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{}
-  
+
 % untuk modif numbering
 \usepackage{enumitem}
 
