@@ -2,15 +2,26 @@
 
 \begin{document}
 
+\newpage
 \input{cover}
 
 % Halaman depan
+\newpage
 \frontmatter
 \input{cover dalam}
 
-%\includepdf[pages={2}]{surat_persetujuan.pdf} ....
-%\includepdf[pages={2}]{surat_pengesahan.pdf} ...
-%\includepdf[pages={2}]{surat_bermaterai.pdf} ...
+\newpage
+\addcontentsline{toc}{chapter}{PERSETUJUAN PEMBIMBING SKRIPSI}
+%\includepdf[pages={2}]{lembar persetujuan pembimbing.pdf}
+
+\newpage
+\addcontentsline{toc}{chapter}{PENGESAHAN TIM PENGUJI SKRIPSI}
+%\includepdf[pages={2}]{lembar persetujuan dan pengesahan.pdf}
+
+\newpage
+\addcontentsline{toc}{chapter}{PERNYATAAN KEASLIAN TULISAN}
+%\includepdf[pages={2}]{pernyataan keaslian tulisan bermaterai.pdf} ...
+
 \input{abstrak}
 \input{kata pengantar}
 
@@ -54,9 +65,12 @@
 \chapter{PENUTUP}
 \input{kesimpulan dan saran}
 % Daftar Pustaka
+\newpage
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
 \bibliographystyle{apalike}
 \bibliography{library}
 
 \input{lampiran}
 
+\input{riwayat hidup}
 \end{document}
