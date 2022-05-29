@@ -4,7 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-
+\usepackage{float}
 %Mengatur ke font times new rouman
 \usepackage{mathptmx}
 
@@ -50,7 +50,7 @@
 
 % change languange dan pemenggalan kata
 %\usepackage[indonesian]{babel}
-\sloppy 
+\sloppy %agar teks tidak lebih saat rata kanan kiri
 
 % numbering on section
 \renewcommand{\thechapter}{\Roman{chapter}} %Peringkat 1
@@ -81,3 +81,12 @@
 \usepackage{hyperref}
 
 \usepackage{soul} %digunakan sementara untuk meng-highlight teks yang belum diubah
+
+% agar paragraf setelah section menjorok ke kiri
+%\usepackage{changepage}% http://ctan.org/pkg/changepage
+%\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+%\begin{adjustwidth}{2.5em}{0pt}
+%	kata-kata
+%\end{adjustwidth}\
+
+\usepackage[none]{hyphenat} %untuk menghilangkanpemenggalan kata

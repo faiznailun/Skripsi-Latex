@@ -3,7 +3,7 @@
 
 \subsection{Data Penelitian}
     
-Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam penelitian ini adalah data koordinat dari seluruh SMA di Kabupaten Probolinggo. Data nama-nama sekolah dikumpulkan dari \url{https://data.sekolah-kita.net}, dan data koordinat dikumpulkan melalui aplikasi Google Earth yang dapat diunduh langsug ke dalam bentuk excel. Waktu yang diperlukan peneliti untuk mengumpulkan data dari web tersebut kurang lebih sekitar satu bulan.
+Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam penelitian ini adalah data koordinat dari seluruh SMA di Kabupaten Probolinggo. Data nama-nama sekolah dikumpulkan dari \url{https://data.sekolah-kita.net}, dan data koordinat dikumpulkan melalui aplikasi Google Earth yang dapat diunduh langsug ke dalam bentuk spreadsheet. Waktu yang diperlukan peneliti untuk mengumpulkan data dari web tersebut kurang lebih sekitar satu bulan.
 
 \subsection{Instrumen Pendukung}
 \begin{enumerate}
@@ -13,28 +13,31 @@ Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam peneli
     
     \item Jupyter Notebook
     
-    Jupyter Notebook adalah aplikasi web gratis yang digunakan untuk membuat dan membagikan dokumen yang memiliki kode, hasil hitungan, visualisasi, dan teks. Notebook ini juga mendukung 3 bahasa pemrograman salah satunya adalah bahasa pemrograman python. Banyak kelebihan yang disajikan dari aplikasi ini salah satunya adalah visualisasi data, mendokumentasikan kode, dan menjalankan kode dalam setiap sel.
+    Jupyter Notebook adalah aplikasi web gratis yang digunakan untuk membuat dan membagikan dokumen yang memiliki kode, hasil hitungan, visualisasi, dan teks. Notebook ini juga mendukung 3 bahasa pemrograman salah satunya adalah bahasa pemrograman python. Banyak kelebihan yang disajikan dari aplikasi ini salah satunya adalah mendokumentasikan kode, dan menjalankan kode dalam setiap sel, dan visualisasi data seperti pada Gambar \ref{fig:visjupyter}.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.8\textwidth]{visualisasi jupyter.png}
-  \caption{Visualisasi data menggunakan jupyter notebook}
+  \caption{Visualisasi data jupyter notebook}
+  \label{fig:visjupyter}
 \end{figure}
 
 	\item Google Earth
 	
-	Google earth digunakan dalam penelitian ini untuk mengumpulkan koordinat lokasi seluruh SMA di Kabupaten Probolinggo. Dalam hal ini google earth dapat menandai beberapa lokasi dan mengekspor langsung kedalam bentuk excel. Data-data lokasi yang telah didownload ke dalam bentuk excel akan diproses menggunakan jupyter notebook.
+	Google earth digunakan dalam penelitian ini untuk mengumpulkan koordinat lokasi seluruh SMA di Kabupaten Probolinggo. Aplikasi ini dapat menandai beberapa lokasi secara langsung seperti pada Gambar \ref{fig:markloc} dan mengekspor kedalam bentuk spreadsheet seperti pada Gambar \ref{fig:eksspread}. Data-data lokasi yang telah didownload ke dalam bentuk spreadsheet akan diproses menggunakan jupyter notebook.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.8\textwidth]{google earth.png}
-  \caption{Menandai beberapa lokasi pada google earth}
+  \caption{Menandai lokasi pada google earth}
+  \label{fig:markloc}
 \end{figure}
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.8\textwidth]{ekspor excel.png}
-  \caption{Mengekspor data dan menjadikannya ke format excel}
+  \includegraphics[width=0.8\textwidth]{ekspor spreadsheet.png}
+  \caption{Mengekspor data ke bentuk spreadsheet}
+  \label{fig:eksspread}
 \end{figure}
 
 \end{enumerate}
@@ -46,27 +49,25 @@ Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam peneli
     \item Langkah-langkah yang digunakan dalam metode \textit{k}-means adalah sebagai berikut
     \begin{enumerate}
         \item Memilih sebanyak $n$ \textit{centroid} secara acak, sesuai dengan berapa banyak salesman yang akan ditugaskan
-        \item Menghitung jarak data ke \textit{centroid} dengan rumus \textit{euclidean distance}
+        \item \label{ulang1} Menghitung jarak data ke \textit{centroid} dengan rumus \textit{euclidean distance} seperti pada Persamaan (\ref{eq:euclidean}).
         \begin{equation}
         d_{xy}=\sqrt{\sum_{i=1}^{n}(x_i-y_i)^{2}}
+        \label{eq:euclidean}
         \end{equation}
         \item Titik-titik lokasi yang tersebar merupakan klaster yang sama dengan titik \textit{centroid} paling dekat
         \item Perbarui \textit{centroid} tiap klaster yang dihasilkan dengan menghitung nilai koordinat rata-rata titik nilai pada masing-masing klaster.
-        \item Iterasi dilakukan untuk generasi berikutnya sampai yaitu dengan kembali ke tahapan (b) sampai tidak ada perubahan klaster atau perubahan nilai \textit{centroid}
+        \item Iterasi dilakukan untuk generasi berikutnya sampai yaitu dengan kembali ke tahapan (\ref{ulang1}) sampai tidak ada perubahan klaster atau perubahan nilai \textit{centroid}
     \end{enumerate}
 	
 	\item Selanjutnya melakukan proses TSP pada setiap klaster yang telah dibagi, langkah-langkahnya adalah sebagai berikut.
 	\begin{enumerate}
 	    \item Membuat populasi awal secara random menggunakan data yang telah diklaster
-	    \item Melakukan reproduksi dengan metode \textit{crosover} dengan peluang 0,95
+	    \item \label{ulang2} Melakukan reproduksi dengan metode \textit{crosover} dengan peluang 0,95
 	    \item Melakukan mutasi pada data dengan peluang 0,01
 	    \item Selanjutnya seleksi dengan mode eliminasi
-	    \item Menentukan nilai fitness agar mendapatkan solusi akhir yang optimal dengan rumus:
-	    \begin{equation}
-	    fitness=\frac{10000}{RMSE}
-	    \end{equation}
-	    \item Iterasi dilakukan dengan cara kembali ke tahapan b untuk generasi berikutnya sampai hasil yang dilakukan optimal atau mendekati optimal.
+	    \item Menentukan nilai fitness agar mendapatkan solusi akhir yang optimal
+	    \item Iterasi dilakukan dengan cara kembali ke tahapan (\ref{ulang2}) untuk generasi berikutnya sampai hasil yang dilakukan optimal atau mendekati optimal.
     \end{enumerate}
-	\item Ketika proses diatas selesai dilakukan maka dihasilkanlah pembagian klaster dan rute terdekat tiap klaster menuju seluruh SMP di Kabupaten Probolinggo
+	\item Ketika proses diatas selesai dilakukan maka dihasilkanlah pembagian klaster dan rute terdekat tiap klaster menuju seluruh SMA di Kabupaten Probolinggo
 	\item Mengevaluasi data yang dihasilkan
 \end{enumerate}
