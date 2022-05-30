@@ -1,5 +1,3 @@
-% sudah direvisi ibu shofia
-
 \section{Dasar Teori}
 
 \subsection{\textit{Multiple Traveling Salesman Problem}}
@@ -26,17 +24,17 @@ Maulana menyebutkan dalam artikelnya algoritma adalah kumpulan perintah untuk me
 
 \subsection{Algoritma $k$-means}
 
-$K$-Means adalah jenis metode klasifikasi tanpa pengawasan yang mempartisi item data menjadi satu atau lebih klaster \cite{agusta2007k}. $K$-Means mencoba untuk memodelkan suatu dataset ke dalam klaster-klaster sehingga item-item data dalam suatu klaster memiliki karakteristik yang sama dan memiliki karakteristik yang berbeda dengan cluster lainnya.
+$K$-Means adalah jenis metode klasifikasi tanpa pengawasan yang mempartisi item data menjadi satu atau lebih klaster \cite{agusta2007k}. $K$-Means mencoba untuk memodelkan suatu dataset ke dalam beberapa klaster sehingga item-item data dalam suatu klaster memiliki karakteristik yang sama dan memiliki karakteristik yang berbeda dengan klaster lainnya.
 
-Menurut S Monalisa \cite{monalisa2018klasterisasi} tahapan mengklaster menggunakan algoritma \textit{k}-means adalah sebagai berikut:
+Menurut S Monalisa \cite{monalisa2018klasterisasi} tahapan mengklaster menggunakan algoritma \textit{k}-means adalah sebagai berikut.
 
 \begin{enumerate}
-	\item Menentukan banyak klaster sesuai dengan keinginan
-	\item Pilih beberapa \textit{centroid} secara acak sesuai banyak klaster
-	\item Hitung jarak titik ke centroid dengan rumus \textit{euclidean distance}
+	\item Menentukan banyak klaster
+	\item Memilih beberapa \textit{centroid} secara acak sesuai banyak klaster
+	\item Hitung jarak titik ke centroid dengan rumus \textit{euclidean distance} seperti Persamaan (\ref{eq:euclidean1}).
 	\begin{equation}
 	d_{xy}=\sqrt{\sum_{i=1}^{n}(x_i-y_i)^{2}}
-	\label{eq:euclidean}
+	\label{eq:euclidean1}
 	\end{equation}
 	\item Titik-titik yang tersebar masuk ke klaster yang sama dengan titik \textit{centroid} yang paling dekat
 	\item Perbarui \textit{centroid} dengan menghitung nilai rata-rata nilai pada masing-masing klaster
