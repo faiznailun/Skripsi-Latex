@@ -44,7 +44,8 @@ Pada tahap ini metode yang digunakan adalah metode $K-$means untuk mengklaster d
 \begin{enumerate}
 	\item Menentukan jumlah klaster, dalam hal ini ditetapkan adalah 10 klaster.
 	\item Menentukan titik centroid secara random seperti pada Gambar \ref{fig:dasen} dan \ref{fig:visdasen}
-	\item Pengklasifikasian data, dalam langkah ini akan dikelompokkan data sesuai dengan titik centroid paling dekatnya dengan menggunakan rumus \textit{Euclidean Distance} seperti Persamaan \ref{eq:euclidean3}.
+	\item Pengklasifikasian data, dalam langkah ini akan dikelompokkan data sesuai dengan titik centroid paling dekatnya dengan menggunakan rumus \textit{Euclidean Distance} seperti Persamaan (\ref{eq:euclidean3}).
+	\item Iterasi atau pengulangan dilakukan agar klaster yang dihasilkan lebih optimal.
 	
 	\begin{equation}
 	\left[ \left( x,y \right) ,\left( a,b \right)\right]=\sqrt{\left( x-a \right)^{2}+\left( y-b \right)^{2}}
@@ -53,3 +54,7 @@ Pada tahap ini metode yang digunakan adalah metode $K-$means untuk mengklaster d
 	
 	\item Setelah semua data terklasifikasi, selanjutnya adalah memperbarui titik-titik centroid dengan cara menghitung rata-rata tiap anggota klaster.
 \end{enumerate}
+
+\subsection{Proses TSP}
+
+Setelah data terklaster seperti pada Gambar \ref{•} selanjutnya adalah mencari rute terdekatnya menggunakan Algoritma Genetika
