@@ -16,24 +16,24 @@ mampu membaca input yang dimasukkan. Dapat dilihat pada Gambar \ref{fig:datalok}
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.8\textwidth]{peta sma.png}
+  \includegraphics[width=0.5\textwidth]{peta sma.png}
   \caption{Visualisasi lokasi SMA di Kabupaten Probolinggo}
   \label{fig:petasma}
 \end{figure}
 
-Setelah mendapatkan lokasi yang akan diproses, selanjutnya adalah menentukan beberapa titik centroid secara random, dalam penelitian ini akan diambil 10 centroid secara random seperti pada Gambar \ref{fig:dasen} dan \ref{fig:visdasen}.
+Setelah mendapatkan lokasi yang akan diproses, selanjutnya adalah menentukan beberapa titik centroid secara random, dalam penelitian ini akan diambil 7 centroid secara random seperti pada Gambar \ref{fig:dasen} dan \ref{fig:visdasen}.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{centroid.png}
-	\caption{Data Centroid}
+	\caption{Koordinat Centroid}
 	\label{fig:dasen}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{titik centroid.png}
-	\caption{Data Koordinat Centroid}
+	\includegraphics[width=0.5\textwidth]{titik centroid.png}
+	\caption{Visualisasi Centroid}
 	\label{fig:visdasen}
 \end{figure}
 
@@ -42,10 +42,12 @@ Setelah mendapatkan lokasi yang akan diproses, selanjutnya adalah menentukan beb
 Pada tahap ini metode yang digunakan adalah metode $K-$means untuk mengklaster data. Langkah-langkah nya adalah sebagai berikut.
 
 \begin{enumerate}
-	\item Menentukan jumlah klaster, dalam hal ini ditetapkan adalah 10 klaster.
-	\item Menentukan titik centroid secara random seperti pada Gambar \ref{fig:dasen} dan \ref{fig:visdasen}
-	\item Pengklasifikasian data, dalam langkah ini akan dikelompokkan data sesuai dengan titik centroid paling dekatnya dengan menggunakan rumus \textit{Euclidean Distance} seperti Persamaan (\ref{eq:euclidean3}).
-	\item Iterasi atau pengulangan dilakukan agar klaster yang dihasilkan lebih optimal.
+	\item Menentukan jumlah klaster, dalam hal ini yang digunakan adalah 7 klaster.
+	\item Memilih titik-titik centroid sebanyak jumlah klaster seperti pada Gambar \ref{fig:dasen} dan \ref{fig:visdasen}
+	\item \label{ulang3} Hitung jarak tiap titik sekolah yang ada dengan masing-masing \textit{centroid}. Penghitungan jarak menggunakan \textit{Euclidean Distance} pada persamaan (\ref{eq:euclidean3}.
+	\item Kelompokan data ke dalam klaster yang memiliki jarak paling minimum.
+	\item Setelah seluruh titik sekolah masuk ke dalam klaster-klaster, hitung \textit{centroid} yang baru dengan cara menghitung rata-rata titik sekolah yang ada di dalam klaster tersebut. Lakukan hal yang sama pada klaster yang lain.
+	\item Jika terdapat perubahan klaster, maka ulangi langkah \ref{ulang3} hingga tidak ada perubahan anggota pada tiap klaster. Jika \textit{centroid} yang baru tidak berubah dari sebelumnya, maka proses berhenti, karena \textit{centroid} yang tidak berubah menyebabkan anggota klaster juga tidak berubah.
 	
 	\begin{equation}
 	\left[ \left( x,y \right) ,\left( a,b \right)\right]=\sqrt{\left( x-a \right)^{2}+\left( y-b \right)^{2}}
@@ -57,4 +59,18 @@ Pada tahap ini metode yang digunakan adalah metode $K-$means untuk mengklaster d
 
 \subsection{Proses TSP}
 
-Setelah data terklaster seperti pada Gambar \ref{•} selanjutnya adalah mencari rute terdekatnya menggunakan Algoritma Genetika
+Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adalah mencari rute terdekatnya menggunakan Algoritma Genetika
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{hasil klaster.png}
+	\caption{Visualisasi klaster sesuai warna}
+	\label{fig:hasilklas}
+\end{figure}
+
+\begin{enumerate}
+	\item Bangkitkan beberapa populasi awal berisi sejumlah kromosom yang di dalamnya terdapat urutan perjalanan menuju titik sekolah.
+	\item Hitung nilai \textit{fitness} (total jarak) dari tiap kromosom.
+	\item Menetapkan probabilitas \textit{crossover} ($p_c$) dalam hal ini yang digunakan adalah $p_c=0,95$. Bangkitkan bilangan random (0,0000 sampai 1,0000) pada setiap kromosom, kromosom dengan bilangan random kurang dari $p_c$ maka akan dilakukan \textit{crossover}. Jika kromosom hasil \textit{crossover} memiliki \textit{fitness} yang lebih baik  dari kromosom awal, maka kromosom awal digantikan oleh kromosom hasil \textit{crossover}.
+	\item Menetapkan probabilitas mutasi ($p_m$), dalam hal ini digunakan $p_m=0,1$. Bangkitakan bilangan random (0,0000 sampai 1,0000) pada setiap kromosom, kromosom yang memiliki bilangan random kuran dari $p_m$ maka akan dilakukan mutasi. Jika kromosom hasil mutasi memiliki \textit{fitness} yang lebih baik dari kromosom awal, maka kromosom awal digantikan oleh kromosom hasil mutasi.
+\end{enumerate}
