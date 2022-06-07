@@ -61,12 +61,11 @@ Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam peneli
 	
 	\item Selanjutnya melakukan proses TSP pada setiap klaster yang telah dibagi, langkah-langkahnya adalah sebagai berikut.
 	\begin{enumerate}
-	    \item Membuat populasi awal secara random menggunakan data yang telah diklaster
-	    \item \label{ulang2} Melakukan reproduksi dengan metode \textit{crosover} dengan peluang 0,95
-	    \item Melakukan mutasi pada data dengan peluang 0,01
-	    \item Selanjutnya seleksi dengan mode eliminasi
-	    \item Menentukan nilai fitness agar mendapatkan solusi akhir yang optimal
-	    \item Iterasi dilakukan dengan cara kembali ke tahapan (\ref{ulang2}) untuk generasi berikutnya sampai hasil yang dilakukan optimal atau mendekati optimal.
+		\item Bangkitkan populasi awal yang berisi sejumlah kromosom
+	    \item \label{ulang2} Hitung nilai \textit{fitness} (jarak) tiap kromosom
+	    \item Tetapkan probabilitas \textit{crossover} ($p_c$) dan bangkitkan bilangan random (0,0000 sampai 1,0000) pada tiap kromosom, jika bilangan random kurang dari $p_c$ maka dilakukan \textit{crossover}. Jika \textit{fitness} kromosom hasil \textit{crossover} lebih baik dari kromosom awal, maka kromosom awal digantikan dengan kromosom hasil \textit{crossover}.
+	    \item Tetapkan probabilitas mutasi ($p_m$) dan bangkitkan bilangan random (0,0000 sampai 1,0000) pada setiap kromosom. Jika bilangan random kurang dari $p_m$ maka akan dilakukan mutasi. Kromosom awal digantikan dengan kromosom hasil mutasi jika kromosom hasil mutasi memiliki fitness yang lebih baik dari kromosom awal.
+	    \item Jika hasil kurang optimal, iterasi dilakukan dengan cara kembali ke tahapan \ref{ulang2} untuk generasi berikutnya sampai hasil yang dilakukan optimal atau mendekati optimal.
     \end{enumerate}
 	\item Ketika proses diatas selesai dilakukan maka dihasilkanlah pembagian klaster dan rute terdekat tiap klaster menuju seluruh SMA di Kabupaten Probolinggo
 	\item Mengevaluasi data yang dihasilkan

@@ -4,7 +4,7 @@ Pada penelitian ini dilakukan uji coba menggunakan data lokasi seluruh SMA di Ka
 
 \subsection{Pengambilan Data Lokasi}
 
-Data yang digunakan adalah data koordinat lokasi yang diekspor memalui google earth. Pengujian Pengambilan data lokasi bertujuan untuk menunjukkan bahwa sistem 
+Data yang digunakan adalah data koordinat lokasi yang diekspor melalui google earth. Pengujian Pengambilan data lokasi bertujuan untuk menunjukkan bahwa sistem 
 mampu membaca input yang dimasukkan. Dapat dilihat pada Gambar \ref{fig:datalok} sebagian nama nama sekolah di kabupaten probolinggo beserta koordinat lokasinya. Visualisasi data dari koordinat-koordinat SMA di kabupaten probolinggo dapat dilihat pada Gambar \ref{fig:petasma}.
 
 \begin{figure}[h!]
@@ -70,18 +70,26 @@ Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adal
 
 \begin{enumerate}
 	\item Bangkitkan beberapa populasi awal berisi sejumlah kromosom yang di dalamnya terdapat urutan perjalanan menuju titik sekolah.
-	\item Hitung nilai \textit{fitness} (total jarak) dari tiap kromosom.
+	\item \label{ulang4} Hitung nilai \textit{fitness} (total jarak) dari tiap kromosom.
 	\item Menetapkan probabilitas \textit{crossover} ($p_c$) dalam hal ini yang digunakan adalah $p_c=0,95$. Bangkitkan bilangan random (0,0000 sampai 1,0000) pada setiap kromosom, kromosom dengan bilangan random kurang dari $p_c$ maka akan dilakukan \textit{crossover}. Jika kromosom hasil \textit{crossover} memiliki \textit{fitness} yang lebih baik  dari kromosom awal, maka kromosom awal digantikan oleh kromosom hasil \textit{crossover}.
 	\item Menetapkan probabilitas mutasi ($p_m$), dalam hal ini digunakan $p_m=0,1$. Bangkitakan bilangan random (0,0000 sampai 1,0000) pada setiap kromosom, kromosom yang memiliki bilangan random kuran dari $p_m$ maka akan dilakukan mutasi. Jika kromosom hasil mutasi memiliki \textit{fitness} yang lebih baik dari kromosom awal, maka kromosom awal digantikan oleh kromosom hasil mutasi.
+	\item Jika hasil kurang optimal, iterasi dilakukan dengan cara kembali ke tahapan (\ref{ulang4}) untuk generasi berikutnya sampai hasil yang dilakukan optimal atau mendekati optimal.
 \end{enumerate}
 
-\subsection{Hasil dari proses $k$-means dan Algoritma Genetika}
+\subsection{Hasil dari proses \textbf{$k$}-means dan Algoritma Genetika}
 
-Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui seperti pada Gambar \ref{fig:vishasilmtsp}.
+Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui seperti pada Gambar \ref{fig:vishasilmtsp}. Rute-rute yang dihasilkan telah diurutkan sebelumnya dan telah diekspor ke bentuk spreadsheet sehingga mempermudah pengguna dalam membaca data seperti pada Gambar \ref{fig:datahasilmtsp} merupakan urutan perjalanan pada klaster A.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{hasil mtsp.png}
 	\caption{Visualisasi hasil pembagian klaster dan rute yang dapat dilalui}
 	\label{fig:vishasilmtsp}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{data hasil.png}
+	\caption{Urutan perjalanan pada klaster A}
+	\label{fig:datahasilmtsp}
 \end{figure}
