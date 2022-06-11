@@ -21,14 +21,9 @@ mampu membaca input yang dimasukkan. Dapat dilihat pada Gambar \ref{fig:datalok}
   \label{fig:petasma}
 \end{figure}
 
-Setelah mendapatkan lokasi yang akan diproses, selanjutnya adalah menentukan beberapa titik centroid secara random, dalam penelitian ini akan diambil 7 centroid secara random seperti pada Gambar \ref{fig:dasen} dan \ref{fig:visdasen}.
+Setelah mendapatkan lokasi yang akan diproses, selanjutnya adalah menentukan beberapa titik centroid secara random, dalam penelitian ini akan diambil 7 centroid secara random seperti pada Tabel \ref{tab:dasen} dan \ref{fig:visdasen}.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.8\textwidth]{centroid.png}
-	\caption{Koordinat Centroid}
-	\label{fig:dasen}
-\end{figure}
+\input{CENTROID}
 
 \begin{figure}[h!]
 	\centering
@@ -43,7 +38,7 @@ Pada tahap ini metode yang digunakan adalah metode $K-$means untuk mengklaster d
 
 \begin{enumerate}
 	\item Menentukan jumlah klaster, dalam hal ini yang digunakan adalah 7 klaster.
-	\item Memilih titik-titik centroid sebanyak jumlah klaster seperti pada Gambar \ref{fig:dasen} dan \ref{fig:visdasen}
+	\item Memilih titik-titik centroid sebanyak jumlah klaster seperti pada Tabel \ref{tab:dasen} dan \ref{fig:visdasen}
 	\item \label{ulang3} Hitung jarak tiap titik sekolah yang ada dengan masing-masing \textit{centroid}. Penghitungan jarak menggunakan \textit{Euclidean Distance} pada persamaan (\ref{eq:euclidean3}.
 	\item Kelompokan data ke dalam klaster yang memiliki jarak paling minimum.
 	\item Setelah seluruh titik sekolah masuk ke dalam klaster-klaster, hitung \textit{centroid} yang baru dengan cara menghitung rata-rata titik sekolah yang ada di dalam klaster tersebut. Lakukan hal yang sama pada klaster yang lain.
@@ -78,7 +73,7 @@ Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adal
 
 \subsection{Hasil dari proses \textbf{$k$}-means dan Algoritma Genetika}
 
-Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui seperti pada Gambar \ref{fig:vishasilmtsp}. Rute-rute yang dihasilkan telah diurutkan sebelumnya dan telah diekspor ke bentuk spreadsheet sehingga mempermudah pengguna dalam membaca data seperti pada Gambar \ref{fig:datahasilmtsp} merupakan urutan perjalanan pada klaster A.
+Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui seperti pada Gambar \ref{fig:vishasilmtsp}. Rute-rute yang dihasilkan telah diurutkan sebelumnya dan telah diekspor ke bentuk spreadsheet sehingga mempermudah pengguna dalam membaca data seperti pada Tabel \ref{tab:datahasil} merupakan urutan perjalanan pada klaster A.
 
 \begin{figure}[h!]
 	\centering
@@ -87,9 +82,4 @@ Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat d
 	\label{fig:vishasilmtsp}
 \end{figure}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.8\textwidth]{data hasil.png}
-	\caption{Urutan perjalanan pada klaster A}
-	\label{fig:datahasilmtsp}
-\end{figure}
+\input{datahasil}
