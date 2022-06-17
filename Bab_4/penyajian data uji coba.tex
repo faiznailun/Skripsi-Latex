@@ -1,4 +1,4 @@
-\section{Penyajian Data Uji Coba}
+33\section{Penyajian Data Uji Coba}
 
 Pada penelitian ini dilakukan uji coba menggunakan data lokasi seluruh SMA di Kabupaten Probolinggo, dan dijalankan menggunakan python. Berikut adalah sajian data hasil uji coba.
 
@@ -7,18 +7,18 @@ Pada penelitian ini dilakukan uji coba menggunakan data lokasi seluruh SMA di Ka
 Data yang digunakan adalah data koordinat lokasi yang diekspor melalui google earth. Pengujian Pengambilan data lokasi bertujuan untuk menunjukkan bahwa sistem 
 mampu membaca input yang dimasukkan. Dapat dilihat pada Lampiran \ref{lampiran1} seluruh nama-nama SMA di Kabupaten Probolinggo beserta koordinat lokasinya. Visualisasi data dari koordinat-koordinat SMA di kabupaten probolinggo dapat dilihat pada Gambar \ref{fig:petasma}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{Gambar/peta sma.png}
   \caption{Visualisasi lokasi SMA di Kabupaten Probolinggo}
   \label{fig:petasma}
 \end{figure}
 
-Setelah mendapatkan lokasi yang akan diproses, selanjutnya adalah menentukan beberapa titik centroid secara random, dalam penelitian ini akan diambil 7 centroid secara random seperti pada Tabel \ref{tab:dasen} dan \ref{fig:visdasen}.
+Setelah mendapatkan lokasi yang akan diproses, selanjutnya adalah menentukan beberapa titik centroid secara random, dalam penelitian ini akan diambil 8 centroid secara random seperti pada Tabel \ref{tab:dasen} dan \ref{fig:visdasen}.
 
 \input{Tabel/CENTROID}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{Gambar/titik centroid.png}
 	\caption{Visualisasi Centroid}
@@ -30,7 +30,7 @@ Setelah mendapatkan lokasi yang akan diproses, selanjutnya adalah menentukan beb
 Pada tahap ini metode yang digunakan adalah metode $K-$means untuk mengklaster data. Langkah-langkah nya adalah sebagai berikut.
 
 \begin{enumerate}
-	\item Menentukan jumlah klaster, dalam hal ini yang digunakan adalah 7 klaster.
+	\item Menentukan jumlah klaster, dalam hal ini yang digunakan adalah 8 klaster.
 	\item Memilih titik-titik centroid sebanyak jumlah klaster seperti pada Tabel \ref{tab:dasen} dan \ref{fig:visdasen}
 	\item \label{ulang3} Hitung jarak tiap titik sekolah yang ada dengan masing-masing \textit{centroid}. Penghitungan jarak menggunakan \textit{Euclidean Distance} pada persamaan (\ref{eq:euclidean3}.
 	\item Kelompokan data ke dalam klaster yang memiliki jarak paling minimum.
@@ -49,7 +49,7 @@ Pada tahap ini metode yang digunakan adalah metode $K-$means untuk mengklaster d
 
 Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adalah mencari rute terdekatnya menggunakan Algoritma Genetika
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{Gambar/hasil klaster.png}
 	\caption{Visualisasi klaster sesuai warna}
@@ -68,7 +68,7 @@ Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adal
 
 Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui seperti pada Gambar \ref{fig:vishasilmtsp}. Rute-rute yang dihasilkan telah diurutkan sebelumnya dan telah diekspor ke bentuk spreadsheet sehingga mempermudah pengguna dalam membaca data seperti pada Tabel \ref{tab:datahasil} merupakan urutan perjalanan pada klaster A.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{Gambar/hasil mtsp.png}
 	\caption{Visualisasi hasil pembagian klaster dan rute yang dapat dilalui}
@@ -76,3 +76,10 @@ Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat d
 \end{figure}
 
 \input{Tabel/datahasil}
+
+\subsection{Percobaan menggunakan banyak klaster yang berbeda}
+
+Pada penelitian ini tidak hanya menggunakan pembagian 8 klaster saja, namun sebelumnya telah diuji coba menggunakan banyak klaster yang berbeda seperti pada Gambar \ref{fig:klasterbeda}. Dalam gambar tersebut telah diuji coba menggugunakan pembagian 1 klaster hingga 10 klaster, namun setelah dihitung jarak yang minimal yang dapat dilalui berada pada pembagian 8 klaster seperti Tabel \ref{tab:totaljarak} membuktikan bahwa pembagian menjadi 8 klaster dapat menghasilkan jarak yang paling minimum.
+
+\input{Lain-lain/percobaan tiap klaster}
+\input{Tabel/total jarak}
