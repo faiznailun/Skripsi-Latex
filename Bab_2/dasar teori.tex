@@ -2,7 +2,7 @@
 
 \subsection{\textit{Multiple Traveling Salesman Problem}}
 
-Menurut Al-Omeer dan Ahmed, \textit{Multiple Travelling Salesman Problem} (MTSP) adalah salah satu kombinatorial optimasi masalah, yang dapat didefinisikan sebagai berikut: Ada $m$ jumlah salesman yang harus melakukan perjalanan ke $n$ sejumlah kota dimulai dengan depot dan berakhir di depot yang sama \cite{al2019comparative}. Selanjutnya para salesman harus melakukan perjalanan dari satu kota ke kota lain secara terus menerus tanpa mengulang kota mana saja yang telah dilintasi oleh para salesman dan mempertimbangkan jalur terpendek selama perjalanan tersebut. Metode MTSP sebenarnya banyak sekali, namun yang digunakan dalam penelitian ini adalah algoritma genetika dan algoritma \textit{k}-means. Dalam hal ini data akan dibagi menjadi beberapa klaster terlebih dahulu sesuai dengan jumlah salesman dari perusahaan, seperti pada Gambar \ref{fig:mtsp6} dan \ref{fig:mtsp5}
+\textit{Travelling Salesman Problem} atau TSP adalah permasalahan pencarian rute paling efisien dalam sebuah perjalanan, sedangkang \textit{Multiple Travelling Salesman Problem} (MTSP) adalah gabungan dari beberapa permasalahan TSP dengan titik kumpul dan titik kembali yang sama. Menurut Al-Omeer dan Ahmed, MTSP adalah salah satu kombinatorial optimasi masalah, yang dapat didefinisikan sebagai berikut: Ada $m$ jumlah salesman yang harus melakukan perjalanan ke $n$ sejumlah kota dimulai dengan depot dan berakhir di depot yang sama \cite{al2019comparative}. Selanjutnya para salesman harus melakukan perjalanan dari satu kota ke kota lain secara terus menerus tanpa mengulang kota mana saja yang telah dilintasi oleh para salesman dan mempertimbangkan jalur terpendek selama perjalanan tersebut. Metode MTSP sebenarnya banyak sekali, namun yang digunakan dalam penelitian ini adalah algoritma genetika dan algoritma \textit{k}-means. Dalam hal ini data akan dibagi menjadi beberapa klaster terlebih dahulu sesuai dengan jumlah salesman dari perusahaan, seperti pada Gambar \ref{fig:mtsp6} dan \ref{fig:mtsp5}
 
 \begin{figure}[H]
   \centering
@@ -55,3 +55,26 @@ Menurut Armanda RS \cite{armanda2016penerapan} dalam artikelnya menyampaikan pen
 	\item Menentukan nilai fitness agar mendapatkan solusi akhir yang optimal
 	\item Iterasi dilakukan untuk generasi berikutnya.
 \end{enumerate}
+
+\subsection{Fitness}
+Fitness adalah suatu ukuran yang dijadikan acuan untuk mengetahui baik atau tidaknya suatu individu atau bisa disebut nilai dari fungsi tujuan \cite{basuki2003strategi}. Tujuan dari penggunaan algoritma genetika adalah untuk mengoptimalkan nilai fitness dengan cara mencari nilai fitness yang paling maksimal atau minimal. Seperti dalam penelitian ini yang tujuannya adalah mencari jarak yang paling minimal maka nilai fitness nya yang dicari adalah yang paling minimal juga.
+
+\subsection{\textit{Crossover}}
+\textit{Crossover} atau persilangan adalah operator dari algoritma genetika yang melibatkan dua induk untuk membentuk kromosom baru menurut artikel \cite{hardi2014analisis}. Dalam langkah ini dilakukan dengan cara menukar sebagian gen pada kromosom induk pertama dengan gen pada kromosom induk kedua seperti pada Gambar \ref{fig:crossover}. Proses \textit{crossover} tersebut diterapkan pada setiap individu dengan probabilitas \textit{crossover} ($p_c$) yang telah ditentukan. Jika diterapkan \textit{crossover} keturunan didapatkan dari kromosom-kromosom induk. Namun jika \textit{crossover} tidak diterapkan satu induk dipilih secara random dengan $p_c$ yang sama dan diduplikasi menjadi anak.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Gambar/crossover.png}
+  \caption{Proses crossover}
+  \label{fig:crossover}
+\end{figure}
+
+\subsection{Mutasi}
+Mutasi atau mutation adalah operator yang digunakan untuk mengubah gen-gen yang terdapat dalam kromosom. Model dalam proses ini sebagaimana yang terjadi dalam kehidupan alam \cite{rovie2014genetic} seperti pada Gambar \ref{fig:mutasi}. Dalam proses mutasi akan dibangkitkan sebuah bilangan random sebagai Probabilitas mutasi ($p_m$) yang sangat kecil. Mutasi diterapkan dengan tujuan untuk memperoleh nilai fitness yang lebih baik dari sebelumnya, dan lama-kelamaan akan menjadi solusi optimum yang diinginkan.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Gambar/mutasi.jpg}
+  \caption{Proses mutasi}
+  \label{fig:mutasi}
+\end{figure}
