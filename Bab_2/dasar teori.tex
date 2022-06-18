@@ -7,14 +7,14 @@
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{Gambar/Picture1.png}
-  \caption{Solusi MTSP dengan membagi menjadi 6 klaster}
+  \caption{Contoh MTSP 6 klaster}
   \label{fig:mtsp6}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{Gambar/Picture2.png}
-  \caption{Solusi MTSP dengan membagi menjadi 5 klaster}
+  \caption{Contoh MTSP 5 klaster}
   \label{fig:mtsp5}
 \end{figure}
 
@@ -31,7 +31,7 @@ Menurut S Monalisa \cite{monalisa2018klasterisasi} tahapan mengklaster menggunak
 \begin{enumerate}
 	\item Menentukan banyak klaster
 	\item Memilih beberapa \textit{centroid} secara acak sesuai banyak klaster
-	\item Hitung jarak titik ke centroid dengan rumus \textit{euclidean distance} seperti Persamaan (\ref{eq:euclidean1}).
+	\item Hitung jarak titik ke centroid dengan rumus \textit{Euclidean distance} seperti Persamaan (\ref{eq:euclidean1}).
 	\begin{equation}
 	d_{xy}=\sqrt{\sum_{i=1}^{n}(x_i-y_i)^{2}}
 	\label{eq:euclidean1}
@@ -41,6 +41,9 @@ Menurut S Monalisa \cite{monalisa2018klasterisasi} tahapan mengklaster menggunak
 	\item Lakukan iterasi sebanyak mungkin dengan kembali ke tahapan 3 sampai tidak ada perubahan klaster atau perubahan nilai \textit{centroid}
 \end{enumerate}
 
+\subsection{Centroid}
+
+Centroid adalah nilai yang dijadikan sebagai titik awal dimulainya sebuah pengelompokan (\textit{clustering}) pada algoritma $k$-means \cite{retno2019peningkatan}. Untuk melakukan pengelompokan data, dimulai dengan menghitung jarak dari setiap titik tujuan menuju ke setiap titik centroid sebagai awal pembentukan klaster, setelah itu titik-titik tujuan akan dikelompokkan menurut titik klaster terdekatnya. Dalam langkah tersebut akan dihitung titik-titik centroid yang baru menggunakan nilai rata-rata titik dari tiap klaster.
 
 \subsection{Algoritma Genetika}
 

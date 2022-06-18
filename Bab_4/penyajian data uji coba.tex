@@ -4,7 +4,7 @@ Pada penelitian ini dilakukan uji coba menggunakan data lokasi seluruh SMA di Ka
 
 \subsection{Pengambilan Data Lokasi}
 
-Data yang digunakan adalah data koordinat lokasi yang diekspor melalui google earth. Pengujian Pengambilan data lokasi bertujuan untuk menunjukkan bahwa sistem 
+Data yang digunakan adalah data koordinat lokasi yang diekspor melalui Google Earth. Pengujian Pengambilan data lokasi bertujuan untuk menunjukkan bahwa sistem 
 mampu membaca input yang dimasukkan. Dapat dilihat pada Lampiran \ref{lampiran1} seluruh nama-nama SMA di Kabupaten Probolinggo beserta koordinat lokasinya. Visualisasi data dari koordinat-koordinat SMA di kabupaten probolinggo dapat dilihat pada Gambar \ref{fig:petasma}.
 
 \begin{figure}[H]
@@ -32,7 +32,7 @@ Pada tahap ini metode yang digunakan adalah metode $K-$means untuk mengklaster d
 \begin{enumerate}
 	\item Menentukan jumlah klaster, dalam hal ini yang digunakan adalah 8 klaster.
 	\item Memilih titik-titik centroid sebanyak jumlah klaster seperti pada Tabel \ref{tab:dasen} dan \ref{fig:visdasen}
-	\item \label{ulang3} Hitung jarak tiap titik sekolah yang ada dengan masing-masing \textit{centroid}. Penghitungan jarak menggunakan \textit{Euclidean Distance} pada persamaan (\ref{eq:euclidean3}.
+	\item \label{ulang3} Hitung jarak tiap titik sekolah yang ada dengan masing-masing \textit{centroid}. Penghitungan jarak menggunakan \textit{Euclidean distance} pada persamaan (\ref{eq:euclidean3}.
 	\item Kelompokan data ke dalam klaster yang memiliki jarak paling minimum.
 	\item Setelah seluruh titik sekolah masuk ke dalam klaster-klaster, hitung \textit{centroid} yang baru dengan cara menghitung rata-rata titik sekolah yang ada di dalam klaster tersebut. Lakukan hal yang sama pada klaster yang lain.
 	\item Jika terdapat perubahan klaster, maka ulangi langkah \ref{ulang3} hingga tidak ada perubahan anggota pada tiap klaster. Jika \textit{centroid} yang baru tidak berubah dari sebelumnya, maka proses berhenti, karena \textit{centroid} yang tidak berubah menyebabkan anggota klaster juga tidak berubah.
