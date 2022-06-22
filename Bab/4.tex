@@ -1,0 +1,117 @@
+\chapter{HASIL}
+
+\section{Pengambilan Data Lokasi}
+
+Data yang digunakan adalah data koordinat lokasi yang diekspor melalui Google Earth. Lokasi pada Google Earth ditandai satu per satu dan diekspor ke dalam bentuk spreadsheet. Dapat dilihat pada Lampiran \ref{lampiran1} seluruh nama-nama SMA di Kabupaten Probolinggo beserta koordinat lokasinya. Data tersebut dikumpulkan sebagai dataset dari penelitian ini. Visualisasi data dari koordinat-koordinat SMA di kabupaten probolinggo dapat dilihat pada Gambar \ref{fig:petasma}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Gambar/peta sma.png}
+  \caption{Visualisasi lokasi SMA di Kabupaten Probolinggo}
+  \label{fig:petasma}
+\end{figure}
+
+Setelah mendapatkan lokasi yang akan diproses, dalam penelitian ini akan di uji menggunakan pembagian mulai dari 1 sampai dengan 10 klaster untuk mengetahui rute dan pembagian klaster yang paling optimal. Berikut ini adalah hasil dari percobaan tersebut.
+
+\section{Proses Pengklasteran Data}
+
+Pada tahap ini metode yang digunakan adalah metode $k-$means untuk mengklaster data. Langkah-langkah nya adalah sebagai berikut.
+
+\begin{enumerate}
+	\item Tentukan jumlah klaster, dalam hal ini yang digunakan adalah ujicoba dengan pembagian 1 sampai dengan 10 klaster.
+	\item Memilih titik-titik centroid sebanyak jumlah klaster sebagai contoh saja seperti pada Tabel \ref{tab:dasen} merupakan titik-titik centroid yang dipilih secara acak pada pembagian 8 klaster.
+	
+\input{Tabel/CENTROID}
+
+	\item \label{ulang3} Hitung jarak tiap titik sekolah yang ada dengan masing-masing \textit{centroid}. Penghitungan jarak menggunakan \textit{Euclidean distance} pada persamaan (\ref{eq:euclidean3}).
+	
+	\begin{equation}
+	\left[ \left( x,y \right) ,\left( a,b \right)\right]=\sqrt{\left( x-a \right)^{2}+\left( y-b \right)^{2}}
+	\label{eq:euclidean3}
+	\end{equation}	
+	
+	\item Kelompokan data ke dalam klaster yang memiliki jarak paling minimum.
+	\item Setelah seluruh titik sekolah masuk ke dalam klaster-klaster, hitung \textit{centroid} yang baru dengan cara menghitung rata-rata titik sekolah yang ada di dalam klaster tersebut. Lakukan hal yang sama pada klaster yang lain.
+	\item Jika terdapat perubahan klaster, maka ulangi langkah \ref{ulang3} hingga tidak ada perubahan anggota pada tiap klaster. Jika \textit{centroid} yang baru tidak berubah dari sebelumnya, maka proses berhenti, karena \textit{centroid} yang tidak berubah menyebabkan anggota klaster juga tidak berubah.
+	
+	\item Setelah semua data terklasifikasi, selanjutnya adalah menentukan titik kumpul dengan cara menghitung rata-rata dari seluruh titik-titik centroid tersebut.
+\end{enumerate}
+
+\section{Proses TSP menggunakan Algoritma Genetika}
+
+Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adalah mencari rute terdekatnya menggunakan Algoritma Genetika
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Gambar/hasil klaster.png}
+	\caption{Visualisasi klaster sesuai warna}
+	\label{fig:hasilklas}
+\end{figure}
+
+\begin{enumerate}
+	\item Bangkitkan beberapa populasi awal berisi sejumlah kromosom yang di dalamnya terdapat urutan perjalanan menuju titik sekolah.
+	\item \label{ulang4} Hitung nilai \textit{fitness} (total jarak) dari tiap kromosom.
+	\item Menetapkan probabilitas \textit{crossover} ($p_c$) dalam hal ini yang digunakan adalah $p_c=0,95$. Bangkitkan bilangan acak (0,0000 sampai 1,0000) pada setiap kromosom, kromosom dengan bilangan acak kurang dari $p_c$ maka akan dilakukan \textit{crossover}. Jika kromosom hasil \textit{crossover} memiliki \textit{fitness} yang lebih baik  dari kromosom awal, maka kromosom awal digantikan oleh kromosom hasil \textit{crossover}.
+	\item Menetapkan probabilitas mutasi ($p_m$), dalam hal ini digunakan $p_m=0,1$. Bangkitakan bilangan acak (0,0000 sampai 1,0000) pada setiap kromosom, kromosom yang memiliki bilangan acak kurang dari $p_m$ maka akan dilakukan mutasi. Jika kromosom hasil mutasi memiliki \textit{fitness} yang lebih baik dari kromosom awal, maka kromosom awal digantikan oleh kromosom hasil mutasi.
+	\item Jika hasil kurang optimal, iterasi dilakukan dengan cara kembali ke tahapan (\ref{ulang4}) untuk generasi berikutnya sampai hasil yang dilakukan optimal atau mendekati optimal.
+\end{enumerate}
+
+\section{Hasil akhir}
+
+Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui seperti pada Gambar \ref{fig:klasterbeda} yang merupakan rute yang didapatkan dari pembagian klaster berbeda. Pada Sub Gambar \ref{fig:klasterbeda1} tidak menggunakan pembagian klaster, sehingga titik centroid pada klaster tersebut dijadikan titik kumpul.
+
+\input{Lain-lain/percobaan tiap klaster}
+\input{Tabel/total jarak}
+
+Rute-rute yang dihasilkan sebelumnya diekspor ke bentuk spreadsheet dan telah diurutkan berdasarkan nomor urut yang terdapat pada Lampiran \ref{lampiran1} sehingga mempermudah pengguna dalam membaca data.
+
+\subsection{Pembagian 1 klaster}
+
+Urutan perjalanan perjalanan pada Gambar \ref{fig:klasterbeda1} yang merupakan pembagian 1 klaster menghasilkan urutan kota seperti berikut.
+
+\noindent $
+67 \rightarrow 30 \rightarrow 52 \rightarrow 38 \rightarrow 37 \rightarrow 50 \rightarrow 62 \rightarrow 25 \rightarrow 14 \rightarrow 7 \rightarrow 27 \rightarrow 17 \rightarrow 23 \rightarrow 69 \rightarrow 72 \rightarrow 21 \rightarrow 55 \rightarrow 54 \rightarrow 20 \rightarrow 46 \rightarrow 26 \rightarrow 59 \rightarrow 60 \rightarrow 16 \rightarrow 58 \rightarrow 45 \rightarrow 15 \rightarrow 65 \rightarrow 36 \rightarrow 18 \rightarrow 40 \rightarrow 70 \rightarrow 75 \rightarrow 2 \rightarrow 44 \rightarrow 11 \rightarrow 41 \rightarrow 53 \rightarrow 3 \rightarrow 71 \rightarrow 10 \rightarrow 6 \rightarrow 29 \rightarrow 74 \rightarrow 68 \rightarrow 47 \rightarrow 32 \rightarrow 56 \rightarrow 63 \rightarrow 9 \rightarrow 51 \rightarrow 49 \rightarrow 35 \rightarrow 1 \rightarrow 73 \rightarrow 24 \rightarrow 33 \rightarrow 57 \rightarrow 61 \rightarrow 22 \rightarrow 34 \rightarrow 8 \rightarrow 43 \rightarrow 66 \rightarrow 42 \rightarrow 13 \rightarrow 5 \rightarrow 4 \rightarrow 64 \rightarrow 31 \rightarrow 39 \rightarrow 19 \rightarrow 28 \rightarrow 48 \rightarrow 12$
+
+Urutan tersebut menghasilkan jarak total seperti pada Tabel \ref{tab:totaljarak} yaitu 11,02 satuan.
+
+\subsection{Pembagian 2 klaster}
+
+Urutan perjalanan perjalanan pada Gambar \ref{fig:klasterbeda2} yang merupakan pembagian 2 klaster menghasilkan urutan kota seperti berikut.
+
+\noindent Urutan rute pada klaster A sebagai berikut:
+
+\noindent $
+33 \rightarrow 17 \rightarrow 47 \rightarrow 32 \rightarrow 55 \rightarrow 36 \rightarrow 10 \rightarrow 37 \rightarrow 56 \rightarrow 11 \rightarrow 30 \rightarrow 27 \rightarrow 59 \rightarrow 60 \rightarrow 64 \rightarrow 21 \rightarrow 9 \rightarrow 39 \rightarrow 29 \rightarrow 24 \rightarrow 63 \rightarrow 72 \rightarrow 13 \rightarrow 6 \rightarrow 38 \rightarrow 52
+$
+
+\noindent Urutan rute pada klaster B sebagai berikut:
+
+\noindent $
+43 \rightarrow 35 \rightarrow 7 \rightarrow 2 \rightarrow 44 \rightarrow 25 \rightarrow 70 \rightarrow 61 \rightarrow 66 \rightarrow 45 \rightarrow 68 \rightarrow 65 \rightarrow 50 \rightarrow 22 \rightarrow 46 \rightarrow 49 \rightarrow 14 \rightarrow 5 \rightarrow 16 \rightarrow 74 \rightarrow 42 \rightarrow 8 \rightarrow 48 \rightarrow 31 \rightarrow 26 \rightarrow 18 \rightarrow 54 \rightarrow 40 \rightarrow 58 \rightarrow 67 \rightarrow 15 \rightarrow 12 \rightarrow 57 \rightarrow 20 \rightarrow 34 \rightarrow 69 \rightarrow 75 \rightarrow 41 \rightarrow 23 \rightarrow 51 \rightarrow 19 \rightarrow 28 \rightarrow 1 \rightarrow 62 \rightarrow 4 \rightarrow 53 \rightarrow 3 \rightarrow 71 \rightarrow 73
+$
+
+Urutan tersebut menghasilkan jarak total seperti pada Tabel \ref{tab:totaljarak} yaitu 7,45 satuan.
+
+\subsection{Pembagian 3 klaster}
+
+Urutan perjalanan perjalanan pada Gambar \ref{fig:klasterbeda3} yang merupakan pembagian 3 klaster menghasilkan urutan kota seperti berikut.
+
+\noindent Urutan rute pada klaster A sebagai berikut:
+
+\noindent $
+38 \rightarrow 60 \rightarrow 56 \rightarrow 32 \rightarrow 13 \rightarrow 21 \rightarrow 72 \rightarrow 47 \rightarrow 59 \rightarrow 36 \rightarrow 37 \rightarrow 55 \rightarrow 27 \rightarrow 17 \rightarrow 29 \rightarrow 30 \rightarrow 11 \rightarrow 10
+$ 
+
+\noindent Urutan rute pada klaster B sebagai berikut:
+
+\noindent $
+2 \rightarrow 66 \rightarrow 14 \rightarrow 74 \rightarrow 26 \rightarrow 42 \rightarrow 54 \rightarrow 22 \rightarrow 51 \rightarrow 50 \rightarrow 34 \rightarrow 70 \rightarrow 7 \rightarrow 28 \rightarrow 8 \rightarrow 44 \rightarrow 41
+$
+
+\noindent Urutan rute pada klaster C sebagai berikut:
+
+\noindent $
+69 \rightarrow 68 \rightarrow 40 \rightarrow 73 \rightarrow 25 \rightarrow 5 \rightarrow 1 \rightarrow 35 \rightarrow 65 \rightarrow 3 \rightarrow 24 \rightarrow 16 \rightarrow 19 \rightarrow 71 \rightarrow 61 \rightarrow 58 \rightarrow 53 \rightarrow 23 \rightarrow 49 \rightarrow 67 \rightarrow 64 \rightarrow 33 \rightarrow 4 \rightarrow 18 \rightarrow 39 \rightarrow 48 \rightarrow 20 \rightarrow 75 \rightarrow 63 \rightarrow 15 \rightarrow 31 \rightarrow 43 \rightarrow 57 \rightarrow 9 \rightarrow 6 \rightarrow 12 \rightarrow 46 \rightarrow 45 \rightarrow 52 \rightarrow 62
+$
+
+Urutan tersebut menghasilkan jarak total seperti pada Tabel \ref{tab:totaljarak} yaitu 6,44 satuan.

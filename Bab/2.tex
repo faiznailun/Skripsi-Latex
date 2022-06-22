@@ -1,3 +1,13 @@
+\chapter{KAJIAN PUSTAKA}
+
+\section{Penelitian Relevan}
+
+Ada beberapa hasil penelitian sebelumnya yang memiliki keterkaitan dengan penelitian ini. Penelitian berjudul "\textit{Applying K-means and Genetic Algorithm for Solving MTSP}" \cite{inproceedings}. Penelitian tersebut membahas tentang persilangan jalur antar tiap salesman yang dapat dihindari dengan menggukan algoritma genetika dan \textit{k}-means. Dari penelitian tersebut dihasilkan bahwa dengan penggunaan algoritma genetika dan $k$-means untuk menyelesaikan MTSP dapat meminimalisir terjadinya tabrakan antar salesman.
+
+Penelitian kedua berjudul "Optimasi \textit{Multiple Travelling Salesman Problem} (M-TSP) Pada Penentuan Rute Optimal Penjemputan Penumpang \textit{Travel} Menggunakan Algoritme Genetika" \cite{raditya2017optimasi}. Penelitian tersebut membahas tentang permasalahan MTSP yaitu beberapa orang salesman yang akan berangkat dari kantor \textit{travel} menuju ke alamat penjemputan masing-masing penumpang. Pada permasalahan tersebut menggunakan representasi permutasi, proses reproduksi \textit{crossover} dengan \textit{one cut point crossover}, proses mutasi dengan \textit{exchange mutation}, dan proses seleksi dengan \textit{elitism selection}.
+
+Mayuliana, N. K., Kencana, E. N., dan Harini, L. P. I. dalam artikelnya yang berjudul “Penyelesaian Multitraveling Salesman Problem dengan Algoritma Genetika” \cite{mayuliana2015penyelesaian}, mempelajari tentang kinerja algoritma genetika berdasarkan jarak minimum dan waktu pemrosesan yang diperlukan untuk 10 kali pengulangan untuk setiap kombinasi kota penjual. Artikel karangan Al-Khateeb, B., dan Yousif, M. berjudul "\textit{SOLVING MULTIPLE TRAVELING SALESMAN PROBLEM BY MEERKAT SWARM OPTIMIZATION ALGORITHM}" \cite{al2019solving} dalam artikel ini mengusulkan algoritma metaheuristik yang disebut algoritma \textit{Meerkat Swarm Optimization} (MSO) untuk memecahkan MTSP dan menjamin solusi berkualitas baik dalam waktu yang wajar untuk masalah kehidupan nyata.
+
 \section{Dasar Teori}
 
 \subsection{\textit{Multiple Traveling Salesman Problem}}
@@ -63,7 +73,7 @@ Menurut Armanda RS \cite{armanda2016penerapan} dalam artikelnya menyampaikan pen
 Fitness adalah suatu ukuran yang dijadikan acuan untuk mengetahui baik atau tidaknya suatu individu atau bisa disebut nilai dari fungsi tujuan \cite{basuki2003strategi}. Tujuan dari penggunaan algoritma genetika adalah untuk mengoptimalkan nilai fitness dengan cara mencari nilai fitness yang paling maksimal atau minimal. Seperti dalam penelitian ini yang tujuannya adalah mencari jarak yang paling minimal maka nilai fitness nya yang dicari adalah yang paling minimal juga.
 
 \subsection{\textit{Crossover}}
-\textit{Crossover} atau persilangan adalah operator dari algoritma genetika yang melibatkan dua induk untuk membentuk kromosom baru menurut artikel \cite{hardi2014analisis}. Dalam langkah ini dilakukan dengan cara menukar sebagian gen pada kromosom induk pertama dengan gen pada kromosom induk kedua seperti pada Gambar \ref{fig:crossover}. Proses \textit{crossover} tersebut diterapkan pada setiap individu dengan probabilitas \textit{crossover} ($p_c$) yang telah ditentukan. Jika diterapkan \textit{crossover} keturunan didapatkan dari kromosom-kromosom induk. Namun jika \textit{crossover} tidak diterapkan satu induk dipilih secara random dengan $p_c$ yang sama dan diduplikasi menjadi anak.
+\textit{Crossover} atau persilangan adalah operator dari algoritma genetika yang melibatkan dua induk untuk membentuk kromosom baru menurut artikel \cite{hardi2014analisis}. Dalam langkah ini dilakukan dengan cara menukar sebagian gen pada kromosom induk pertama dengan gen pada kromosom induk kedua seperti pada Gambar \ref{fig:crossover}. Proses \textit{crossover} tersebut diterapkan pada setiap individu dengan probabilitas \textit{crossover} ($p_c$) yang telah ditentukan. Jika diterapkan \textit{crossover} keturunan didapatkan dari kromosom-kromosom induk. Namun jika \textit{crossover} tidak diterapkan satu induk dipilih secara acak dengan $p_c$ yang sama dan diduplikasi menjadi anak.
 
 \begin{figure}[H]
   \centering
@@ -73,7 +83,7 @@ Fitness adalah suatu ukuran yang dijadikan acuan untuk mengetahui baik atau tida
 \end{figure}
 
 \subsection{Mutasi}
-Mutasi atau mutation adalah operator yang digunakan untuk mengubah gen-gen yang terdapat dalam kromosom. Model dalam proses ini sebagaimana yang terjadi dalam kehidupan alam \cite{rovie2014genetic} seperti pada Gambar \ref{fig:mutasi}. Dalam proses mutasi akan dibangkitkan sebuah bilangan random sebagai Probabilitas mutasi ($p_m$) yang sangat kecil. Mutasi diterapkan dengan tujuan untuk memperoleh nilai fitness yang lebih baik dari sebelumnya, dan lama-kelamaan akan menjadi solusi optimum yang diinginkan.
+Mutasi atau mutation adalah operator yang digunakan untuk mengubah gen-gen yang terdapat dalam kromosom. Model dalam proses ini sebagaimana yang terjadi dalam kehidupan alam \cite{rovie2014genetic} seperti pada Gambar \ref{fig:mutasi}. Dalam proses mutasi akan dibangkitkan sebuah bilangan acak sebagai Probabilitas mutasi ($p_m$) yang sangat kecil. Mutasi diterapkan dengan tujuan untuk memperoleh nilai fitness yang lebih baik dari sebelumnya, dan lama-kelamaan akan menjadi solusi optimum yang diinginkan.
 
 \begin{figure}[H]
   \centering
