@@ -39,7 +39,7 @@ Pada tahap ini metode yang digunakan adalah metode $k-$means untuk mengklaster d
 
 \section{Proses TSP menggunakan Algoritma Genetika}
 
-Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adalah mencari rute terdekatnya menggunakan Algoritma Genetika
+Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adalah mencari rute terdekatnya menggunakan algoritma genetika
 
 \begin{figure}[H]
 	\centering
@@ -58,60 +58,87 @@ Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adal
 
 \section{Hasil akhir}
 
-Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui seperti pada Gambar \ref{fig:klasterbeda} yang merupakan rute yang didapatkan dari pembagian klaster berbeda. Pada Sub Gambar \ref{fig:klasterbeda1} tidak menggunakan pembagian klaster, sehingga titik centroid pada klaster tersebut dijadikan titik kumpul.
-
-\input{Lain-lain/percobaan tiap klaster}
-\input{Tabel/total jarak}
+Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui seperti pada Gambar \# \ref{fig:klasterbeda} yang merupakan rute yang didapatkan dari pembagian klaster berbeda. Pada Gambar \ref{fig:hasil_mtsp1} tidak menggunakan pembagian klaster, sehingga titik centroid pada klaster tersebut dijadikan titik kumpul.
 
 Rute-rute yang dihasilkan sebelumnya diekspor ke bentuk spreadsheet dan telah diurutkan berdasarkan nomor urut yang terdapat pada Lampiran \ref{lampiran1} sehingga mempermudah pengguna dalam membaca data.
 
-\subsection{Pembagian 1 klaster}
+\subsection{Tanpa pembagian klaster}
 
-Urutan perjalanan perjalanan pada Gambar \ref{fig:klasterbeda1} yang merupakan pembagian 1 klaster menghasilkan urutan kota seperti berikut.
+Urutan perjalanan perjalanan dengan tanpa pembagian klaster menghasilkan urutan titik seperti berikut. $K$-means pada urutan ini tidak digunakan untuk pengklasteran data, namun hanya untuk penentuan titik kumpul.
 
 \noindent $
 67 \rightarrow 30 \rightarrow 52 \rightarrow 38 \rightarrow 37 \rightarrow 50 \rightarrow 62 \rightarrow 25 \rightarrow 14 \rightarrow 7 \rightarrow 27 \rightarrow 17 \rightarrow 23 \rightarrow 69 \rightarrow 72 \rightarrow 21 \rightarrow 55 \rightarrow 54 \rightarrow 20 \rightarrow 46 \rightarrow 26 \rightarrow 59 \rightarrow 60 \rightarrow 16 \rightarrow 58 \rightarrow 45 \rightarrow 15 \rightarrow 65 \rightarrow 36 \rightarrow 18 \rightarrow 40 \rightarrow 70 \rightarrow 75 \rightarrow 2 \rightarrow 44 \rightarrow 11 \rightarrow 41 \rightarrow 53 \rightarrow 3 \rightarrow 71 \rightarrow 10 \rightarrow 6 \rightarrow 29 \rightarrow 74 \rightarrow 68 \rightarrow 47 \rightarrow 32 \rightarrow 56 \rightarrow 63 \rightarrow 9 \rightarrow 51 \rightarrow 49 \rightarrow 35 \rightarrow 1 \rightarrow 73 \rightarrow 24 \rightarrow 33 \rightarrow 57 \rightarrow 61 \rightarrow 22 \rightarrow 34 \rightarrow 8 \rightarrow 43 \rightarrow 66 \rightarrow 42 \rightarrow 13 \rightarrow 5 \rightarrow 4 \rightarrow 64 \rightarrow 31 \rightarrow 39 \rightarrow 19 \rightarrow 28 \rightarrow 48 \rightarrow 12$
 
-Urutan tersebut menghasilkan jarak total seperti pada Tabel \ref{tab:totaljarak} yaitu 11,02 satuan.
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp1} urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo tanpa pembagian klaster. Terlihat pada urutan gambar tersebut tampaknya masih belum sepenuhnya optimal. Urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} seperti pada Tabel \ref{tab:totaljarak} yaitu 11,02 satuan.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Gambar/hasil_mtsp/1}
+\caption{Perjalanan tanpa pembagian klaster}
+\label{fig:hasil_mtsp1}
+\end{figure}
 
 \subsection{Pembagian 2 klaster}
 
-Urutan perjalanan perjalanan pada Gambar \ref{fig:klasterbeda2} yang merupakan pembagian 2 klaster menghasilkan urutan kota seperti berikut.
+Pada tahap ini urutan perjalanan dibagi menjadi 2 klaster yaitu klaster A dan B, menghasilkan urutan sebagai berikut.
 
-\noindent Urutan rute pada klaster A sebagai berikut:
+\vspace{0.4cm}
+\noindent Urutan perjalanan pada klaster A:
 
 \noindent $
 33 \rightarrow 17 \rightarrow 47 \rightarrow 32 \rightarrow 55 \rightarrow 36 \rightarrow 10 \rightarrow 37 \rightarrow 56 \rightarrow 11 \rightarrow 30 \rightarrow 27 \rightarrow 59 \rightarrow 60 \rightarrow 64 \rightarrow 21 \rightarrow 9 \rightarrow 39 \rightarrow 29 \rightarrow 24 \rightarrow 63 \rightarrow 72 \rightarrow 13 \rightarrow 6 \rightarrow 38 \rightarrow 52
 $
 
-\noindent Urutan rute pada klaster B sebagai berikut:
+\vspace{0.4cm}
+\noindent Urutan perjalanan pada klaster B:
 
 \noindent $
 43 \rightarrow 35 \rightarrow 7 \rightarrow 2 \rightarrow 44 \rightarrow 25 \rightarrow 70 \rightarrow 61 \rightarrow 66 \rightarrow 45 \rightarrow 68 \rightarrow 65 \rightarrow 50 \rightarrow 22 \rightarrow 46 \rightarrow 49 \rightarrow 14 \rightarrow 5 \rightarrow 16 \rightarrow 74 \rightarrow 42 \rightarrow 8 \rightarrow 48 \rightarrow 31 \rightarrow 26 \rightarrow 18 \rightarrow 54 \rightarrow 40 \rightarrow 58 \rightarrow 67 \rightarrow 15 \rightarrow 12 \rightarrow 57 \rightarrow 20 \rightarrow 34 \rightarrow 69 \rightarrow 75 \rightarrow 41 \rightarrow 23 \rightarrow 51 \rightarrow 19 \rightarrow 28 \rightarrow 1 \rightarrow 62 \rightarrow 4 \rightarrow 53 \rightarrow 3 \rightarrow 71 \rightarrow 73
 $
+\vspace{0.4cm}
 
-Urutan tersebut menghasilkan jarak total seperti pada Tabel \ref{tab:totaljarak} yaitu 7,45 satuan.
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp2} perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 2 klaster. Terlihat pada urutan tersebut menghasilkan jarak total seperti pada Tabel \ref{tab:totaljarak} yaitu 7,45 satuan.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Gambar/hasil_mtsp/2}
+\caption{Perjalanan dibagi 2 klaster}
+\label{fig:hasil_mtsp2}
+\end{figure}
 
 \subsection{Pembagian 3 klaster}
 
-Urutan perjalanan perjalanan pada Gambar \ref{fig:klasterbeda3} yang merupakan pembagian 3 klaster menghasilkan urutan kota seperti berikut.
+Pada tahap ini urutan perjalanan dibagi menjadi 3 klaster yaitu klaster A, B, dan C, menghasilkan urutan perjalanan sebagai berikut.
 
-\noindent Urutan rute pada klaster A sebagai berikut:
+\vspace{0.4cm}
+\noindent Urutan perjalanan pada klaster A:
 
 \noindent $
 38 \rightarrow 60 \rightarrow 56 \rightarrow 32 \rightarrow 13 \rightarrow 21 \rightarrow 72 \rightarrow 47 \rightarrow 59 \rightarrow 36 \rightarrow 37 \rightarrow 55 \rightarrow 27 \rightarrow 17 \rightarrow 29 \rightarrow 30 \rightarrow 11 \rightarrow 10
 $ 
 
-\noindent Urutan rute pada klaster B sebagai berikut:
+\vspace{0.4cm}
+\noindent Urutan perjalanan pada klaster B:
 
 \noindent $
 2 \rightarrow 66 \rightarrow 14 \rightarrow 74 \rightarrow 26 \rightarrow 42 \rightarrow 54 \rightarrow 22 \rightarrow 51 \rightarrow 50 \rightarrow 34 \rightarrow 70 \rightarrow 7 \rightarrow 28 \rightarrow 8 \rightarrow 44 \rightarrow 41
 $
 
-\noindent Urutan rute pada klaster C sebagai berikut:
+\vspace{0.4cm}
+\noindent Urutan perjalanan pada klaster C:
 
 \noindent $
 69 \rightarrow 68 \rightarrow 40 \rightarrow 73 \rightarrow 25 \rightarrow 5 \rightarrow 1 \rightarrow 35 \rightarrow 65 \rightarrow 3 \rightarrow 24 \rightarrow 16 \rightarrow 19 \rightarrow 71 \rightarrow 61 \rightarrow 58 \rightarrow 53 \rightarrow 23 \rightarrow 49 \rightarrow 67 \rightarrow 64 \rightarrow 33 \rightarrow 4 \rightarrow 18 \rightarrow 39 \rightarrow 48 \rightarrow 20 \rightarrow 75 \rightarrow 63 \rightarrow 15 \rightarrow 31 \rightarrow 43 \rightarrow 57 \rightarrow 9 \rightarrow 6 \rightarrow 12 \rightarrow 46 \rightarrow 45 \rightarrow 52 \rightarrow 62
 $
+\vspace{0.4cm}
 
-Urutan tersebut menghasilkan jarak total seperti pada Tabel \ref{tab:totaljarak} yaitu 6,44 satuan.
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp3} perjalanan menuju seluruh SMA di Kabupaten Probolinggo dibagi menjadi 3 klaster. Terlihat pada urutan tersebut menghasilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu 6,44 satuan.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Gambar/hasil_mtsp/3}
+\caption{Perjalanan dibagi 3 klaster}
+\label{fig:hasil_mtsp3}
+\end{figure}
+
+\input{Tabel/total jarak}
