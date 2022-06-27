@@ -11,7 +11,7 @@ Data yang digunakan adalah data koordinat lokasi yang diekspor melalui Google Ea
   \label{fig:petasma}
 \end{figure}
 
-Setelah mendapatkan lokasi yang akan diproses, dalam penelitian ini akan di uji menggunakan pembagian mulai dari 1 sampai dengan 10 klaster untuk mengetahui rute dan pembagian klaster yang paling optimal. Berikut ini adalah hasil dari percobaan tersebut.
+Setelah peneliti mendapatkan lokasi yang akan diproses, selanjutnya diuji menggunakan pembagian dari 1 sampai dengan 10 klaster untuk mengetahui rute dan pembagian klaster yang paling optimal. Berikut ini adalah hasil dari percobaan tersebut.
 
 \section{Proses Pengklasteran Data}
 
@@ -19,9 +19,230 @@ Pada tahap ini metode yang digunakan adalah metode $k-$means untuk mengklaster d
 
 \begin{enumerate}
 	\item Tentukan jumlah klaster, dalam hal ini yang digunakan adalah ujicoba dengan pembagian 1 sampai dengan 10 klaster.
-	\item Memilih titik-titik centroid sebanyak jumlah klaster sebagai contoh saja seperti pada Tabel \ref{tab:dasen} merupakan titik-titik centroid yang dipilih secara acak pada pembagian 8 klaster.
+	\item Selanjutnya pilih titik-titik centroid secara acak sebanyak jumlah klaster. Dari hasil pemilihan acak tersebut terpilihlah titik-titik centroid berikut.
 	
-\input{Tabel/CENTROID}
+	\begin{enumerate}
+	
+	\item Untuk pembagian 1 klaster terpilih titik-titik centroid pada Tabel \ref{tab:center1}.
+	
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{ccc}
+\rowcolor[HTML]{4472C4} 
+{\color[HTML]{FFFFFF} \textbf{Nama   Centroid}} & {\color[HTML]{FFFFFF} \textbf{Latitude (Sumbu X)}} & {\color[HTML]{FFFFFF} \textbf{Longitude (Sumbu Y)}} \\
+\rowcolor[HTML]{D9E1F2} 
+A &
+  -7,77 &
+  113,41
+\end{tabular}
+\caption{Centroid pada 1 klaster}
+\label{tab:center1}
+\end{table}
+
+
+	\item Untuk pembagian 2 klaster terpilih titik-titik centroid pada Tabel \ref{tab:center2}.
+
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{ccc}
+\rowcolor[HTML]{4472C4} 
+{\color[HTML]{FFFFFF} \textbf{Nama   Centroid}} & {\color[HTML]{FFFFFF} \textbf{Latitude (Sumbu X)}} & {\color[HTML]{FFFFFF} \textbf{Longitude (Sumbu Y)}} \\
+\rowcolor[HTML]{D9E1F2} 
+A                                               & -7,75                                              & 113,42                                              \\
+B                                               & -7,83                                              & 113,30                                             
+\end{tabular}
+\caption{Centroid pada 2 klaster}
+\label{tab:center2}
+\end{table}
+
+	\item Untuk pembagian 3 klaster terpilih titik-titik centroid pada Tabel \ref{tab:center3}.
+	
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{ccc}
+\rowcolor[HTML]{4472C4} 
+{\color[HTML]{FFFFFF} \textbf{Nama   Centroid}} & {\color[HTML]{FFFFFF} \textbf{Latitude (Sumbu X)}} & {\color[HTML]{FFFFFF} \textbf{Longitude (Sumbu Y)}} \\
+\rowcolor[HTML]{D9E1F2} 
+A & -7,84 & 113,22 \\
+B & -7,93 & 113,31 \\
+\rowcolor[HTML]{D9E1F2} 
+C & -7,79 & 113,38
+\end{tabular}
+\caption{Centroid pada 3 klaster}
+\label{tab:center3}
+\end{table}
+
+	\item Untuk pembagian 4 klaster terpilih titik-titik centroid pada Tabel \ref{tab:center4}.
+	
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{ccc}
+\rowcolor[HTML]{4472C4} 
+{\color[HTML]{FFFFFF} \textbf{Nama   Centroid}} & {\color[HTML]{FFFFFF} \textbf{Latitude (Sumbu X)}} & {\color[HTML]{FFFFFF} \textbf{Longitude (Sumbu Y)}} \\
+\rowcolor[HTML]{D9E1F2} 
+A & -7,77 & 113,43 \\
+B & -7,83 & 113,42 \\
+\rowcolor[HTML]{D9E1F2} 
+C & -7,74 & 113,13 \\
+D & -7,75 & 113,42
+\end{tabular}
+\caption{Centroid pada 4 klaster}
+\label{tab:center4}
+\end{table}	
+	
+	\item Untuk pembagian 5 klaster terpilih titik-titik centroid pada Tabel \ref{tab:center5}
+	
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{ccc}
+\rowcolor[HTML]{4472C4} 
+{\color[HTML]{FFFFFF} \textbf{Nama   Centroid}} & {\color[HTML]{FFFFFF} \textbf{Latitude (Sumbu X)}} & {\color[HTML]{FFFFFF} \textbf{Longitude (Sumbu Y)}} \\
+\rowcolor[HTML]{D9E1F2} 
+A & -7,94 & 113,11 \\
+B & -7,85 & 113,42 \\
+\rowcolor[HTML]{D9E1F2} 
+C & -7,80 & 113,39 \\
+D & -7,94 & 113,53 \\
+\rowcolor[HTML]{D9E1F2} 
+E & -7,84 & 113,32
+\end{tabular}
+\caption{Centroid pada 5 klaster}
+\label{tab:center5}
+\end{table}
+
+	\item Untuk pembagian 6 klaster terpilih titik-titik centroid pada Tabel \ref{tab:center6}.
+	
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{ccc}
+\rowcolor[HTML]{4472C4} 
+{\color[HTML]{FFFFFF} \textbf{Nama   Centroid}} & {\color[HTML]{FFFFFF} \textbf{Latitude (Sumbu X)}} & {\color[HTML]{FFFFFF} \textbf{Longitude (Sumbu Y)}} \\
+\rowcolor[HTML]{D9E1F2} 
+A & -7,79 & 113,53 \\
+B & -7,86 & 113,29 \\
+\rowcolor[HTML]{D9E1F2} 
+C & -7,89 & 113,14 \\
+D & -7,87 & 113,37 \\
+\rowcolor[HTML]{D9E1F2} 
+E & -7,94 & 113,48 \\
+F & -7,88 & 113,50
+\end{tabular}
+\caption{Centroid pada 6 klaster}
+\label{tab:center6}
+\end{table}
+
+	\item Untuk pembagian 7 klaster terpilih titik-titik centroid pada Tabel \ref{tab:center7}.
+	
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{ccc}
+\rowcolor[HTML]{4472C4} 
+{\color[HTML]{FFFFFF} \textbf{Nama   Centroid}} & {\color[HTML]{FFFFFF} \textbf{Latitude (Sumbu X)}} & {\color[HTML]{FFFFFF} \textbf{Longitude (Sumbu Y)}} \\
+\rowcolor[HTML]{D9E1F2} 
+A & -7,89 & 113,34 \\
+B & -7,81 & 113,32 \\
+\rowcolor[HTML]{D9E1F2} 
+C & -7,84 & 113,48 \\
+D & -7,79 & 113,17 \\
+\rowcolor[HTML]{D9E1F2} 
+E & -7,71 & 113,50 \\
+F & -7,77 & 113,41 \\
+\rowcolor[HTML]{D9E1F2} 
+G & -7,72 & 113,51
+\end{tabular}
+\caption{Centroid pada 7 klaster}
+\label{tab:center7}
+\end{table}
+
+	\item Untuk pembagian 8 klaster terpilih titik-titik centroid pada Tabel \ref{tab:center8}.
+	
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{ccc}
+\rowcolor[HTML]{4472C4} 
+{\color[HTML]{FFFFFF} \textbf{Nama   Centroid}} & {\color[HTML]{FFFFFF} \textbf{Latitude (Sumbu X)}} & {\color[HTML]{FFFFFF} \textbf{Longitude (Sumbu Y)}} \\
+\rowcolor[HTML]{D9E1F2} 
+A & -7,79 & 113,38 \\
+B & -7,88 & 113,43 \\
+\rowcolor[HTML]{D9E1F2} 
+C & -7,78 & 113,51 \\
+D & -7,84 & 113,30 \\
+\rowcolor[HTML]{D9E1F2} 
+E & -7,75 & 113,43 \\
+F & -7,75 & 113,16 \\
+\rowcolor[HTML]{D9E1F2} 
+G & -7,86 & 113,18 \\
+H & -7,86 & 113,35
+\end{tabular}
+\caption{Centroid pada 8 klaster}
+\label{tab:center8}
+\end{table}
+
+	\item Untuk pembagian 9 klaster terpilih titik-titik centroid pada Tabel \ref{tab:center9}.
+	
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{ccc}
+\rowcolor[HTML]{4472C4} 
+{\color[HTML]{FFFFFF} \textbf{Nama   Centroid}} & {\color[HTML]{FFFFFF} \textbf{Latitude (Sumbu X)}} & {\color[HTML]{FFFFFF} \textbf{Longitude (Sumbu Y)}} \\
+\rowcolor[HTML]{D9E1F2} 
+A & -7,83 & 113,30 \\
+B & -7,74 & 113,48 \\
+\rowcolor[HTML]{D9E1F2} 
+C & -7,84 & 113,22 \\
+D & -7,93 & 113,31 \\
+\rowcolor[HTML]{D9E1F2} 
+E & -7,79 & 113,38 \\
+F & -7,88 & 113,43 \\
+\rowcolor[HTML]{D9E1F2} 
+G & -7,78 & 113,51 \\
+H & -7,84 & 113,30 \\
+\rowcolor[HTML]{D9E1F2} 
+I & -7,75 & 113,43 \\                        
+\end{tabular}
+\caption{Centroid pada 9 klaster}
+\label{tab:center9}
+\end{table}
+
+	\item Untuk pembagian 10 klaster terpilih titik-titik centroid pada Tabel \ref{tab:center10}.
+	
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{ccc}
+\rowcolor[HTML]{4472C4} 
+{\color[HTML]{FFFFFF} \textbf{Nama   Centroid}} & {\color[HTML]{FFFFFF} \textbf{Latitude (Sumbu X)}} & {\color[HTML]{FFFFFF} \textbf{Longitude (Sumbu Y)}} \\
+\rowcolor[HTML]{D9E1F2} 
+A & -7,77 & 113,41 \\
+B & -7,76 & 113,43 \\
+\rowcolor[HTML]{D9E1F2} 
+C & -7,84 & 113,18 \\
+D & -7,83 & 113,50 \\
+\rowcolor[HTML]{D9E1F2} 
+E & -7,87 & 113,25 \\
+F & -7,94 & 113,11 \\
+\rowcolor[HTML]{D9E1F2} 
+G & -7,85 & 113,42 \\
+H & -7,80 & 113,39 \\
+\rowcolor[HTML]{D9E1F2} 
+I & -7,94 & 113,53 \\
+J & -7,84 & 113,32
+\end{tabular}
+\caption{Centroid pada 10 klaster}
+\label{tab:center10}
+\end{table}
+
+		
+	\end{enumerate}
 
 	\item \label{ulang3} Hitung jarak tiap titik sekolah yang ada dengan masing-masing \textit{centroid}. Penghitungan jarak menggunakan \textit{Euclidean distance} pada persamaan (\ref{eq:euclidean3}).
 	
@@ -58,7 +279,7 @@ Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adal
 
 \section{Hasil akhir}
 
-Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui seperti pada Gambar \# \ref{fig:klasterbeda} yang merupakan rute yang didapatkan dari pembagian klaster berbeda. Pada Gambar \ref{fig:hasil_mtsp1} tidak menggunakan pembagian klaster, sehingga titik centroid pada klaster tersebut dijadikan titik kumpul.
+Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui yang merupakan rute yang didapatkan dari pembagian klaster berbeda. Salah satunya pada Gambar \ref{fig:hasil_mtsp1} tidak menggunakan pembagian klaster, sehingga titik centroid pada klaster tersebut dijadikan titik kumpul.
 
 Rute-rute yang dihasilkan sebelumnya diekspor ke bentuk spreadsheet dan telah diurutkan berdasarkan nomor urut yang terdapat pada Lampiran \ref{lampiran1} sehingga mempermudah pengguna dalam membaca data.
 
@@ -162,7 +383,7 @@ $62\rightarrow24\rightarrow6\rightarrow65\rightarrow67\rightarrow20\rightarrow23
 
 \end{enumerate}
 
-Dapat dilihat pada Gambar \ref{fig:hasil_mtsp4} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 4 Klaster. Terlihat pada urutan tersebut menghasilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $5,45$ satuan
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp4} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 4 klaster. Terlihat pada urutan tersebut menghasilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $5,45$ satuan
 
 \begin{figure}[H]
 \centering
@@ -199,7 +420,7 @@ $41\rightarrow42\rightarrow50\rightarrow74\rightarrow44\rightarrow26\rightarrow3
 
 \end{enumerate}
 
-Dapat dilihat pada Gambar \ref{fig:hasil_mtsp5} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 5 Klaster. Terlihat pada urutan tersebut menghasilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $5,45$ satuan
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp5} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 5 klaster. Terlihat pada urutan tersebut menghasilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $5,45$ satuan
 
 \begin{figure}[H]
 \centering
@@ -240,7 +461,7 @@ $10\rightarrow21\rightarrow47\rightarrow17\rightarrow60\rightarrow59\rightarrow3
 
 \end{enumerate}
 
-Dapat dilihat pada Gambar \ref{fig:hasil_mtsp6} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 6 Klaster. Terlihat pada urutan tersebut menghasilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $4,89$ satuan
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp6} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 6 klaster. Terlihat pada urutan tersebut menghasilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $4,89$ satuan
 
 \begin{figure}[H]
 \centering
@@ -285,7 +506,7 @@ $4\rightarrow40\rightarrow45\rightarrow49\rightarrow75\rightarrow41\rightarrow54
 
 \end{enumerate}
 
-Dapat dilihat pada Gambar \ref{fig:hasil_mtsp7} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 7 Klaster. Terlihat pada urutan tersebut menghaslilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $4,85$ satuan.
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp7} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 7 klaster. Terlihat pada urutan tersebut menghaslilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $4,85$ satuan.
 
 \begin{figure}[H]
 \centering
@@ -294,5 +515,159 @@ Dapat dilihat pada Gambar \ref{fig:hasil_mtsp7} perjalanan menuju seluru SMA di 
 \label{fig:hasil_mtsp7}
 \end{figure}
 
+\subsection{Pembagian 8 klaster}
+
+Pada tahap ini urutan perjalanan dibagi menjadi 8 klaster yaitu klaster A, B, C, D, E, F, G, dan H, menghasilkan urutan perjalanan sebagai berikut.
+
+\begin{enumerate}
+\item Urutan perjalanan pada klaster A:
+
+$11\rightarrow21\rightarrow30\rightarrow29\rightarrow37\rightarrow56\rightarrow13\rightarrow55\rightarrow36\rightarrow32\rightarrow72\rightarrow47$
+
+\item Urutan perjalanan pada klaster B:
+
+$22\rightarrow7\rightarrow70\rightarrow28\rightarrow66\rightarrow34\rightarrow2\rightarrow8\rightarrow51$
+
+\item Urutan perjalanan pada klaster C:
+
+$43\rightarrow25\rightarrow46\rightarrow35\rightarrow19\rightarrow5\rightarrow69\rightarrow16\rightarrow68\rightarrow14\rightarrow1\rightarrow48$
+
+\item Urutan perjalanan pada klaster D:
+
+$23\rightarrow31\rightarrow20\rightarrow39\rightarrow64$
+
+\item Urutan perjalanan pada klaster E:
+
+$44\rightarrow42\rightarrow26\rightarrow50\rightarrow74$
+
+\item Urutan perjalanan pada klaster F:
+
+$59\rightarrow60\rightarrow27\rightarrow6\rightarrow38\rightarrow10\rightarrow33\rightarrow9\rightarrow17$
+
+\item Urutan perjalanan pada klaster G:
+
+$4\rightarrow3\rightarrow54\rightarrow65\rightarrow40\rightarrow41\rightarrow45\rightarrow18\rightarrow75\rightarrow61\rightarrow49$
+
+\item Urutan perjalanan pada klaster H:
+
+$52\rightarrow67\rightarrow58\rightarrow62\rightarrow15\rightarrow57\rightarrow53\rightarrow24\rightarrow63\rightarrow73\rightarrow71\rightarrow12$
+\end{enumerate}
+
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp8} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 8 klaster. Terlihat pada urutan tersebut menghaslilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $4,76$ satuan. Nilai jarak total pada pembagian klaster ini merupakan jarak total yang paling rendah diantara yang lain.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Gambar/hasil_mtsp/8}
+\caption{Perjalanan dibagi 8 klaster}
+\label{fig:hasil_mtsp8}
+\end{figure}
+
+\subsection{Pembagian 9 klaster}
+
+Pada tahap ini urutan perjalanan dibagi menjadi 9 klaster yaitu klaster A, B, C, D, E, F, G, H, dan I, menghasilkan urutan perjalanan sebagai berikut.
+
+\begin{enumerate}
+\item Urutan perjalanan pada klaster A:
+
+$17\rightarrow60\rightarrow21\rightarrow47\rightarrow59\rightarrow10$
+
+\item Urutan perjalanan pada klaster B:
+
+$2\rightarrow22\rightarrow7\rightarrow51\rightarrow8\rightarrow66\rightarrow28\rightarrow34\rightarrow70$
+
+\item Urutan perjalanan pada klaster C:
+
+$69\rightarrow1\rightarrow68\rightarrow19\rightarrow35\rightarrow14\rightarrow5\rightarrow46\rightarrow25\rightarrow43\rightarrow16$
+
+\item Urutan perjalanan pada klaster D:
+
+$67\rightarrow23\rightarrow58\rightarrow31\rightarrow39\rightarrow20\rightarrow64$
+
+\item Urutan perjalanan pada klaster E:
+
+$74\rightarrow42\rightarrow50\rightarrow26\rightarrow44$
+
+\item Urutan perjalanan pada klaster F:
+
+$52\rightarrow6\rightarrow27\rightarrow38\rightarrow33\rightarrow9$
+
+\item Urutan perjalanan pada klaster G:
+
+$3\rightarrow45\rightarrow65\rightarrow54\rightarrow41\rightarrow40\rightarrow61\rightarrow49\rightarrow75\rightarrow4\rightarrow18$
+
+\item Urutan perjalanan pada klaster H:
+
+$62\rightarrow12\rightarrow63\rightarrow57\rightarrow53\rightarrow24\rightarrow48\rightarrow73\rightarrow71\rightarrow15$
+
+\item Urutan perjalanan pada klaster I:
+
+$13\rightarrow32\rightarrow37\rightarrow30\rightarrow29\rightarrow56\rightarrow11\rightarrow72\rightarrow55\rightarrow36$
+
+\end{enumerate}
+
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp9} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 9 klaster. Terlihat pada urutan tersebut menghaslilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $5,08$ satuan.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Gambar/hasil_mtsp/9}
+\caption{Perjalanan dibagi 9 klaster}
+\label{fig:hasil_mtsp9}
+\end{figure}
+
+\subsection{Pembagian 10 klaster}
+
+Pada tahap ini urutan perjalanan dibagi menjadi 10 klaster yaitu klaster A, B, C, D, E, F, G, H, I, dan J, menghasilkan urutan perjalanan sebagai berikut.
+
+\begin{enumerate}
+\item Urutan perjalanan pada klaster A:
+
+$59\rightarrow21\rightarrow17\rightarrow60\rightarrow47\rightarrow10$
+
+\item Urutan perjalanan pada klaster B:
+
+$2\rightarrow22\rightarrow7\rightarrow51\rightarrow8\rightarrow66\rightarrow28\rightarrow34\rightarrow70$
+
+\item Urutan perjalanan pada klaster C:
+
+$69\rightarrow1\rightarrow68\rightarrow19\rightarrow35\rightarrow14\rightarrow5\rightarrow46\rightarrow25\rightarrow43\rightarrow16$
+
+\item Urutan perjalanan pada klaster D:
+
+$23\rightarrow52\rightarrow39\rightarrow64\rightarrow58\rightarrow20\rightarrow67\rightarrow12$
+
+\item Urutan perjalanan pada klaster E:
+
+$26\rightarrow74\rightarrow31$
+
+\item Urutan perjalanan pada klaster F:
+
+$6\rightarrow27\rightarrow38\rightarrow33\rightarrow9$
+
+\item Urutan perjalanan pada klaster G:
+
+$65\rightarrow45\rightarrow41\rightarrow4\rightarrow3\rightarrow54\rightarrow40\rightarrow49\rightarrow75\rightarrow18\rightarrow61$
+
+\item Urutan perjalanan pada klaster H:
+
+$62\rightarrow48\rightarrow53\rightarrow73\rightarrow71\rightarrow24\rightarrow57\rightarrow15\rightarrow63$
+
+\item Urutan perjalanan pada klaster I:
+
+$11\rightarrow30\rightarrow29\rightarrow13\rightarrow36\rightarrow55\rightarrow32\rightarrow56\rightarrow37\rightarrow72$
+
+\item Urutan perjalanan pada klaster J:
+
+$44\rightarrow50\rightarrow42$
+
+\end{enumerate}
+
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp10} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 10 klaster. Terlihat pada urutan tersebut menghaslilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $5,02$ satuan.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Gambar/hasil_mtsp/10}
+\caption{Perjalanan dibagi 10 klaster}
+\label{fig:hasil_mtsp10}
+\end{figure}
 
 \input{Tabel/total jarak}
