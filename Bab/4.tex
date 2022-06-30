@@ -15,7 +15,7 @@ Setelah peneliti mendapatkan lokasi yang akan diproses, selanjutnya diuji menggu
 
 \section{Proses Pengklasteran Data}
 
-Pada tahap ini metode yang digunakan adalah metode $k-$means untuk mengklaster data. Langkah-langkah nya adalah sebagai berikut.
+Pada tahap ini metode yang digunakan adalah metode $k-$means untuk mengklaster data. Dengan tahapan sebagai berikut.
 
 \begin{enumerate}
 	\item Tentukan jumlah klaster, dalam hal ini yang digunakan adalah ujicoba dengan pembagian 1 sampai dengan 10 klaster.
@@ -244,12 +244,7 @@ J & -7,84 & 113,32
 		
 	\end{enumerate}
 
-	\item \label{ulang3} Hitung jarak tiap titik sekolah yang ada dengan masing-masing \textit{centroid}. Penghitungan jarak menggunakan \textit{Euclidean distance} pada persamaan (\ref{eq:euclidean3}).
-	
-	\begin{equation}
-	\left[ \left( x,y \right) ,\left( a,b \right)\right]=\sqrt{\left( x-a \right)^{2}+\left( y-b \right)^{2}}
-	\label{eq:euclidean3}
-	\end{equation}	
+	\item \label{ulang3} Hitung jarak tiap titik sekolah yang ada dengan masing-masing titik \textit{centroid}. Penghitungan jarak menggunakan \textit{Euclidean distance} pada persamaan (\ref{eq:euclidean}).
 	
 	\item Kelompokan data ke dalam klaster yang memiliki jarak paling minimum.
 	\item Setelah seluruh titik sekolah masuk ke dalam klaster-klaster, hitung \textit{centroid} yang baru dengan cara menghitung rata-rata titik sekolah yang ada di dalam klaster tersebut. Lakukan hal yang sama pada klaster yang lain.
@@ -661,7 +656,7 @@ $44\rightarrow50\rightarrow42$
 
 \end{enumerate}
 
-Dapat dilihat pada Gambar \ref{fig:hasil_mtsp10} perjalanan menuju seluru SMA di Kabupaten Probolinggo dibagi menjadi 10 klaster. Terlihat pada urutan tersebut menghaslilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $5,02$ satuan.
+Dapat dilihat pada Gambar \ref{fig:hasil_mtsp10} perjalanan menuju seluruh SMA di Kabupaten Probolinggo dibagi menjadi 10 klaster. Terlihat pada urutan tersebut menghaslilkan jarak total pada Tabel \ref{tab:totaljarak} yaitu $5,02$ satuan.
 
 \begin{figure}[H]
 \centering

@@ -28,7 +28,6 @@
 % Mengkompres cite
 \usepackage[numbers]{natbib}
 
-
 % Mengatur page number
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -39,7 +38,6 @@
 
 
 % change name Daftar Isi, Daftar Pustaka jadi section
-
 \renewcommand{\contentsname}{DAFTAR ISI}
 \renewcommand{\chaptername}{BAB}
 \renewcommand{\bibname}{DAFTAR PUSTAKA}
@@ -53,10 +51,13 @@
 %\usepackage[indonesian]{babel}
 \sloppy %agar teks tidak lebih saat rata kanan kiri
 
-% numbering on section
+% numbering
 \renewcommand{\thechapter}{\Roman{chapter}} %Peringkat 1
 \renewcommand{\thesection}{\Alph{section}.} %Peringkat 2
 \renewcommand{\thesubsection}{\arabic{subsection}.} %Peringkat 3
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}%gambar
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}%tabel
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}%equestion
 
 \setcounter{secnumdepth}{3}
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}}
@@ -79,17 +80,10 @@
 % untuk modif numbering
 \usepackage{enumitem}
 
-% link
+% membuat link
 \usepackage{hyperref}
 
 %\usepackage{soul} %digunakan sementara untuk meng-highlight teks yang belum diubah
-
-% agar paragraf setelah section menjorok ke kiri
-%\usepackage{changepage}% http://ctan.org/pkg/changepage
-%\usepackage{lipsum}% http://ctan.org/pkg/lipsum
-%\begin{adjustwidth}{2.5em}{0pt}
-%	kata-kata
-%\end{adjustwidth}\
 
 \usepackage[none]{hyphenat} %untuk menghilangkanpemenggalan kata
 
@@ -99,10 +93,14 @@
 \usepackage{longtable} %Untuk membuat table lebih panjang
 %\usepackage{booktabs}
 
-\usepackage{caption}
-\usepackage{subcaption}
+% Untuk membuat subfigure, dan subtable
+%\usepackage{caption}
+%\usepackage{subcaption}
 
 
-\usepackage{float} %digunakan agar gambar tidak pindah dengan menambah [H]
+\usepackage{float} %digunakan agar gambar dan tabel tidak pindah, cara menggunakan dengan menambah [H]
 
-\usepackage[title]{appendix}
+%\usepackage[title]{appendix} %ini kalau tidak digunakan dihapus saja
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}

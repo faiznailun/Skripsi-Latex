@@ -1,0 +1,35 @@
+\begin{figure}[H]
+\centering
+%Definisi
+\tikzstyle{bulat} = \tikzstyle{bulat} = [draw, ellipse, node distance=1cm, minimum width=3.5cm, minimum height=1cm, fill=red!30]
+\tikzstyle{jajargenjang} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{kotak} = [rectangle, minimum height=1cm, text width=3cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{kotak2} = [rectangle, minimum height=1cm, text width=5cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{belahketupat} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{garis} = [thick,->,>=stealth]
+%Gambar
+\begin{tikzpicture}
+\node (S) [bulat] {Start};
+\node (in) [jajargenjang, below of=S, yshift=-1cm]{Dataset};
+\node (pop) [kotak2, below of=in, yshift=-1cm] {Bangkitkan Populasi Awal};
+\node (fit) [kotak, below of=pop, yshift=-1cm] {Hitung \textit{Fitness}};
+\node (sel) [kotak, right of=fit, xshift=+3.5cm] {Seleksi};
+\node (cross) [kotak, below of=sel, yshift=-1cm] {Crossover};
+\node (mut) [kotak, below of=cross, yshift=-1cm] {Mutasi};
+\node (opt) [belahketupat, left of=mut, xshift=-3.5cm] {Optimal};
+\node (out) [jajargenjang, below of=opt, yshift=-1.5cm]{Kromosom Optimal};
+\node (E) [bulat, below of=out, yshift=-1cm] {End};
+\draw [garis] (S) -- (in);
+\draw [garis] (in) -- (pop);
+\draw [garis] (pop) -- (fit);
+\draw [garis] (fit) -- (sel);
+\draw [garis] (sel) -- (cross);
+\draw [garis] (cross) -- (mut);
+\draw [garis] (mut) -- (opt);
+\draw [garis] (opt) -- node[near start, color=black, xshift=+0.5cm]{Ya}(out);
+\draw [garis] (opt) -- node[near start, color=black, xshift=+0.5cm]{Tidak}(fit);
+\draw [garis] (out) -- (E);
+\end{tikzpicture}
+\caption{Diagram alir tahapan algoritma genetika}
+\label{fig:flowag}
+\end{figure}

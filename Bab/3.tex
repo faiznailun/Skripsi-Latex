@@ -1,24 +1,22 @@
 \chapter{METODE PENELITIAN}
 
-\section{Model Penelitian dan Pengembangan}
+\section{Tahapan Penelitian}
 
-\textit{Research and Development (R\&D)} atau penelitian dan pengembangan adalah suatu metode penelitian yang digunakan untuk menghasilkan produk tertentu, dan menguji keefektifan produk \cite{sugiyono2013metode}. 
-Berdasarkan pendapat tersebut, metode \textit{Research and Development (R\&D)} atau penelitian dan pengembangan dalam bidang pendidikan merupakan penelitian yang bertujuan untuk menghasilkan atau mengembangkan dan menvalidasi suatu produk pendidikan secara efektif.
-Model penelitian dan pengembangan dalam skripsi ini melalui tahapan sebagai berikut.
+Tahapan penelitian dalam skripsi ini melalui tahapan sebagai berikut.
 
 \begin{enumerate}
-	\item Tahap pengumpulan data, kegiatan yang dilakukan pada tahap pertama adalah peneliti mengumpulkan data. Pada tahap ini peneliti juga mencari informasi data, yaitu membaca artikel penelitian sebelumnya yang berkaitan dan juga menyiapkan alat bantu atau aplikasi yang akan digunakan untuk membantu pengolahan data. Dari tahap ini data akan dikumpulkan untuk kemudian melanjutkan ke tahapan selanjutnya.
-	\item Tahap pengolahan data, pada tahap ini penulis mulai mengolah data yang telah dikumpulkan sebelumnya untuk di olah dan dari tahap ini akan dilakukan ujicoba untuk mengetahui keefektifan suatu produk.
+	\item Tahap pengumpulan data, kegiatan yang dilakukan pada tahap pertama adalah peneliti mengumpulkan data. Pada tahap ini peneliti juga mencari informasi data, yaitu membaca artikel penelitian sebelumnya yang berkaitan dengan MTSP dan juga menyiapkan alat bantu atau aplikasi yang akan digunakan untuk membantu pengolahan data. Dari tahap ini data akan dikumpulkan kemudian dilanjutkan ke tahapan selanjutnya.
+	\item Tahap pengolahan data, pada tahap ini penulis mulai mengolah data yang telah dikumpulkan sebelumnya untuk di olah dan dari tahap ini akan dilakukan ujicoba untuk mengetahui keefektifan metode yang digunakan.
 	\item Tahap analisis, setelah mendapatkan hasil uji coba peneliti mulai menganalisis hasil, menjabarkan, serta mengevaluasinya.
 	\item Tahap implementasi, pada tahap terakhir ini penelitian yang telah dievaluasi dapat digunakan dan diterapkan pada tempat penelitian.
 \end{enumerate}
 
-\section{Prosedur Penelitian dan Pengembangan}
+\section{Prosedur Penelitian}
 
 
 \subsection{Data Penelitian}
     
-Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam penelitian ini adalah data koordinat dari seluruh SMA di Kabupaten Probolinggo. Data nama-nama sekolah dikumpulkan dari \url{https://referensi.data.kemdikbud.go.id/} \cite{kemendikbud}, dan data koordinat dikumpulkan melalui aplikasi Google Earth yang dapat diunduh langsug ke dalam bentuk spreadsheet, dapat dilihat pada Lampiran \ref{lampiran1}. Waktu yang diperlukan peneliti untuk mengumpulkan data dari web tersebut kurang lebih sekitar satu bulan.
+Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam penelitian ini adalah data koordinat dari seluruh SMA di Kabupaten Probolinggo. Data nama-nama sekolah dikumpulkan dari \url{https://referensi.data.kemdikbud.go.id/} \cite{kemendikbud}, dan data koordinat dikumpulkan melalui aplikasi Google Earth yang dapat diunduh langsug ke dalam bentuk \textit{spreadsheet}, dapat dilihat pada Lampiran \ref{lampiran1}. Waktu yang diperlukan peneliti untuk mengumpulkan data dari web tersebut kurang lebih sekitar satu bulan.
 
 \subsection{Instrumen Pendukung}
 \begin{enumerate}
@@ -64,12 +62,9 @@ Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam peneli
     \item Langkah-langkah yang digunakan dalam metode \textit{k}-means adalah sebagai berikut
     \begin{enumerate}
         \item Tentukan jumlah klaster
-        \item Pilih titik-titik centroid sesuai banyak klaster
+        \item Pilih titik-titik \textit{centroid} sesuai banyak klaster
         \item \label{ulang1} Hitung jarak tiap titik tujuan dengan masing-masing \textit{centroid} dengan rumus \textit{Euclidean distance} seperti pada Persamaan (\ref{eq:euclidean}).
-        \begin{equation}
-        d_{xy}=\sqrt{\sum_{i=1}^{n}(x_i-y_i)^{2}}
-        \label{eq:euclidean}
-        \end{equation}
+	
         \item Setelah seluruh titik masuk ke dalam klaster, hitung \textit{centroid} baru dengan cara menghitung rata-rata titik pada klaster tersebut. Lakukan hal yang sama pada klaster yang lain.
         \item Ulangi langkah \ref{ulang1} sampai tidak ada perubahan pada anggota klaster.
     \end{enumerate}
