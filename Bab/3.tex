@@ -57,19 +57,16 @@ Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam peneli
 
 \subsection{Langkah-langkah Dalam Tahap Pengolahan Data}
 \begin{enumerate}
-    \item Menyiapkan data yang telah dikumpulkan sebelumnya.
-    \item Selanjutnya menentukan jumlah klaster yaitu sebanyak $n$ klaster. Data yang telah dikumupulkan pada tahap ini akan dibagi menjadi beberapa klaster, metode yang digunakan algoritma \textit{k}-means.
-    \item Langkah-langkah yang digunakan dalam metode \textit{k}-means adalah sebagai berikut
+    \item Peneliti menyiapkan data yang telah dikumpulkan sebelumnya.
+    \item Selanjutnya peneliti melakukan pengelompokkan data sebanyak 1 sampai dengan 10 klaster, untuk menemukan pembagian klaster sekaligus rute yang paling optimal. Metode yang digunakan adalah algoritma \textit{k}-means, dengan langkah-langkah sebagai berikut.
     \begin{enumerate}
-        \item Tentukan jumlah klaster
         \item Pilih titik-titik \textit{centroid} sesuai banyak klaster
         \item \label{ulang1} Hitung jarak tiap titik tujuan dengan masing-masing \textit{centroid} dengan rumus \textit{Euclidean distance} seperti pada Persamaan (\ref{eq:euclidean}).
-	
-        \item Setelah seluruh titik masuk ke dalam klaster, hitung \textit{centroid} baru dengan cara menghitung rata-rata titik pada klaster tersebut. Lakukan hal yang sama pada klaster yang lain.
+        \item Setelah seluruh titik dimasukan ke dalam klaster, hitung \textit{centroid} baru dengan cara menghitung rata-rata titik pada klaster tersebut. Lakukan hal yang sama pada klaster yang lain.
         \item Ulangi langkah \ref{ulang1} sampai tidak ada perubahan pada anggota klaster.
     \end{enumerate}
 	
-	\item Selanjutnya melakukan proses TSP pada setiap klaster yang telah dibagi, langkah-langkahnya adalah sebagai berikut.
+	\item Selanjutnya melakukan proses pencarian rute terpendeknya atau TSP pada setiap klaster yang telah dibagi, langkah-langkahnya adalah sebagai berikut.
 	\begin{enumerate}
 		\item Bangkitkan populasi awal yang berisi sejumlah kromosom
 	    \item \label{ulang2} Hitung nilai \textit{fitness} (jarak) tiap kromosom
