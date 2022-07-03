@@ -6,7 +6,7 @@ Tahapan penelitian dalam skripsi ini melalui tahapan sebagai berikut.
 
 \begin{enumerate}
 	\item Tahap pengumpulan data, kegiatan yang dilakukan pada tahap pertama adalah peneliti mengumpulkan data. Pada tahap ini peneliti juga mencari informasi data, yaitu membaca artikel penelitian sebelumnya yang berkaitan dengan MTSP dan juga menyiapkan alat bantu atau aplikasi yang akan digunakan untuk membantu pengolahan data. Dari tahap ini data akan dikumpulkan kemudian dilanjutkan ke tahapan selanjutnya.
-	\item Tahap pengolahan data, pada tahap ini penulis mulai mengolah data yang telah dikumpulkan sebelumnya untuk di olah dan dari tahap ini akan dilakukan ujicoba untuk mengetahui keefektifan metode yang digunakan.
+	\item Tahap pengolahan data, pada tahap ini penulis mulai mengolah data yang telah dikumpulkan sebelumnya untuk di olah dan dari tahap ini akan dilakukan uji coba untuk mengetahui keefektifan metode yang digunakan.
 	\item Tahap analisis, setelah mendapatkan hasil uji coba peneliti mulai menganalisis hasil, menjabarkan, serta mengevaluasinya.
 	\item Tahap implementasi, pada tahap terakhir ini penelitian yang telah dievaluasi dapat digunakan dan diterapkan pada tempat penelitian.
 \end{enumerate}
@@ -16,13 +16,13 @@ Tahapan penelitian dalam skripsi ini melalui tahapan sebagai berikut.
 
 \subsection{Data Penelitian}
     
-Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam penelitian ini adalah data koordinat dari seluruh SMA di Kabupaten Probolinggo. Data nama-nama sekolah dikumpulkan dari \url{https://referensi.data.kemdikbud.go.id/} \cite{kemendikbud}, dan data koordinat dikumpulkan melalui aplikasi Google Earth yang dapat diunduh langsug ke dalam bentuk \textit{spreadsheet}, dapat dilihat pada Lampiran \ref{lampiran1}. Waktu yang diperlukan peneliti untuk mengumpulkan data dari web tersebut kurang lebih sekitar satu bulan.
+Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam penelitian ini adalah data koordinat dari seluruh SMA di Kabupaten Probolinggo. Data nama-nama sekolah dikumpulkan dari \url{https://referensi.data.kemdikbud.go.id/} \cite{kemendikbud}, dan data koordinat dikumpulkan melalui aplikasi Google Earth \cite{googleearth} yang dapat diunduh langsung ke dalam bentuk \textit{spreadsheet}, dapat dilihat pada Lampiran \ref{lampiran1}. Waktu yang diperlukan peneliti untuk mengumpulkan data dari web tersebut kurang lebih sekitar satu bulan.
 
 \subsection{Instrumen Pendukung}
 \begin{enumerate}
     \item Python
     
-    Dalam penelitian ini akan digunakan bahasa pemrograman python untuk mempermudah pengerjaan. Bahasa python adalah bahasa pemrograman baru di masa sekarang, karena dalam bahasa ini lebih simple dan singkat dalam membuat program \cite{syahrudin2018input}. Bahasa pemrograman ini merupakan bahasa pemrograman yang paling mudah dipelajari dari pada bahasa pemrograman yang lain. Serta dalam bahasa pemrograman ini dapat menjalankan beberapa rumus matematika di dalamnya. Selain itu bahasa Python telah digunakan secara luas, dan masuk dalam 3 besar bahasa pemrograman yang digunakan dalam beberapa tahun belakangan.
+    Dalam penelitian ini akan digunakan bahasa pemrograman python untuk mempermudah pengerjaan. Bahasa python adalah bahasa pemrograman baru di masa sekarang, karena dalam bahasa ini lebih simpel dan singkat dalam membuat program \cite{syahrudin2018input}. Bahasa pemrograman ini merupakan bahasa pemrograman yang paling mudah dipelajari dari pada bahasa pemrograman yang lain. Serta dalam bahasa pemrograman ini dapat menjalankan beberapa rumus matematika di dalamnya. Selain itu bahasa Python telah digunakan secara luas, dan masuk dalam 3 besar bahasa pemrograman yang digunakan dalam beberapa tahun belakangan.
     
     \item Jupyter Notebook
     
@@ -37,7 +37,7 @@ Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam peneli
 
 	\item Google Earth
 	
-	Google Earth digunakan dalam penelitian ini untuk mengumpulkan koordinat lokasi seluruh SMA di Kabupaten Probolinggo. Aplikasi ini dapat menandai beberapa lokasi secara langsung seperti pada Gambar \ref{fig:markloc} dan mengekspor kedalam bentuk spreadsheet seperti pada Gambar \ref{fig:eksspread}. Data-data lokasi yang telah didownload ke dalam bentuk spreadsheet akan diproses menggunakan jupyter notebook.
+	Google Earth digunakan dalam penelitian ini untuk mengumpulkan koordinat lokasi seluruh SMA di Kabupaten Probolinggo. Aplikasi ini dapat menandai beberapa lokasi secara langsung seperti pada Gambar \ref{fig:markloc} dan mengekspor ke dalam bentuk spreadsheet seperti pada Gambar \ref{fig:eksspread}. Data-data lokasi yang telah diunduh ke dalam bentuk spreadsheet akan diproses menggunakan jupyter notebook.
 
 \begin{figure}[H]
   \centering
@@ -74,6 +74,6 @@ Berdasarkan studi kasus dalam skripsi ini, data yang akan digunakan dalam peneli
 	    \item Tetapkan probabilitas mutasi ($p_m$) dan bangkitkan bilangan acak (0,0000 sampai 1,0000) pada setiap kromosom. Jika bilangan acak kurang dari $p_m$ maka akan dilakukan mutasi. Kromosom awal digantikan dengan kromosom hasil mutasi jika kromosom hasil mutasi memiliki fitness yang lebih baik dari kromosom awal.
 	    \item Jika hasil kurang optimal, iterasi dilakukan dengan cara kembali ke tahapan \ref{ulang2} untuk generasi berikutnya sampai hasil yang dilakukan optimal atau mendekati optimal.
     \end{enumerate}
-	\item Ketika proses diatas selesai dilakukan maka dihasilkanlah pembagian klaster dan rute terdekat tiap klaster menuju seluruh SMA di Kabupaten Probolinggo
+	\item Ketika proses diatas selesai dilakukan maka dihasilkan pembagian klaster dan rute terdekat tiap klaster menuju seluruh SMA di Kabupaten Probolinggo
 	\item Mengevaluasi data yang dihasilkan
 \end{enumerate}
