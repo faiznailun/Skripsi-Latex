@@ -74,7 +74,7 @@ Pada tahap ini metode yang digunakan adalah metode $k-$means untuk mengklaster d
 	\item Setelah semua data terklaster, selanjutnya adalah menentukan titik kumpul dengan cara menghitung rata-rata dari seluruh titik-titik \textit{centroid} tersebut.
 \end{enumerate}
 
-Dari serangkaian proses $k$-means menghasilkan klaster-klaster pada Lampiran \ref{lampiran2}. Data-data tersebut telah berhasil dikelompokkan, selanjutnya data tersebut akan diproses untuk ke tahapan selanjutnya.
+Dari serangkaian proses $k$-means menghasilkan klaster-klaster berbeda. Data-data tersebut telah berhasil dikelompokkan, selanjutnya data tersebut akan diproses untuk ke tahapan selanjutnya.
 
 \section{Proses TSP menggunakan Algoritma Genetika}
 
@@ -90,14 +90,14 @@ Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adal
 \begin{enumerate}
 	\item Pada tahap awal, populasi yang berisi sejumlah kromosom yang di dalamnya dibangkitkan.
 	\item \label{ulang4} Selanjutnya adalah menghitung nilai \textit{fitness} dari populasi yang dihasilkan, yaitu menghitung nilai total jarak dari masing-masing kromosom.
-	\item Setelah nilai fitness ditemukan, selanjutnya menetapkan probabilitas \textit{crossover} ($p_c$), dalam hal ini yang digunakan adalah $p_c=0,95$. Bangkitkan bilangan acak (0,0000 sampai 1,0000) pada setiap kromosom, kromosom dengan bilangan acak kurang dari $p_c$ maka akan dilakukan \textit{crossover}. Jika kromosom hasil \textit{crossover} memiliki \textit{fitness} yang lebih baik  dari kromosom awal, maka kromosom awal digantikan oleh kromosom hasil \textit{crossover}.
+	\item Setelah nilai \textit{fitness} ditemukan, selanjutnya menetapkan probabilitas \textit{crossover} ($p_c$), dalam hal ini yang digunakan adalah $p_c=0,95$. Bangkitkan bilangan acak (0,0000 sampai 1,0000) pada setiap kromosom, kromosom dengan bilangan acak kurang dari $p_c$ maka akan dilakukan \textit{crossover}. Jika kromosom hasil \textit{crossover} memiliki \textit{fitness} yang lebih baik  dari kromosom awal, maka kromosom awal digantikan oleh kromosom hasil \textit{crossover}.
 	\item Langkah selanjutnya adalah menentukan probabilitas mutasi ($p_m$), dalam menentukan probabilitah mutasi yang digunakan adalah $p_m=0,1$. Bangkitkan bilangan acak (0,0000 sampai 1,0000) pada setiap kromosom, kromosom yang memiliki bilangan acak kurang dari $p_m$ maka akan dilakukan mutasi. Jika kromosom hasil mutasi memiliki \textit{fitness} yang lebih baik dari kromosom awal, maka kromosom awal digantikan oleh kromosom hasil mutasi.
 	\item Iterasi dilakukan dengan cara kembali ke tahapan \ref{ulang4} untuk generasi berikutnya sampai hasil yang dilakukan optimal atau mendekati optimal.
 \end{enumerate}
 
 \section{Hasil dari proses MTSP}
 
-Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui yang merupakan rute yang didapatkan dari pembagian klaster berbeda. Salah satunya pada Gambar \ref{fig:hasil_mtsp1} tidak menggunakan pembagian klaster, sehingga titik centroid pada klaster tersebut dijadikan titik kumpul.
+Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui yang merupakan rute yang didapatkan dari pembagian klaster berbeda. Salah satunya pada Gambar \ref{fig:hasil_mtsp1} tidak menggunakan pembagian klaster, sehingga titik \textit{centroid} pada klaster tersebut dijadikan titik kumpul.
 
 Rute-rute yang dihasilkan sebelumnya diekspor ke bentuk spreadsheet dan telah diurutkan berdasarkan nomor urut yang terdapat pada Lampiran \ref{lampiran1} sehingga mempermudah pengguna dalam membaca data.
 
@@ -107,7 +107,7 @@ Urutan perjalanan perjalanan dengan tanpa pembagian klaster menghasilkan urutan 
 
 $67\rightarrow65\rightarrow53\rightarrow27\rightarrow4\rightarrow42\rightarrow66\rightarrow34\rightarrow70\rightarrow8\rightarrow19\rightarrow28\rightarrow37\rightarrow11\rightarrow25\rightarrow72\rightarrow55\rightarrow31\rightarrow3\rightarrow74\rightarrow15\rightarrow68\rightarrow20\rightarrow44\rightarrow40\rightarrow16\rightarrow30\rightarrow23\rightarrow24\rightarrow63\rightarrow13\rightarrow29\rightarrow50\rightarrow7\rightarrow54\rightarrow2\rightarrow10\rightarrow52\rightarrow64\rightarrow21\rightarrow62\rightarrow58\rightarrow26\rightarrow1\rightarrow69\rightarrow14\rightarrow45\rightarrow61\rightarrow38\rightarrow59\rightarrow17\rightarrow71\rightarrow18\rightarrow32\rightarrow57\rightarrow73\rightarrow75\rightarrow41\rightarrow39\rightarrow49\rightarrow51\rightarrow6\rightarrow60\rightarrow22\rightarrow33\rightarrow48\rightarrow5\rightarrow35\rightarrow46\rightarrow56\rightarrow36\rightarrow47\rightarrow9\rightarrow12\rightarrow43$
 
-Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo tanpa pembagian klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp1}. Urutan tersebut tampaknya masih belum sepenuhnya optimal, karena menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $10,05030304$ satuan dengan koordinat titik kumpul yaitu $[7.82, 113,35]$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
+Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo tanpa pembagian klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp1}. Urutan tersebut tampaknya masih belum sepenuhnya optimal, karena menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $10,05030304$ satuan dengan koordinat titik kumpul yaitu $(7.82, 113.35)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
 \begin{figure}[H]
 \centering
@@ -131,7 +131,7 @@ $57\rightarrow58\rightarrow71\rightarrow53\rightarrow49\rightarrow25\rightarrow1
 
 \end{enumerate}
 
-Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 2 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp2}. Urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $6,858777424$ satuan dengan koordinat titik kumpul yaitu $[7.82, 113,32]$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
+Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 2 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp2}. Urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $6,858777424$ satuan dengan koordinat titik kumpul yaitu $(7.82, 113.32)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
 
 \begin{figure}[H]
@@ -160,7 +160,7 @@ $65\rightarrow48\rightarrow35\rightarrow1\rightarrow46\rightarrow40\rightarrow4\
 
 \end{enumerate}
 
-Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 3 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp3}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $5,599877636$ satuan dengan koordinat titik kumpul yaitu $[7.82, 113,35]$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
+Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 3 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp3}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $5,599877636$ satuan dengan koordinat titik kumpul yaitu $(7.82, 113.35)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
 \begin{figure}[H]
 \centering
@@ -193,7 +193,7 @@ $23\rightarrow62\rightarrow58\rightarrow31\rightarrow63\rightarrow9\rightarrow6\
 
 \end{enumerate}
 
-Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 4 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp4}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $5,010993898$ satuan dengan koordinat titik kumpul yaitu $[7.82, 113,36]$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
+Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 4 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp4}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $5,010993898$ satuan dengan koordinat titik kumpul yaitu $(7.82, 113.36)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
 
 \begin{figure}[H]
@@ -231,7 +231,7 @@ $74\rightarrow26\rightarrow50\rightarrow42\rightarrow54\rightarrow44\rightarrow3
 
 \end{enumerate}
 
-Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 5 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp5}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,805014746$ satuan dengan koordinat titik kumpul yaitu $[7.82, 113,37]$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
+Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 5 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp5}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,805014746$ satuan dengan koordinat titik kumpul yaitu $(7.82, 113.37)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
 \begin{figure}[H]
 \centering
@@ -272,7 +272,7 @@ $17\rightarrow60\rightarrow59\rightarrow38\rightarrow27\rightarrow47\rightarrow2
 
 \end{enumerate}
 
-Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 6 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp6}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,431319949$ satuan dengan koordinat titik kumpul yaitu $[7.82, 113,34]$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
+Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 6 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp6}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,431319949$ satuan dengan koordinat titik kumpul yaitu $(7.82, 113.34)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
 \begin{figure}[H]
 \centering
@@ -317,7 +317,7 @@ $40\rightarrow49\rightarrow54\rightarrow4\rightarrow41\rightarrow3\rightarrow45\
 
 \end{enumerate}
 
-Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 7 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp7}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,353294633$ satuan dengan koordinat titik kumpul yaitu $[7.82, 113,37]$ dapat dilihat pada Tabel \ref{tab:totaljarak}. Nilai jarak total pada pembagian klaster ini merupakan jarak total yang paling rendah diantara yang lain.
+Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 7 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp7}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,353294633$ satuan dengan koordinat titik kumpul yaitu $(7.82, 113.37)$ dapat dilihat pada Tabel \ref{tab:totaljarak}. Nilai jarak total pada pembagian klaster ini merupakan jarak total yang paling rendah diantara yang lain.
 
 \begin{figure}[H]
 \centering
@@ -364,7 +364,7 @@ $61\rightarrow18\rightarrow75\rightarrow49\rightarrow65\rightarrow3\rightarrow54
 $53\rightarrow67\rightarrow52\rightarrow12\rightarrow24\rightarrow57\rightarrow58\rightarrow63\rightarrow15\rightarrow73\rightarrow71\rightarrow62$
 \end{enumerate}
 
-Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 8 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp8}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,4,398984127$ satuan dengan koordinat titik kumpul yaitu $[7.83, 113,35]$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
+Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 8 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp8}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,4,398984127$ satuan dengan koordinat titik kumpul yaitu $(7.83, 113.35)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
 \begin{figure}[H]
 \centering
@@ -416,7 +416,7 @@ $37\rightarrow56\rightarrow32\rightarrow13\rightarrow11\rightarrow30\rightarrow2
 
 \end{enumerate}
 
-Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 9 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp9}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,482429562$ satuan dengan koordinat titik kumpul yaitu $[7.83, 113,35]$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
+Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 9 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp9}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,482429562$ satuan dengan koordinat titik kumpul yaitu $(7.83, 113.35)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
 \begin{figure}[H]
 \centering
@@ -472,7 +472,7 @@ $44\rightarrow42\rightarrow50$
 
 \end{enumerate}
 
-Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 10 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp10}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,780413176$ satuan dengan koordinat titik kumpul yaitu $[7.84, 113,36]$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
+Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 10 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp10}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,780413176$ satuan dengan koordinat titik kumpul yaitu $(7.84, 113.36)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
 \begin{figure}[H]
 \centering

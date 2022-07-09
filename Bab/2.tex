@@ -2,7 +2,7 @@
 
 \section{Penelitian Relevan}
 
-Ada beberapa hasil penelitian sebelumnya yang memiliki keterkaitan dengan penelitian ini. Penelitian berjudul "\textit{Applying K-means and Genetic Algorithm for Solving MTSP}" \cite{inproceedings}. Penelitian tersebut membahas tentang persilangan jalur antar tiap \textit{salesman} yang dapat dihindari dengan menggunakan algoritma genetika dan \textit{k}-means. Dari penelitian tersebut dihasilkan bahwa dengan penggunaan algoritma genetika dan $k$-means untuk menyelesaikan MTSP dapat meminimalisir terjadinya tabrakan antar \textit{salesman}.
+Ada beberapa hasil penelitian sebelumnya yang memiliki keterkaitan dengan penelitian ini. Penelitian berjudul "\textit{Applying K-means and Genetic Algorithm for Solving MTSP}" \cite{inproceedings}. Penelitian tersebut membahas tentang persilangan jalur antara tiap \textit{salesman} yang dapat dihindari dengan menggunakan algoritma genetika dan \textit{k}-means. Dari penelitian tersebut dihasilkan bahwa dengan penggunaan algoritma genetika dan $k$-means untuk menyelesaikan MTSP dapat meminimalisir terjadinya tabrakan antara \textit{salesman}.
 
 Penelitian kedua berjudul "Optimasi \textit{Multiple Travelling Salesman Problem} (M-TSP) pada Penentuan Rute Optimal Penjemputan Penumpang \textit{Travel} Menggunakan Algoritme Genetika" \cite{raditya2017optimasi}. Penelitian tersebut membahas tentang permasalahan MTSP yaitu beberapa \textit{salesman} yang akan berangkat dari kantor \textit{travel} menuju ke alamat penjemputan masing-masing penumpang. Pada permasalahan tersebut menggunakan representasi permutasi, proses reproduksi \textit{crossover} dengan \textit{one cut point crossover}, proses mutasi dengan \textit{exchange mutation}, dan proses seleksi dengan \textit{elitism selection}.
 
@@ -34,22 +34,22 @@ Maulana menyebutkan dalam artikelnya algoritma adalah kumpulan perintah untuk me
 
 \subsection{Algoritma $k$-means}
 
-$K$-Means adalah jenis metode klasifikasi tanpa pengawasan yang mempartisi item data menjadi satu atau lebih klaster \cite{agusta2007k}. $K$-Means mencoba untuk memodelkan suatu dataset ke dalam beberapa klaster sehingga item-item data dalam suatu klaster memiliki karakteristik yang sama dan memiliki karakteristik yang berbeda dengan klaster lainnya.
+$K$-means adalah jenis metode klasifikasi tanpa pengawasan yang mempartisi item data menjadi satu atau lebih klaster \cite{agusta2007k}. $K$-means mencoba untuk memodelkan suatu dataset ke dalam beberapa klaster sehingga item-item data dalam suatu klaster memiliki karakteristik yang sama dan memiliki karakteristik yang berbeda dengan klaster lainnya.
 
 Menurut S Monalisa \cite{monalisa2018klasterisasi} tahapan mengklaster menggunakan algoritma \textit{k}-means adalah sebagai berikut.
 
 \begin{enumerate}
 	\item Menentukan banyak klaster
 	\item Memilih beberapa \textit{centroid} secara acak sesuai banyak klaster
-	\item Menghitung jarak titik ke centroid dengan rumus \textit{Euclidean distance} seperti Persamaan (\ref{eq:euclidean}).
+	\item Menghitung jarak titik ke \textit{centroid} dengan rumus \textit{Euclidean distance} seperti Persamaan (\ref{eq:euclidean}).
 	\item Mengelompokkan titik-titik yang tersebar ke dalam klaster yang sama dengan titik \textit{centroid} paling dekat
 	\item Memperbarui \textit{centroid} dengan menghitung nilai rata-rata nilai pada masing-masing klaster
 	\item Melakukan iterasi sebanyak mungkin dengan kembali ke tahapan 3 sampai tidak ada perubahan klaster atau perubahan nilai \textit{centroid}
 \end{enumerate}
 
-\subsection{Centroid}
+\subsection{\textit{Centroid}}
 
-Centroid adalah nilai yang dijadikan sebagai titik awal dimulainya sebuah pengelompokan (\textit{clustering}) pada algoritma $k$-means \cite{retno2019peningkatan}. Untuk melakukan pengelompokan data, dimulai dengan menghitung jarak dari setiap titik tujuan menuju ke setiap titik centroid sebagai awal pembentukan klaster, setelah itu titik-titik tujuan akan dikelompokkan menurut titik klaster terdekatnya. Dalam langkah tersebut akan dihitung titik-titik centroid yang baru menggunakan nilai rata-rata titik dari tiap klaster.
+\textit{Centroid} adalah nilai yang dijadikan sebagai titik awal dimulainya sebuah pengelompokan (\textit{clustering}) pada algoritma $k$-means \cite{retno2019peningkatan}. Untuk melakukan pengelompokan data, dimulai dengan menghitung jarak dari setiap titik tujuan menuju ke setiap titik \textit{centroid} sebagai awal pembentukan klaster, setelah itu titik-titik tujuan akan dikelompokkan menurut titik klaster terdekatnya. Dalam langkah tersebut akan dihitung titik-titik \textit{centroid} yang baru menggunakan nilai rata-rata titik dari tiap klaster.
 
 \subsection{Algoritma Genetika}
 
@@ -94,14 +94,12 @@ Menurut Armanda RS \cite{armanda2016penerapan} dalam artikelnya menyampaikan pen
 	Keterangan:
 	\begin{itemize}
 	\item $d_{ij}$ adalah nilai jarak pada titik $i$ ke titik $j$
-	\item $x_j$ adalah nilai koordinat $x$ pada titik $i$
-	\item $y_j$ adalah nilai koordinat $y$ pada titik $i$
-	\item $x_i$ adalah nilai koordinat $x$ pada titik $j$
-	\item $y_i$ adalah nilai koordinat $y$ pada titik $j$
+	\item $x_j$ dan $y_j$ adalah nilai koordinat $x$ dan $y$ pada titik $i$
+	\item $x_i$ dan $y_i$ adalah nilai koordinat $x$ dan $y$ pada titik $j$
 	\end{itemize}
 
 \subsection{\textit{Crossover}}
-\textit{Crossover} atau persilangan adalah operator dari algoritma genetika yang melibatkan dua induk untuk membentuk kromosom baru menurut artikel \cite{hardi2014analisis}. Dalam langkah ini dilakukan dengan cara menukar sebagian gen pada kromosom induk pertama dengan gen pada kromosom induk kedua seperti pada Gambar \ref{fig:crossover}. Proses \textit{crossover} tersebut diterapkan pada setiap individu dengan probabilitas \textit{crossover} ($p_c$) yang telah ditentukan. Jika diterapkan \textit{crossover} keturunan didapatkan dari kromosom-kromosom induk. Jjika \textit{crossover} tidak diterapkan, satu induk dipilih secara acak dengan $p_c$ yang sama dan diduplikasi menjadi anak.
+\textit{Crossover} atau persilangan adalah operator dari algoritma genetika yang melibatkan dua induk untuk membentuk kromosom baru menurut artikel \cite{hardi2014analisis}. Dalam langkah ini dilakukan dengan cara menukar sebagian gen pada kromosom induk pertama dengan gen pada kromosom induk kedua seperti pada Gambar \ref{fig:crossover}. Proses \textit{crossover} tersebut diterapkan pada setiap individu dengan probabilitas \textit{crossover} ($p_c$) yang telah ditentukan. Jika diterapkan \textit{crossover} keturunan didapatkan dari kromosom-kromosom induk. Jika \textit{crossover} tidak diterapkan, satu induk dipilih secara acak dengan $p_c$ yang sama dan diduplikasi menjadi anak.
 
 \begin{figure}[H]
   \centering

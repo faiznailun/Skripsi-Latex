@@ -4,23 +4,23 @@
 
 Kabupaten Probolinggo adalah salah satu dari beberapa kabupaten yang sedang berkembang di provinsi Jawa Timur. Banyak sekolah tingkat menengah yang tersebar di Kabupaten Probolinggo. Selain itu di Kabupaten Probolinggo terdapat beberapa kampus salah satunya adalah Universitas Nurul Jadid yang terletak di Kecamatan Paiton. Pada tahun-tahun sebelumnya kampus ini sering sekali mengadakan acara-acara besar seperti lomba dan olimpiade. Dalam acara-acara tersebut seringkali melakukan pendistribusian barang seperti undangan acara, poster, surat selebaran, dan lain-lain kepada beberapa sekolah di Kabupaten Probolinggo. Oleh karena itu diperlukan sebuah pencarian rute yang efisien untuk menuju ke sekolah-sekolah tersebut agar dapat menghemat waktu dan tenaga dalam perjalanan. Permasalahan pencarian rute tersebut dalam hal ini dapat disebut dengan \textit{Traveling Salesman Problem} (TSP), sedangkan gabungan dari beberapa permasalahan TSP disebut \textit{Multiple Traveling Salesman Problem} (MTSP).
 
-Selama bertahun-tahun, telah banyak penelitian tentang MTSP. Berbagai metode telah banyak digunakan untuk mencari solusi dari permasalahan MTSP salah satunya adalah algoritma genetika (AG) dan $k$-means. Untuk melakukan proses pencarian solusi MTSP diperlukan proses pengklasteran (pengelompokan) terlebih dahulu, ada banyak cara untuk menggunakan AG dalam pengklasteran, terbukti bahwa metode ini dapat mengklaster data lebih cepat daripada beberapa algoritma lain yang digunakan untuk pengklasteran \cite{krishna1999genetic}. Kemampuan pengklasteran dari AG ini dimanfaatkan untuk mencari pusat klaster yang sesuai sehingga kesamaan dari klaster yang dihasilkan dioptimalkan \cite{maii2000genetic}. Ada juga yang menggunakan metode paralel untuk TSP untuk meningkatkan efisiensi seperti pada artikel \cite{li2016parallel}.
+Selama bertahun-tahun, telah banyak penelitian tentang MTSP. Berbagai metode telah banyak digunakan untuk mencari solusi dari permasalahan MTSP salah satunya adalah algoritma genetika (AG) dan $k$-means. Untuk melakukan proses pencarian solusi MTSP diperlukan proses pengklasteran (pengelompokan) terlebih dahulu, ada banyak cara untuk menggunakan AG dalam pengklasteran, terbukti bahwa metode ini dapat mengklaster data lebih cepat daripada beberapa algoritma lain yang digunakan untuk pengklasteran \cite{krishna1999genetic}. Kemampuan pengklasteran dari AG ini dimanfaatkan untuk mencari pusat klaster yang sesuai sehingga kesamaan dari klaster yang dihasilkan dioptimalkan \cite{maii2000genetic}. Ada juga yang menggunakan metode paralel untuk TSP untuk meningkatkan efisiensi seperti pada artikel Zhang, dkk. \cite{li2016parallel}.
 
-Menurut artikel Zhang efisiensi AG akan menurun dengan cepat jika digunakan pada skala kota besar \cite{zhang2014parallel}. Berbeda dengan algoritma $k$-means dapat mengklaster terlebih dahulu sebelum melakukan pencarian solusi dari permasalahan TSP dan menghindari persilangan tiap rute \textit{salesman} (pengirim barang) \cite{inproceedings}. Penggunaan algoritma genetika dan algoritma \textit{k}-means, algoritma ini merupakan algoritma yang digunakan untuk membagi data MTSP menjadi beberapa klaster, metode ini efektif untuk menyelesaikan MTSP, selain itu juga dapat menghindari persilangan rute antar \textit{salesman} seperti yang dibahas oleh Lu pada artikelnya \cite{inproceedings}. Dari gabungan semua perspektif tersebut, dalam penelitian ini, digunakanlah \textit{k}-means dan algoritma genetika untuk menyelesaikan kasus pembagian klaster dan pencarian rute terdekat menuju seluruh SMA di Kabupaten Probolinggo.
+Menurut artikel Zhang efisiensi AG akan menurun dengan cepat jika digunakan pada skala kota besar \cite{zhang2014parallel}. Berbeda dengan algoritma $k$-means dapat mengklaster terlebih dahulu sebelum melakukan pencarian solusi dari permasalahan TSP dan menghindari persilangan tiap rute \textit{salesman} (pengirim barang) \cite{inproceedings}. Penggunaan algoritma genetika dan algoritma \textit{k}-means, algoritma ini merupakan algoritma yang digunakan untuk membagi data MTSP menjadi beberapa klaster, metode ini efektif untuk menyelesaikan MTSP, selain itu juga dapat menghindari persilangan rute antara \textit{salesman} seperti yang dibahas oleh Lu, dkk., pada artikelnya \cite{inproceedings}. Dari gabungan semua perspektif tersebut, dalam penelitian ini, digunakanlah \textit{k}-means dan algoritma genetika untuk menyelesaikan kasus pembagian klaster dan pencarian rute terdekat menuju seluruh SMA di Kabupaten Probolinggo.
 
 \section{Rumusan Masalah}
 
 Berdasarkan latar belakang, maka rumusan masalah yang akan dikaji dalam penelitian ini sebagai berikut.
 \begin{enumerate}
-    \item Bagaimana cara mencari solusi \textit{multiple traveling salesman problem} dengan $k$-means dan algoritma genetika?
+    \item Bagaimana cara mencari solusi \textit{Multiple Traveling Salesman Problem} dengan $k$-means dan algoritma genetika?
     \item Bagaimana pembagian klaster dan penentuan rute terdekat menuju seluruh SMA di Kabupaten Probolinggo?
 \end{enumerate}
 
 \section{Tujuan Penelitian dan Pengembangan}
 
-Berdasarkan latar belakang dan rumusan masalah, tujuan dari penelitian ini yaitu untuk.
+Berdasarkan latar belakang dan rumusan masalah, tujuan dari penelitian ini yaitu.
 \begin{enumerate}
-	\item Mengetahui cara menemukan solusi \textit{multiple traveling salesman problem} dengan $k$-means dan algoritma genetika.
+	\item Mengetahui cara menemukan solusi \textit{Multiple Traveling Salesman Problem} dengan $k$-means dan algoritma genetika.
 	\item Menemukan solusi pembagian klaster dan penentuan rute terdekat menuju seluruh SMA di Kabupaten Probolinggo.
 \end{enumerate}
 
@@ -45,6 +45,6 @@ Berdasarkan latar belakang penelitian dan tujuan penelitian, batasan masalah dal
 	\item MTSP pada skripsi ini menggunakan $k$-means untuk pengklasteran dan algoritma genetika untuk menentukan rute terdekatnya.
 	\item Titik tujuan merupakan seluruh SMA di Kabupaten Probolinggo baik negeri maupun swasta.
 	\item Setiap titik tujuan diasumsikan selalu terhubung dan berjalan lurus.
-	\item Titik kumpul menggunakan koordinat rata-rata dari semua titik-titik centroid karena untuk mengurangi persilangan seperti yang dibahas pada artikel \cite{inproceedings}
+	\item Titik kumpul menggunakan koordinat rata-rata dari semua titik-titik \textit{centroid} karena untuk mengurangi persilangan seperti yang dibahas pada artikel Zhang, dkk. \cite{inproceedings}.
 	\item Tidak ada prioritas kota mana saja yang dilalui terlebih dahulu.
 \end{enumerate}
