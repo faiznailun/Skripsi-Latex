@@ -12,20 +12,21 @@ Mayuliana, dkk., dalam artikelnya yang berjudul “Penyelesaian \textit{Multitra
 
 \subsection{\textit{Multiple Traveling Salesman Problem}}
 
-\textit{Travelling Salesman Problem} atau TSP adalah permasalahan pencarian rute paling efisien dalam sebuah perjalanan, sedangkan \textit{Multiple Travelling Salesman Problem} (MTSP) adalah gabungan dari beberapa permasalahan TSP dengan titik kumpul dan titik kembali yang sama. Menurut Al-Omeer dan Ahmed, MTSP adalah salah satu kombinatorial optimasi masalah, yang dapat didefinisikan sebagai berikut: Ada $m$ jumlah \textit{salesman} yang harus melakukan perjalanan ke $n$ sejumlah kota dimulai dengan depot dan berakhir di depot yang sama \cite{al2019comparative}. Selanjutnya para \textit{salesman} harus melakukan perjalanan dari satu kota ke kota lain secara terus menerus tanpa mengulang kota mana saja yang telah dilintasi oleh para \textit{salesman} dan mempertimbangkan jalur terpendek selama perjalanan tersebut. Metode MTSP sebenarnya banyak sekali, namun yang digunakan dalam penelitian ini adalah algoritma genetika dan algoritma \textit{k}-means. Dalam hal ini data akan dibagi menjadi beberapa klaster terlebih dahulu sesuai dengan jumlah \textit{salesman} dari perusahaan, seperti pada Gambar \ref{fig:mtsp6} dan \ref{fig:mtsp5}
+\textit{Travelling Salesman Problem} atau TSP adalah permasalahan pencarian rute paling efisien dalam sebuah perjalanan, sedangkan \textit{Multiple Travelling Salesman Problem} (MTSP) adalah gabungan dari beberapa permasalahan TSP dengan titik kumpul dan titik kembali yang sama. Menurut Al-Omeer dan Ahmed, MTSP adalah salah satu kombinatorial optimasi masalah, yang dapat didefinisikan sebagai berikut: Ada $m$ jumlah \textit{salesman} yang harus melakukan perjalanan ke $n$ sejumlah kota dimulai dengan depot dan berakhir di depot yang sama \cite{al2019comparative}. Selanjutnya para \textit{salesman} harus melakukan perjalanan dari satu kota ke kota lain secara terus menerus tanpa mengulang kota mana saja yang telah dilintasi oleh para \textit{salesman} dan mempertimbangkan jalur terpendek selama perjalanan tersebut. Metode MTSP sebenarnya banyak sekali, namun yang digunakan dalam penelitian ini adalah algoritma genetika dan algoritma \textit{k}-means. Dalam hal ini data akan dibagi menjadi beberapa klaster terlebih dahulu sesuai dengan jumlah \textit{salesman} dari perusahaan, seperti pada Gambar \ref{fig:mtsp}.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.5\textwidth]{Gambar/Picture1.png}
-  \caption{Contoh MTSP 6 klaster}
-  \label{fig:mtsp6}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.5\textwidth]{Gambar/Picture2.png}
-  \caption{Contoh MTSP 5 klaster}
-  \label{fig:mtsp5}
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+\includegraphics[width=\textwidth]{Gambar/Picture1.png}
+\caption{MTSP dengan 6 klaster}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+\includegraphics[width=\textwidth]{Gambar/Picture2.png}
+\caption{MTSP dengan 5 klaster}
+\end{subfigure}
+\caption{Proses MTSP dengan klaster}
+\label{fig:mtsp}
 \end{figure}
 
 \subsection{Algoritma}
