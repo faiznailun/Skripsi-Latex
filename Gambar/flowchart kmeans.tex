@@ -1,0 +1,36 @@
+\begin{figure}[H]
+\linespread{1}
+\centering
+%Definisi
+\tikzstyle{bulat} = \tikzstyle{bulat} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{jajargenjang} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum height=1cm, text width=2cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{kotak} = [rectangle, minimum height=1cm, text width=3cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{belahketupat} = [diamond, text width=2cm, text centered, draw=black, fill=green!30]
+\tikzstyle{garis} = [thick,->,>=stealth]
+
+%Gambar
+\begin{tikzpicture}
+\node (1) [bulat] {Mulai};
+\node (2) [jajargenjang, below of=1, yshift=-0.8cm]{Dataset, tentukan $n$ klaster};
+\node (3) [kotak, below of=2, yshift=-1cm] {Pilih \textit{centroid} secara acak};
+\node (4) [kotak, below of=3, yshift=-1cm] {Hitung \textit{fitness}};
+\node (5) [kotak, below of=4, yshift=-2cm] {Pengelompokan berdasarkan \textit{fitness} terkecil};
+\node (6) [kotak, right of=5, xshift=+3.5cm] {Memindahkan \textit{centroid} ke tengah area};
+\node (7) [belahketupat, above of=6, yshift=+2cm]{\textit{Centroid} bergeser?};
+\node (8) [jajargenjang, right of=7, xshift=+3.5cm] {Hasil $k$-means};
+\node (9) [bulat, below of=8, yshift=-1.5cm] {Selesai};
+
+\draw [garis] (1) -- (2);
+\draw [garis] (2) -- (3);
+\draw [garis] (3) -- (4);
+\draw [garis] (4) -- (5);
+\draw [garis] (5) -- (6);
+\draw [garis] (6) -- (7);
+\draw [garis] (7) -- node[near start, color=black, yshift=+0.5cm]{Ya}(4);
+\draw [garis] (7) -- node[near start, color=black, yshift=+0.5cm]{Tidak}(8);
+\draw [garis] (8) -- (9);
+
+\end{tikzpicture}
+\caption{Diagram alir tahapan $k$-means}
+\label{fig:flowkmeans}
+\end{figure}

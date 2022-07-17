@@ -48,6 +48,10 @@ Menurut S Monalisa \cite{monalisa2018klasterisasi} tahapan mengklaster menggunak
 	\item Melakukan iterasi sebanyak mungkin dengan kembali ke tahapan 3 sampai tidak ada perubahan klaster atau perubahan nilai \textit{centroid}
 \end{enumerate}
 
+\noindent Secara garis besar tahapan-tahapan algoritma genetika seperti diagram alir pada Gambar \ref{fig:flowkmeans}.
+
+\input{Gambar/flowchart kmeans}
+
 \subsection{\textit{Centroid}}
 
 \textit{Centroid} adalah nilai yang dijadikan sebagai titik awal dimulainya sebuah pengelompokan (\textit{clustering}) pada algoritma $k$-means \cite{retno2019peningkatan}. Untuk melakukan pengelompokan data, dimulai dengan menghitung jarak dari setiap titik tujuan menuju ke setiap titik \textit{centroid} sebagai awal pembentukan klaster, setelah itu titik-titik tujuan akan dikelompokkan menurut titik klaster terdekatnya. Dalam langkah tersebut akan dihitung titik-titik \textit{centroid} yang baru menggunakan nilai rata-rata titik dari tiap klaster.
@@ -95,12 +99,12 @@ Menurut Armanda RS \cite{armanda2016penerapan} dalam artikelnya menyampaikan pen
 	Keterangan:
 	\begin{itemize}
 	\item $d_{ij}$ adalah nilai jarak pada titik $i$ ke titik $j$
-	\item $x_j$ dan $y_j$ adalah nilai koordinat $x$ dan $y$ pada titik $i$
-	\item $x_i$ dan $y_i$ adalah nilai koordinat $x$ dan $y$ pada titik $j$
+	\item $x_i$ dan $y_i$ adalah nilai koordinat $x$ dan $y$ pada titik $i$
+	\item $x_j$ dan $y_j$ adalah nilai koordinat $x$ dan $y$ pada titik $j$
 	\end{itemize}
 
 \subsection{\textit{Crossover}}
-\textit{Crossover} atau persilangan adalah operator dari algoritma genetika yang melibatkan dua induk untuk membentuk kromosom baru menurut artikel \cite{hardi2014analisis}. Dalam langkah ini dilakukan dengan cara menukar sebagian gen pada kromosom induk pertama dengan gen pada kromosom induk kedua seperti pada Gambar \ref{fig:crossover}. Proses \textit{crossover} tersebut diterapkan pada setiap individu dengan probabilitas \textit{crossover} ($p_c$) yang telah ditentukan. Jika diterapkan \textit{crossover} keturunan didapatkan dari kromosom-kromosom induk. Jika \textit{crossover} tidak diterapkan, satu induk dipilih secara acak dengan $p_c$ yang sama dan diduplikasi menjadi anak.
+\textit{Crossover} atau persilangan adalah operator dari algoritma genetika yang melibatkan dua induk untuk membentuk kromosom baru menurut Hardi, dkk. pada artikelnya \cite{hardi2014analisis}. Dalam langkah ini dilakukan dengan cara menukar sebagian gen pada kromosom induk pertama dengan gen pada kromosom induk kedua seperti pada Gambar \ref{fig:crossover}. Proses \textit{crossover} tersebut diterapkan pada setiap individu dengan probabilitas \textit{crossover} ($p_c$) yang telah ditentukan. Jika diterapkan \textit{crossover} keturunan didapatkan dari kromosom-kromosom induk. Jika \textit{crossover} tidak diterapkan, satu induk dipilih secara acak dengan $p_c$ yang sama dan diduplikasi menjadi anak.
 
 \begin{figure}[H]
   \centering

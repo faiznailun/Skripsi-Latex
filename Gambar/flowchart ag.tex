@@ -1,8 +1,9 @@
 \begin{figure}[H]
 \centering
+\linespread{1}
 %Definisi
 \tikzstyle{bulat} = \tikzstyle{bulat} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-\tikzstyle{jajargenjang} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{jajargenjang} = [trapezium, trapezium left angle=70, trapezium right angle=110, text width=2cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
 \tikzstyle{kotak} = [rectangle, minimum height=1cm, text width=3cm, text centered, draw=black, fill=orange!30]
 \tikzstyle{kotak2} = [rectangle, minimum height=1cm, text width=5cm, text centered, draw=black, fill=orange!30]
 \tikzstyle{belahketupat} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
@@ -10,15 +11,15 @@
 %Gambar
 \begin{tikzpicture}
 \node (S) [bulat] {Mulai};
-\node (in) [jajargenjang, below of=S, yshift=-1cm]{Dataset};
-\node (pop) [kotak2, below of=in, yshift=-1cm] {Bangkitkan Populasi Awal};
-\node (fit) [kotak, below of=pop, yshift=-1cm] {Hitung \textit{Fitness}};
+\node (in) [jajargenjang, below of=S, yshift=-0.8cm]{Dataset};
+\node (pop) [kotak2, below of=in, yshift=-0.8cm] {Bangkitkan Populasi Awal};
+\node (fit) [kotak, below of=pop, yshift=-0.8cm] {Hitung \textit{Fitness}};
 \node (sel) [kotak, right of=fit, xshift=+3.5cm] {Seleksi};
-\node (cross) [kotak, below of=sel, yshift=-1cm] {\textit{Crossover}};
-\node (mut) [kotak, below of=cross, yshift=-1cm] {Mutasi};
+\node (cross) [kotak, below of=sel, yshift=-0.8cm] {\textit{Crossover}};
+\node (mut) [kotak, below of=cross, yshift=-0.8cm] {Mutasi};
 \node (opt) [belahketupat, left of=mut, xshift=-3.5cm] {Optimal};
 \node (out) [jajargenjang, below of=opt, yshift=-1.5cm]{Kromosom Optimal};
-\node (E) [bulat, below of=out, yshift=-1cm] {Selesai};
+\node (E) [bulat, below of=out, yshift=-0.8cm] {Selesai};
 \draw [garis] (S) -- (in);
 \draw [garis] (in) -- (pop);
 \draw [garis] (pop) -- (fit);
