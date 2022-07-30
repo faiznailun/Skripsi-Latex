@@ -13,11 +13,11 @@
 \node (1) [bulat] {Mulai};
 \node (2) [jajargenjang, below of=1, yshift=-0.8cm]{Dataset, tentukan $n$ klaster};
 \node (3) [kotak, below of=2, yshift=-1cm] {Pilih \textit{centroid} secara acak};
-\node (4) [kotak, below of=3, yshift=-1cm] {Hitung \textit{fitness}};
-\node (5) [kotak, below of=4, yshift=-2cm] {Pengelompokan berdasarkan \textit{fitness} terkecil};
+\node (4) [kotak, below of=3, yshift=-1cm] {Hitung jarak tiap titik ke \textit{centroid}};
+\node (5) [kotak, below of=4, yshift=-2cm] {Pengelompokan berdasarkan jarak terkecil};
 \node (6) [kotak, right of=5, xshift=+3.5cm] {Memindahkan \textit{centroid} ke tengah area};
-\node (7) [belahketupat, above of=6, yshift=+2cm]{\textit{Centroid} bergeser?};
-\node (8) [jajargenjang, right of=7, xshift=+3.5cm] {Hasil $k$-means};
+\node (7) [belahketupat, above of=6, yshift=+2cm]{\textit{Centroid} berbeda?};
+\node (8) [jajargenjang, right of=7, xshift=+3.5cm] {Hasil klaster};
 \node (9) [bulat, below of=8, yshift=-1.5cm] {Selesai};
 
 \draw [garis] (1) -- (2);

@@ -6,7 +6,7 @@ Kabupaten Probolinggo adalah salah satu dari beberapa kabupaten yang sedang berk
 
 Selama bertahun-tahun, telah banyak penelitian tentang MTSP. Berbagai metode telah banyak digunakan untuk mencari solusi dari permasalahan MTSP salah satunya adalah algoritma genetika (AG) dan $k$-means. Untuk melakukan proses pencarian solusi MTSP diperlukan proses pengklasteran (pengelompokan) terlebih dahulu, ada banyak cara untuk menggunakan AG dalam pengklasteran, terbukti bahwa metode ini dapat mengklaster data lebih cepat daripada beberapa algoritma lain yang digunakan untuk pengklasteran \cite{krishna1999genetic}. Kemampuan pengklasteran dari AG ini dimanfaatkan untuk mencari pusat klaster yang sesuai sehingga kesamaan dari klaster yang dihasilkan dioptimalkan \cite{maii2000genetic}. Ada juga yang menggunakan metode paralel untuk TSP untuk meningkatkan efisiensi seperti pada artikel Zhang, dkk. \cite{li2016parallel}.
 
-Menurut artikel Zhang efisiensi AG akan menurun dengan cepat jika digunakan pada skala kota besar \cite{zhang2014parallel}. Berbeda dengan algoritma $k$-means dapat mengklaster terlebih dahulu sebelum melakukan pencarian solusi dari permasalahan TSP dan menghindari persilangan tiap rute \textit{salesman} (pengirim barang) \cite{inproceedings}. Penggunaan algoritma genetika dan algoritma \textit{k}-means, algoritma ini merupakan algoritma yang digunakan untuk membagi data MTSP menjadi beberapa klaster, metode ini efektif untuk menyelesaikan MTSP, selain itu juga dapat menghindari persilangan rute antara \textit{salesman} seperti yang dibahas oleh Lu, dkk., pada artikelnya \cite{inproceedings}. Dari gabungan semua perspektif tersebut, dalam penelitian ini, digunakanlah \textit{k}-means dan algoritma genetika untuk menyelesaikan kasus pembagian klaster dan pencarian rute terdekat menuju seluruh SMA di Kabupaten Probolinggo.
+Menurut artikel Zhang efisiensi AG akan menurun dengan cepat jika digunakan pada skala kota besar \cite{zhang2014parallel}. Berbeda dengan algoritma $k$-means dapat mengklaster terlebih dahulu sebelum melakukan pencarian solusi dari permasalahan TSP dan menghindari persilangan tiap rute \textit{salesman} (pengirim barang) \cite{inproceedings}. Penggunaan algoritma genetika dan algoritma \textit{k}-means, algoritma ini merupakan algoritma yang digunakan untuk membagi data MTSP menjadi beberapa klaster, metode ini efektif untuk menyelesaikan MTSP, selain itu juga dapat menghindari persilangan rute antara \textit{salesman} seperti yang dibahas oleh Lu, dkk., pada artikelnya \cite{inproceedings}. Dari gabungan semua perspektif tersebut, dalam penelitian ini, digunakan \textit{k}-means dan algoritma genetika untuk menyelesaikan kasus pembagian klaster dan pencarian rute terdekat menuju seluruh SMA di Kabupaten Probolinggo.
 
 \section{Rumusan Masalah}
 
@@ -41,10 +41,10 @@ Manfaat dari penelitian ini yaitu:
 Berdasarkan latar belakang penelitian dan tujuan penelitian, batasan masalah dalam penelitian ini yaitu:
 
 \begin{enumerate}
-	\item MTSP pada skripsi ini menggunakan 1 titik asal dan setiap \textit{salesman} akan berangkat dan kembali pada simpul kota yang sama.
-	\item MTSP pada skripsi ini menggunakan $k$-means untuk pengklasteran dan algoritma genetika untuk menentukan rute terdekatnya.
-	\item Titik tujuan merupakan titik koodinat lokasi seluruh SMA di Kabupaten Probolinggo baik negeri maupun swasta.
+	\item Menggunakan 1 titik asal dan setiap \textit{salesman} akan berangkat dan kembali pada titik yang sama.
+	\item Titik-titik tujuan merupakan titik koodinat lokasi 75 SMA di Kabupaten Probolinggo baik negeri maupun swasta.
 	\item Setiap titik tujuan diasumsikan selalu terhubung dan berjalan lurus.
-	\item Titik kumpul menggunakan koordinat rata-rata dari semua titik-titik \textit{centroid} karena untuk mengurangi persilangan seperti yang dibahas pada artikel Zhang, dkk. \cite{inproceedings}.
+	\item Titik asal menggunakan koordinat rata-rata dari semua titik-titik \textit{centroid} karena untuk mengurangi persilangan seperti yang dibahas pada artikel Zhang, dkk. \cite{inproceedings}.
 	\item Tidak ada prioritas sekolah mana saja yang dilalui terlebih dahulu.
+	\item Tahapan implementasi pada penelitian skripsi ini tidak dapat dilaksanakan karena keterbatasan waktu untuk melakukan penelitian lebih lanjut.
 \end{enumerate}

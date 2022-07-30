@@ -13,12 +13,12 @@
 \node (S) [bulat] {Mulai};
 \node (in) [jajargenjang, below of=S, yshift=-0.8cm]{Dataset};
 \node (pop) [kotak2, below of=in, yshift=-0.8cm] {Bangkitkan Populasi Awal};
-\node (fit) [kotak, below of=pop, yshift=-0.8cm] {Hitung \textit{Fitness}};
+\node (fit) [kotak, below of=pop, yshift=-0.8cm] {Hitung \textit{fitness}};
 \node (sel) [kotak, right of=fit, xshift=+3.5cm] {Seleksi};
 \node (cross) [kotak, below of=sel, yshift=-0.8cm] {\textit{Crossover}};
 \node (mut) [kotak, below of=cross, yshift=-0.8cm] {Mutasi};
-\node (opt) [belahketupat, left of=mut, xshift=-3.5cm] {Optimal};
-\node (out) [jajargenjang, below of=opt, yshift=-1.5cm]{Kromosom Optimal};
+\node (opt) [belahketupat, left of=mut, xshift=-3.5cm] {\textit{fitnes} sama?};
+\node (out) [jajargenjang, below of=opt, yshift=-1.7cm]{Kromosom Optimal};
 \node (E) [bulat, below of=out, yshift=-0.8cm] {Selesai};
 \draw [garis] (S) -- (in);
 \draw [garis] (in) -- (pop);
