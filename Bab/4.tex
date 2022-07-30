@@ -76,7 +76,7 @@ Pada tahap ini metode yang digunakan adalah metode $k$-means untuk mengklaster d
 
 Dari serangkaian proses $k$-means menghasilkan klaster-klaster berbeda. Data-data tersebut telah berhasil dikelompokkan, selanjutnya data tersebut akan diproses untuk ke tahapan selanjutnya.
 
-\section{Proses TSP menggunakan Algoritma Genetika}
+\section{Proses TSP Menggunakan Algoritma Genetika}
 
 Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adalah mencari rute terdekatnya menggunakan algoritma genetika.
 
@@ -95,7 +95,7 @@ Setelah data terklaster seperti pada Gambar \ref{fig:hasilklas} selanjutnya adal
 	\item Iterasi dilakukan dengan cara kembali ke tahapan \ref{ulang4} untuk generasi berikutnya sampai hasil yang dilakukan optimal atau mendekati optimal.
 \end{enumerate}
 
-\section{Hasil dari proses MTSP}
+\section{Hasil Dari Proses MTSP}
 
 Dari serangkaian proses di atas, menghasilkan beberapa rute optimal yang dapat dilalui yang merupakan rute yang didapatkan dari pembagian klaster berbeda. Salah satunya pada Gambar \ref{fig:hasil_mtsp1} tidak menggunakan pembagian klaster, sehingga titik \textit{centroid} pada klaster tersebut dijadikan titik asal.
 
@@ -481,11 +481,11 @@ Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menj
 \label{fig:hasil_mtsp10}
 \end{figure}
 
-\section{Total jarak}
+\section{Total Jarak Yang Dihasilkan}
 Setelah semua proses di atas selesai, dapat dibandingkan total jarak seperti pada Tabel \ref{tab:totaljarak}, pembagian dataset  menjadi 7 klaster menempati posisi peringkat pertama yang mempunyai nilai total jarak paling rendah di antara pembagian klaster yang lain. Untuk urutan jalur yang dihasilkan dapat dilihat pada langkah pembagian 7 klaster di atas yang hanya dapat ditempuh dengan $4,353294633$ satuan. Daftar kode dari titik-titik SMA dapat dilihat pada Lampiran \ref{lampiran1}.
 
 \input{Tabel/total jarak}
 
-\section{Hasil analisis}
+\section{Hasil Analisis}
 
 Hasil analisis dalam penelitian ini adalah penggunaan algoritma genetika keefektifannya semakin menurun jika semakin banyak kota akan dituju dalam sekali perjalanan. Namun hal tersebut dapat diminimalisir dengan meningkatkan banyak populasi pada tahap algoritma genetika.
