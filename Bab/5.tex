@@ -5,44 +5,50 @@
 Berdasarkan hasil riset dan analisis peneliti memperoleh kesimpulan sebagai berikut:
 
 \begin{enumerate}
-\item Jalur terpendek menuju seluruh SMA di Kabupaten Probolinggo dapat dihasilkan menggunakan algoritma genetika dan $k$-means dengan pembagian 7 klaster.
-\item Jarak yang dihasilkan dengan pembagian klaster tersebut adalah $4,353294644$ satuan dengan urutan perjalanan sebagai berikut.
+\item Jalur terpendek menuju seluruh SMA di Kabupaten Probolinggo dapat dihasilkan menggunakan algoritma genetika dan $k$-means dengan tahapan sebagai berikut.
+\begin{enumerate}
+\item Pencarian solusi dilakukan dengan membagi titik tujuan menjadi beberapa klaster.
+\item Klaster ditentukan berdasarkan jarak terdekatnya ke titik \textit{centroid}, sedangkan titik kumpul ditentukan dengan mencari nilai koordinat rata-rata dari tiap titik \textit{centroid}.
+\item Kemudian rute terpendek tiap klaster dicari menggunakan algoritma genetika.
+\end{enumerate}
+
+\item Pembagian rute menjadi 7 klaster pada perjalanan menuju seluruh SMA di Kabupaten Probolinggo menghasilkan jarak yang paling minimal yaitu $4,353294644$ satuan dengan urutan perjalanan sebagai berikut.
 
 \begin{enumerate}
 
 \item Urutan perjalanan pada klaster A:
 
-$11\rightarrow30\rightarrow29\rightarrow47\rightarrow21\rightarrow72\rightarrow32\rightarrow56\rightarrow13\rightarrow37\rightarrow55\rightarrow36$
+$\bigcirc \to 11 \to 30 \to 29 \to 47 \to 21 \to 72 \to 32 \to 56 \to 13 \to 37 \to 55 \to 36 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster B:
 
-$7\rightarrow70\rightarrow66\rightarrow28\rightarrow51\rightarrow8\rightarrow2\rightarrow34\rightarrow22$
+$\bigcirc \to 7 \to 70 \to 66 \to 28 \to 51 \to 8 \to 2 \to 34 \to 22 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster C:
 
-$1\rightarrow19\rightarrow73\rightarrow48\rightarrow69\rightarrow35\rightarrow46\rightarrow68\rightarrow25\rightarrow16\rightarrow5\rightarrow14\rightarrow43\rightarrow71\rightarrow53\rightarrow57$
+$\bigcirc \to 1 \to 19 \to 73 \to 48 \to 69 \to 35 \to 46 \to 68 \to 25 \to 16 \to 5 \to 14 \to 43 \to 71 \to 53 \to 57 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster D:
 
-$67\rightarrow58\rightarrow23\rightarrow12\rightarrow20\rightarrow64\rightarrow39\rightarrow31\rightarrow52\rightarrow15$
+$\bigcirc \to 67 \to 58 \to 23 \to 12 \to 20 \to 64 \to 39 \to 31 \to 52 \to 15 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster E:
 
-$26\rightarrow44\rightarrow50\rightarrow42\rightarrow74$
+$\bigcirc \to 26 \to 44 \to 50 \to 42 \to 74 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster F:
 
-$24\rightarrow63\rightarrow10\rightarrow59\rightarrow60\rightarrow17\rightarrow33\rightarrow9\rightarrow38\rightarrow27\rightarrow6$
+$\bigcirc \to 24 \to 63 \to 10 \to 59 \to 60 \to 17 \to 33 \to 9 \to 38 \to 27 \to 6 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster G:
 
-$40\rightarrow49\rightarrow54\rightarrow4\rightarrow41\rightarrow3\rightarrow45\rightarrow61\rightarrow18\rightarrow75\rightarrow65\rightarrow62$
+$\bigcirc \to 40 \to 49 \to 54 \to 4 \to 41 \to 3 \to 45 \to 61 \to 18 \to 75 \to 65 \to 62 \to \bigcirc$
 
 \end{enumerate}
 
-(Daftar kode sekolah dapat dilihat pada Lampiran \ref{lampiran1})
+Dimana $\bigcirc$ adalah origin atau titik keberangkatan dalam pembagian 7 klaster yaitu pada koordinat $(7.82, 113.37)$. Daftar kode sekolah pada urutan rute diatas dapat dilihat pada Lampiran \ref{lampiran1}.
 
-\item Penggunaan algoritma genetika akan menurun keefektifannya jika diterapkan pada skala kota besar atau semakin banyak kota yang dituju dalam sekali perjalanan. Hal tersebut dapat diminimalisir dengan menambahkan banyak populasi pada tahap algoritma genetika. Namun hal tersebut juga masih memiliki keterbatasan yaitu waktu pemrosesan algoritmanya yang semakin lama.
+\item Penggunaan algoritma genetika akan menurun keefektifannya jika diterapkan pada skala kota besar atau semakin banyak kota yang dituju dalam sekali perjalanan. Hal tersebut dapat diminimalisasi dengan menambahkan banyak populasi pada tahap algoritma genetika. Namun hal tersebut juga masih memiliki keterbatasan yaitu waktu pemrosesan algoritmanya yang semakin lama.
 
 \end{enumerate}
 
@@ -51,6 +57,7 @@ $40\rightarrow49\rightarrow54\rightarrow4\rightarrow41\rightarrow3\rightarrow45\
 Mengingat keterbatasan waktu untuk mengembangkan penelitian ini lebih jauh, maka saran kami untuk mengembangkan penelitian ini adalah:
 \begin{enumerate}
     \item Mencoba algoritma lain untuk mengetahui apakah ada metode yang lebih efektif untuk mengetahui rute menuju seluruh SMA di Kabupaten Probolinggo.
-    \item Untuk penelitian selanjutnya dapat menambahkan variabel waktu tempuh untuk mencari rute tercepat untuk menuju ke seluruh SMA di Kabupaten Probolinggo, karena dalam skripsi ini hanya menggunakan variabel jarak saja.
-    \item Untuk penelitian selanjutnya, penghitungan jarak tidak menggunakan \textit{Euclidean distance}, tetapi menggunakan jarak real yang didapatkan di Google Maps
+    \item Menambahkan variabel waktu tempuh untuk mencari rute tercepat untuk menuju ke seluruh SMA di Kabupaten Probolinggo, karena dalam skripsi ini hanya menggunakan variabel jarak saja.
+    \item Penghitungan jarak tidak menggunakan \textit{Euclidean distance}, tetapi menggunakan jarak asli yang didapatkan di Google Maps.
+    \item Mengimplementasikan algoritma ke permasalahan sebenarnya dengan memilih titik berangkat yang sudah ditentukan sesuai klaster masing-masing.
 \end{enumerate}

@@ -105,7 +105,9 @@ Rute-rute yang dihasilkan sebelumnya diekspor ke bentuk spreadsheet dan telah di
 
 Urutan perjalanan perjalanan dengan tanpa pembagian klaster menghasilkan urutan titik seperti berikut. $K$-means pada urutan ini tidak digunakan untuk pengklasteran data, namun hanya untuk penentuan titik asal.
 
-$67\rightarrow65\rightarrow53\rightarrow27\rightarrow4\rightarrow42\rightarrow66\rightarrow34\rightarrow70\rightarrow8\rightarrow19\rightarrow28\rightarrow37\rightarrow11\rightarrow25\rightarrow72\rightarrow55\rightarrow31\rightarrow3\rightarrow74\rightarrow15\rightarrow68\rightarrow20\rightarrow44\rightarrow40\rightarrow16\rightarrow30\rightarrow23\rightarrow24\rightarrow63\rightarrow13\rightarrow29\rightarrow50\rightarrow7\rightarrow54\rightarrow2\rightarrow10\rightarrow52\rightarrow64\rightarrow21\rightarrow62\rightarrow58\rightarrow26\rightarrow1\rightarrow69\rightarrow14\rightarrow45\rightarrow61\rightarrow38\rightarrow59\rightarrow17\rightarrow71\rightarrow18\rightarrow32\rightarrow57\rightarrow73\rightarrow75\rightarrow41\rightarrow39\rightarrow49\rightarrow51\rightarrow6\rightarrow60\rightarrow22\rightarrow33\rightarrow48\rightarrow5\rightarrow35\rightarrow46\rightarrow56\rightarrow36\rightarrow47\rightarrow9\rightarrow12\rightarrow43$
+\noindent $\bigcirc \to 67 \to 65 \to 53 \to 27\rightarrow4 \to 42 \to 66 \to 34 \to 70 \to 8 \to 19 \to 28 \to 37 \to 11 \to 25 \to 72 \to 55 \to 31 \to 3 \to 74 \to 15 \to 68 \to 20 \to 44 \to 40 \to 16 \to 30 \to 23 \to 24 \to 63 \to 13 \to 29 \to 50 \to 7 \to 54 \to 2 \to 10 \to 52 \to 64 \to 21 \to 62 \to 58 \to 26 \to 1 \to 69 \to 14 \to 45 \to 61 \to 38 \to 59 \to 17 \to 71 \to 18 \to 32 \to 57 \to 73 \to 75 \to 41 \to 39 \to 49 \to 51 \to 6 \to 60 \to 22 \to 33 \to 48 \to 5 \to 35 \to 46 \to 56 \to 36 \to 47 \to 9 \to 12 \to 43 \to \bigcirc$
+
+\noindent Dimana $\bigcirc$ adalah origin atau titik keberangkatan.
 
 Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo tanpa pembagian klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp1}. Urutan tersebut tampaknya masih belum sepenuhnya optimal, karena menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $10,05030304$ satuan dengan koordinat titik asal yaitu $(7.82, 113.35)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
@@ -123,13 +125,15 @@ Pada tahap ini urutan perjalanan dibagi menjadi 2 klaster yaitu klaster A dan B,
 \begin{enumerate}
 \item Urutan perjalanan pada klaster A:
 
-$33\rightarrow52\rightarrow21\rightarrow32\rightarrow55\rightarrow36\rightarrow10\rightarrow37\rightarrow56\rightarrow30\rightarrow27\rightarrow59\rightarrow60\rightarrow64\rightarrow6\rightarrow39\rightarrow24\rightarrow72\rightarrow13\rightarrow29\rightarrow11\rightarrow63\rightarrow9\rightarrow17\rightarrow47\rightarrow38$
+$\bigcirc \to 33 \to 52 \to 21 \to 32 \to 55 \to 36 \to 10 \to 37 \to 56 \to 30 \to 27 \to 59 \to 60 \to 64 \to 6 \to 39 \to 24 \to 72 \to 13 \to 29 \to 11 \to 63 \to 9 \to 17 \to 47 \to 38 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster B:
 
-$57\rightarrow58\rightarrow71\rightarrow53\rightarrow49\rightarrow25\rightarrow16\rightarrow23\rightarrow46\rightarrow35\rightarrow61\rightarrow15\rightarrow4\rightarrow41\rightarrow44\rightarrow48\rightarrow67\rightarrow45\rightarrow69\rightarrow5\rightarrow8\rightarrow42\rightarrow50\rightarrow22\rightarrow51\rightarrow74\rightarrow26\rightarrow19\rightarrow34\rightarrow43\rightarrow65\rightarrow12\rightarrow28\rightarrow14\rightarrow70\rightarrow66\rightarrow3\rightarrow40\rightarrow20\rightarrow62\rightarrow31\rightarrow18\rightarrow7\rightarrow54\rightarrow68\rightarrow73\rightarrow75\rightarrow2\rightarrow1$
+$\bigcirc \to 57 \to 58 \to 71 \to 53 \to 49 \to 25 \to 16 \to 23 \to 46 \to 35 \to 61 \to 15 \to 4 \to 41 \to 44 \to 48 \to 67 \to 45 \to 69 \to 5 \to 8 \to 42 \to 50 \to 22 \to 51 \to 74 \to 26 \to 19 \to 34 \to 43 \to 65 \to 12 \to 28 \to 14 \to 70 \to 66 \to 3 \to 40 \to 20 \to 62 \to 31 \to 18 \to 7 \to 54 \to 68 \to 73 \to 75 \to 2 \to 1 \to \bigcirc$
 
 \end{enumerate}
+
+\noindent Dimana $\bigcirc$ adalah origin atau titik keberangkatan.
 
 Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 2 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp2}. Urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $6,858777424$ satuan dengan koordinat titik asal yaitu $(7.82, 113.32)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
@@ -148,17 +152,19 @@ Pada tahap ini urutan perjalanan dibagi menjadi 3 klaster yaitu klaster A, B, da
 \begin{enumerate}
 \item Urutan perjalanan pada klaster A:
 
-$38\rightarrow60\rightarrow56\rightarrow32\rightarrow13\rightarrow47\rightarrow37\rightarrow29\rightarrow55\rightarrow59\rightarrow17\rightarrow30\rightarrow11\rightarrow27\rightarrow21\rightarrow72\rightarrow36\rightarrow10$
+$\bigcirc \to 38 \to 60 \to 56 \to 32 \to 13 \to 47 \to 37 \to 29 \to 55 \to 59 \to 17 \to 30 \to 11 \to 27 \to 21 \to 72 \to 36 \to 10 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster B:
 
-$50\rightarrow41\rightarrow44\rightarrow42\rightarrow34\rightarrow2\rightarrow66\rightarrow14\rightarrow8\rightarrow70\rightarrow28\rightarrow51\rightarrow26\rightarrow74\rightarrow54\rightarrow22\rightarrow7$
+$\bigcirc \to 50 \to 41 \to 44 \to 42 \to 34 \to 2 \to 66 \to 14 \to 8 \to 70 \to 28 \to 51 \to 26 \to 74 \to 54 \to 22 \to 7 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster C:
 
-$65\rightarrow48\rightarrow35\rightarrow1\rightarrow46\rightarrow40\rightarrow4\rightarrow45\rightarrow43\rightarrow18\rightarrow49\rightarrow53\rightarrow62\rightarrow5\rightarrow71\rightarrow73\rightarrow19\rightarrow61\rightarrow57\rightarrow63\rightarrow15\rightarrow25\rightarrow68\rightarrow58\rightarrow24\rightarrow31\rightarrow16\rightarrow3\rightarrow12\rightarrow20\rightarrow52\rightarrow67\rightarrow69\rightarrow75\rightarrow39\rightarrow6\rightarrow64\rightarrow23\rightarrow33\rightarrow9$
+$\bigcirc \to 65 \to 48 \to 35 \to 1 \to 46 \to 40 \to 4 \to 45 \to 43 \to 18 \to 49 \to 53 \to 62 \to 5 \to 71 \to 73 \to 19 \to 61 \to 57 \to 63 \to 15 \to 25 \to 68 \to 58 \to 24 \to 31 \to 16 \to 3 \to 12 \to 20 \to 52 \to 67 \to 69 \to 75 \to 39 \to 6 \to 64 \to 23 \to 33 \to 9 \to \bigcirc$
 
 \end{enumerate}
+
+\noindent Dimana $\bigcirc$ adalah origin atau titik keberangkatan.
 
 Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 3 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp3}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $5,599877636$ satuan dengan koordinat titik asal yaitu $(7.82, 113.35)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
@@ -177,21 +183,23 @@ Pada tahap ini urutan perjalanan dibagi menjadi 4 klaster yaitu klaster A, B, C,
 
 \item Urutan perjalanan pada klaster A:
 
-$60\rightarrow36\rightarrow55\rightarrow32\rightarrow56\rightarrow37\rightarrow29\rightarrow13\rightarrow27\rightarrow38\rightarrow59\rightarrow17\rightarrow72\rightarrow21\rightarrow30\rightarrow11\rightarrow47\rightarrow10$
+$\bigcirc \to 60 \to 36 \to 55 \to 32 \to 56 \to 37 \to 29 \to 13 \to 27 \to 38 \to 59 \to 17 \to 72 \to 21 \to 30 \to 11 \to 47 \to 10 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster B:
 
-$22\rightarrow44\rightarrow50\rightarrow42\rightarrow54\rightarrow2\rightarrow51\rightarrow66\rightarrow70\rightarrow28\rightarrow34\rightarrow8\rightarrow7$
+$\bigcirc \to 22 \to 44 \to 50 \to 42 \to 54 \to 2 \to 51 \to 66 \to 70 \to 28 \to 34 \to 8 \to 7 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster C:
 
-$48\rightarrow68\rightarrow1\rightarrow14\rightarrow19\rightarrow69\rightarrow5\rightarrow18\rightarrow61\rightarrow73\rightarrow71\rightarrow16\rightarrow46\rightarrow35\rightarrow25\rightarrow53\rightarrow15\rightarrow43\rightarrow75\rightarrow4\rightarrow49\rightarrow40\rightarrow57$
+$\bigcirc \to 48 \to 68 \to 1 \to 14 \to 19 \to 69 \to 5 \to 18 \to 61 \to 73 \to 71 \to 16 \to 46 \to 35 \to 25 \to 53 \to 15 \to 43 \to 75 \to 4 \to 49 \to 40 \to 57 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster D:
 
-$23\rightarrow62\rightarrow58\rightarrow31\rightarrow63\rightarrow9\rightarrow6\rightarrow65\rightarrow45\rightarrow33\rightarrow64\rightarrow39\rightarrow41\rightarrow74\rightarrow26\rightarrow20\rightarrow24\rightarrow67\rightarrow12\rightarrow3\rightarrow52$
+$\bigcirc \to 23 \to 62 \to 58 \to 31 \to 63 \to 9 \to 6 \to 65 \to 45 \to 33 \to 64 \to 39 \to 41 \to 74 \to 26 \to 20 \to 24 \to 67 \to 12 \to 3 \to 52 \to \bigcirc$
 
 \end{enumerate}
+
+\noindent Dimana $\bigcirc$ adalah origin atau titik keberangkatan.
 
 Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 4 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp4}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $5,010993898$ satuan dengan koordinat titik asal yaitu $(7.82, 113.36)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
@@ -211,25 +219,27 @@ Pada tahap ini urutan perjalanan dibagi menjadi 5 klaster yaitu klaster A, B, C,
 
 \item Urutan perjalanan pada klaster A:
 
-$37\rightarrow36\rightarrow13\rightarrow55\rightarrow21\rightarrow30\rightarrow29\rightarrow72\rightarrow47\rightarrow56\rightarrow32\rightarrow10\rightarrow11\rightarrow17\rightarrow59\rightarrow60$
+$\bigcirc \to 37 \to 36 \to 13 \to 55 \to 21 \to 30 \to 29 \to 72 \to 47 \to 56 \to 32 \to 10 \to 11 \to 17 \to 59 \to 60 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster B:
 
-$22\rightarrow7\rightarrow28\rightarrow70\rightarrow8\rightarrow34\rightarrow2\rightarrow66\rightarrow51\rightarrow14$
+$\bigcirc \to 22 \to 7 \to 28 \to 70 \to 8 \to 34 \to 2 \to 66 \to 51 \to 14 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster C:
 
-$49\rightarrow75\rightarrow19\rightarrow1\rightarrow35\rightarrow46\rightarrow61\rightarrow69\rightarrow73\rightarrow71\rightarrow43\rightarrow40\rightarrow48\rightarrow53\rightarrow57\rightarrow25\rightarrow45\rightarrow65\rightarrow5\rightarrow18\rightarrow68\rightarrow16\rightarrow4\rightarrow62$
+$\bigcirc \to 49 \to 75 \to 19 \to 1 \to 35 \to 46 \to 61 \to 69 \to 73 \to 71 \to 43 \to 40 \to 48 \to 53 \to 57 \to 25 \to 45 \to 65 \to 5 \to 18 \to 68 \to 16 \to 4 \to 62 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster D:
 
-$15\rightarrow27\rightarrow6\rightarrow52\rightarrow24\rightarrow64\rightarrow39\rightarrow20\rightarrow9\rightarrow38\rightarrow33\rightarrow63\rightarrow12\rightarrow23\rightarrow67\rightarrow58$
+$\bigcirc \to 15 \to 27 \to 6 \to 52 \to 24 \to 64 \to 39 \to 20 \to 9 \to 38 \to 33 \to 63 \to 12 \to 23 \to 67 \to 58 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster E:
 
-$74\rightarrow26\rightarrow50\rightarrow42\rightarrow54\rightarrow44\rightarrow3\rightarrow41\rightarrow31$
+$\bigcirc \to 74 \to 26 \to 50 \to 42 \to 54 \to 44 \to 3 \to 41 \to 31 \to \bigcirc$
 
 \end{enumerate}
+
+\noindent Dimana $\bigcirc$ adalah origin atau titik keberangkatan.
 
 Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 5 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp5}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,805014746$ satuan dengan koordinat titik asal yaitu $(7.82, 113.37)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
@@ -248,29 +258,31 @@ Pada tahap ini urutan perjalanan dibagi menjadi 6 klaster yaitu klaster A, B, C,
 
 \item Urutan perjalanan pada klaster A:
 
-$13\rightarrow29\rightarrow30\rightarrow11\rightarrow32\rightarrow56\rightarrow36\rightarrow37\rightarrow72\rightarrow55$
+$\bigcirc \to 13 \to 29 \to 30 \to 11 \to 32 \to 56 \to 36 \to 37 \to 72 \to 55 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster B:
 
-$14\rightarrow70\rightarrow28\rightarrow66\rightarrow51\rightarrow2\rightarrow34\rightarrow8\rightarrow22\rightarrow7$
+$\bigcirc \to 14 \to 70 \to 28 \to 66 \to 51 \to 2 \to 34 \to 8 \to 22 \to 7 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster C:
 
-$4\rightarrow40\rightarrow69\rightarrow16\rightarrow49\rightarrow68\rightarrow25\rightarrow19\rightarrow46\rightarrow35\rightarrow43\rightarrow71\rightarrow48\rightarrow75\rightarrow18\rightarrow61\rightarrow73\rightarrow5\rightarrow1\rightarrow45\rightarrow65$
+$\bigcirc \to 4 \to 40 \to 69 \to 16 \to 49 \to 68 \to 25 \to 19 \to 46 \to 35 \to 43 \to 71 \to 48 \to 75 \to 18 \to 61 \to 73 \to 5 \to 1 \to 45 \to 65 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster D:
 
-$62\rightarrow9\rightarrow67\rightarrow57\rightarrow53\rightarrow15\rightarrow23\rightarrow58\rightarrow20\rightarrow39\rightarrow64\rightarrow52\rightarrow12\rightarrow6\rightarrow24\rightarrow63\rightarrow33$
+$\bigcirc \to 62 \to 9 \to 67 \to 57 \to 53 \to 15 \to 23 \to 58 \to 20 \to 39 \to 64 \to 52 \to 12 \to 6 \to 24 \to 63 \to 33 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster E:
 
-$44\rightarrow54\rightarrow74\rightarrow42\rightarrow50\rightarrow26\rightarrow31\rightarrow3\rightarrow41$
+$\bigcirc \to 44 \to 54 \to 74 \to 42 \to 50 \to 26 \to 31 \to 3 \to 41 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster F:
 
-$17\rightarrow60\rightarrow59\rightarrow38\rightarrow27\rightarrow47\rightarrow21\rightarrow10$
+$\bigcirc \to 17 \to 60 \to 59 \to 38 \to 27 \to 47 \to 21 \to 10 \to \bigcirc$
 
 \end{enumerate}
+
+\noindent Dimana $\bigcirc$ adalah origin atau titik keberangkatan.
 
 Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 6 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp6}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,431319949$ satuan dengan koordinat titik asal yaitu $(7.82, 113.34)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
@@ -289,33 +301,35 @@ Pada tahap ini urutan perjalanan dibagi menjadi 7 klaster yaitu klaster A, B, C,
 
 \item Urutan perjalanan pada klaster A:
 
-$11\rightarrow30\rightarrow29\rightarrow47\rightarrow21\rightarrow72\rightarrow32\rightarrow56\rightarrow13\rightarrow37\rightarrow55\rightarrow36$
+$\bigcirc \to 11 \to 30 \to 29 \to 47 \to 21 \to 72 \to 32 \to 56 \to 13 \to 37 \to 55 \to 36 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster B:
 
-$7\rightarrow70\rightarrow66\rightarrow28\rightarrow51\rightarrow8\rightarrow2\rightarrow34\rightarrow22$
+$\bigcirc \to 7 \to 70 \to 66 \to 28 \to 51 \to 8 \to 2 \to 34 \to 22 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster C:
 
-$1\rightarrow19\rightarrow73\rightarrow48\rightarrow69\rightarrow35\rightarrow46\rightarrow68\rightarrow25\rightarrow16\rightarrow5\rightarrow14\rightarrow43\rightarrow71\rightarrow53\rightarrow57$
+$\bigcirc \to 1 \to 19 \to 73 \to 48 \to 69 \to 35 \to 46 \to 68 \to 25 \to 16 \to 5 \to 14 \to 43 \to 71 \to 53 \to 57 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster D:
 
-$67\rightarrow58\rightarrow23\rightarrow12\rightarrow20\rightarrow64\rightarrow39\rightarrow31\rightarrow52\rightarrow15$
+$\bigcirc \to 67 \to 58 \to 23 \to 12 \to 20 \to 64 \to 39 \to 31 \to 52 \to 15 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster E:
 
-$26\rightarrow44\rightarrow50\rightarrow42\rightarrow74$
+$\bigcirc \to 26 \to 44 \to 50 \to 42 \to 74 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster F:
 
-$24\rightarrow63\rightarrow10\rightarrow59\rightarrow60\rightarrow17\rightarrow33\rightarrow9\rightarrow38\rightarrow27\rightarrow6$
+$\bigcirc \to 24 \to 63 \to 10 \to 59 \to 60 \to 17 \to 33 \to 9 \to 38 \to 27 \to 6 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster G:
 
-$40\rightarrow49\rightarrow54\rightarrow4\rightarrow41\rightarrow3\rightarrow45\rightarrow61\rightarrow18\rightarrow75\rightarrow65\rightarrow62$
+$\bigcirc \to 40 \to 49 \to 54 \to 4 \to 41 \to 3 \to 45 \to 61 \to 18 \to 75 \to 65 \to 62 \to \bigcirc$
 
 \end{enumerate}
+
+\noindent Dimana $\bigcirc$ adalah origin atau titik keberangkatan.
 
 Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 7 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp7}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,353294633$ satuan dengan koordinat titik asal yaitu $(7.82, 113.37)$ dapat dilihat pada Tabel \ref{tab:totaljarak}. Nilai jarak total pada pembagian klaster ini merupakan jarak total yang paling rendah diantara yang lain.
 
@@ -333,36 +347,38 @@ Pada tahap ini urutan perjalanan dibagi menjadi 8 klaster yaitu klaster A, B, C,
 \begin{enumerate}
 \item Urutan perjalanan pada klaster A:
 
-$11\rightarrow47\rightarrow21\rightarrow37\rightarrow13\rightarrow32\rightarrow56\rightarrow36\rightarrow72\rightarrow55\rightarrow29\rightarrow30$
+$\bigcirc \to 11 \to 47 \to 21 \to 37 \to 13 \to 32 \to 56 \to 36 \to 72 \to 55 \to 29 \to 30 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster B:
 
-$22\rightarrow7\rightarrow51\rightarrow66\rightarrow28\rightarrow2\rightarrow34\rightarrow70\rightarrow8$
+$\bigcirc \to 22 \to 7 \to 51 \to 66 \to 28 \to 2 \to 34 \to 70 \to 8 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster C:
 
-$43\rightarrow5\rightarrow19\rightarrow35\rightarrow25\rightarrow69\rightarrow68\rightarrow46\rightarrow14\rightarrow16\rightarrow1\rightarrow48$
+$\bigcirc \to 43 \to 5 \to 19 \to 35 \to 25 \to 69 \to 68 \to 46 \to 14 \to 16 \to 1 \to 48 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster D:
 
-$39\rightarrow64\rightarrow20\rightarrow31\rightarrow23$
+$\bigcirc \to 39 \to 64 \to 20 \to 31 \to 23 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster E:
 
-$26\rightarrow74\rightarrow50\rightarrow42\rightarrow44$
+$\bigcirc \to 26 \to 74 \to 50 \to 42 \to 44 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster F:
 
-$33\rightarrow10\rightarrow59\rightarrow17\rightarrow60\rightarrow27\rightarrow38\rightarrow6\rightarrow9$
+$\bigcirc \to 33 \to 10 \to 59 \to 17 \to 60 \to 27 \to 38 \to 6 \to 9 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster G:
 
-$61\rightarrow18\rightarrow75\rightarrow49\rightarrow65\rightarrow3\rightarrow54\rightarrow41\rightarrow45\rightarrow40\rightarrow4$
+$\bigcirc \to 61 \to 18 \to 75 \to 49 \to 65 \to 3 \to 54 \to 41 \to 45 \to 40 \to 4 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster H:
 
-$53\rightarrow67\rightarrow52\rightarrow12\rightarrow24\rightarrow57\rightarrow58\rightarrow63\rightarrow15\rightarrow73\rightarrow71\rightarrow62$
+$\bigcirc \to 53 \to 67 \to 52 \to 12 \to 24 \to 57 \to 58 \to 63 \to 15 \to 73 \to 71 \to 62 \to \bigcirc$
 \end{enumerate}
+
+\noindent Dimana $\bigcirc$ adalah origin atau titik keberangkatan.
 
 Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 8 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp8}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,398984127$ satuan dengan koordinat titik asal yaitu $(7.83, 113.35)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
@@ -380,41 +396,43 @@ Pada tahap ini urutan perjalanan dibagi menjadi 9 klaster yaitu klaster A, B, C,
 \begin{enumerate}
 \item Urutan perjalanan pada klaster A:
 
-$17\rightarrow60\rightarrow21\rightarrow47\rightarrow59\rightarrow10$
+$\bigcirc \to 17 \to 60 \to 21 \to 47 \to 59 \to 10 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster B:
 
-$28\rightarrow66\rightarrow70\rightarrow8\rightarrow51\rightarrow34\rightarrow2\rightarrow7\rightarrow22$
+$\bigcirc \to 28 \to 66 \to 70 \to 8 \to 51 \to 34 \to 2 \to 7 \to 22 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster C:
 
-$16\rightarrow5\rightarrow25\rightarrow69\rightarrow35\rightarrow46\rightarrow14\rightarrow19\rightarrow68\rightarrow1\rightarrow43$
+$\bigcirc \to 16 \to 5 \to 25 \to 69 \to 35 \to 46 \to 14 \to 19 \to 68 \to 1 \to 43 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster D:
 
-$39\rightarrow67\rightarrow64\rightarrow20\rightarrow58\rightarrow23\rightarrow31$
+$\bigcirc \to 39 \to 67 \to 64 \to 20 \to 58 \to 23 \to 31 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster E:
 
-$74\rightarrow26\rightarrow50\rightarrow42\rightarrow44$
+$\bigcirc \to 74 \to 26 \to 50 \to 42 \to 44 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster F:
 
-$52\rightarrow9\rightarrow27\rightarrow38\rightarrow6\rightarrow33$
+$\bigcirc \to 52 \to 9 \to 27 \to 38 \to 6 \to 33 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster G:
 
-$75\rightarrow61\rightarrow18\rightarrow3\rightarrow54\rightarrow41\rightarrow40\rightarrow4\rightarrow49\rightarrow45\rightarrow65$
+$\bigcirc \to 75 \to 61 \to 18 \to 3 \to 54 \to 41 \to 40 \to 4 \to 49 \to 45 \to 65 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster H:
 
-$48\rightarrow73\rightarrow71\rightarrow62\rightarrow12\rightarrow57\rightarrow24\rightarrow63\rightarrow53\rightarrow15$
+$\bigcirc \to 48 \to 73 \to 71 \to 62 \to 12 \to 57 \to 24 \to 63 \to 53 \to 15 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster I:
 
-$37\rightarrow56\rightarrow32\rightarrow13\rightarrow11\rightarrow30\rightarrow29\rightarrow36\rightarrow72\rightarrow55$
+$\bigcirc \to 37 \to 56 \to 32 \to 13 \to 11 \to 30 \to 29 \to 36 \to 72 \to 55 \to \bigcirc$
 
 \end{enumerate}
+
+\noindent Dimana $\bigcirc$ adalah origin atau titik keberangkatan.
 
 Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 9 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp9}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,482429562$ satuan dengan koordinat titik asal yaitu $(7.83, 113.35)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
@@ -432,45 +450,47 @@ Pada tahap ini urutan perjalanan dibagi menjadi 10 klaster yaitu klaster A, B, C
 \begin{enumerate}
 \item Urutan perjalanan pada klaster A:
 
-$10\rightarrow21\rightarrow47\rightarrow17\rightarrow60\rightarrow59$
+$\bigcirc \to 10 \to 21 \to 47 \to 17 \to 60 \to 59 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster B:
 
-$28\rightarrow66\rightarrow70\rightarrow22\rightarrow51\rightarrow2\rightarrow34\rightarrow8\rightarrow7$
+$\bigcirc \to 28 \to 66 \to 70 \to 22 \to 51 \to 2 \to 34 \to 8 \to 7 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster C:
 
-$5\rightarrow68\rightarrow25\rightarrow1\rightarrow35\rightarrow46\rightarrow14\rightarrow19\rightarrow69\rightarrow43\rightarrow16$
+$\bigcirc \to 5 \to 68 \to 25 \to 1 \to 35 \to 46 \to 14 \to 19 \to 69 \to 43 \to 16 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster D:
 
-$67\rightarrow20\rightarrow58\rightarrow23\rightarrow39\rightarrow64\rightarrow12\rightarrow52$
+$\bigcirc \to 67 \to 20 \to 58 \to 23 \to 39 \to 64 \to 12 \to 52 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster E:
 
-$31\rightarrow74\rightarrow26$
+$\bigcirc \to 31 \to 74 \to 26 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster F:
 
-$38\rightarrow27\rightarrow6\rightarrow9\rightarrow33$
+$\bigcirc \to 38 \to 27 \to 6 \to 9 \to 33 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster G:
 
-$18\rightarrow75\rightarrow54\rightarrow41\rightarrow3\rightarrow45\rightarrow65\rightarrow4\rightarrow40\rightarrow49\rightarrow61$
+$\bigcirc \to 18 \to 75 \to 54 \to 41 \to 3 \to 45 \to 65 \to 4 \to 40 \to 49 \to 61 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster H:
 
-$62\rightarrow73\rightarrow71\rightarrow48\rightarrow53\rightarrow57\rightarrow15\rightarrow63\rightarrow24$
+$\bigcirc \to 62 \to 73 \to 71 \to 48 \to 53 \to 57 \to 15 \to 63 \to 24 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster I:
 
-$30\rightarrow11\rightarrow55\rightarrow72\rightarrow13\rightarrow56\rightarrow32\rightarrow29\rightarrow37\rightarrow36$
+$\bigcirc \to 30 \to 11 \to 55 \to 72 \to 13 \to 56 \to 32 \to 29 \to 37 \to 36 \to \bigcirc$
 
 \item Urutan perjalanan pada klaster J:
 
-$44\rightarrow42\rightarrow50$
+$\bigcirc \to 44 \to 42 \to 50 \to \bigcirc$
 
 \end{enumerate}
+
+\noindent Dimana $\bigcirc$ adalah origin atau titik keberangkatan.
 
 Urutan perjalanan menuju seluruh SMA di Kabupaten Probolinggo dengan dibagi menjadi 10 klaster, dapat dilihat pada Gambar \ref{fig:hasil_mtsp10}. Pada urutan tersebut menghasilkan jarak total yang dilalui oleh \textit{salesman} yaitu $4,780413176$ satuan dengan koordinat titik asal yaitu $(7.84, 113.36)$ dapat dilihat pada Tabel \ref{tab:totaljarak}.
 
@@ -488,4 +508,4 @@ Setelah semua proses di atas selesai, dapat dibandingkan total jarak seperti pad
 
 \section{Penyebab Rute Kurang Optimal}
 
-Dalam penelitian ini dapat kita lihat bahwa hasil masih kurang optimal dalam penerapan algoritma genetika. Penyebabnya adalah terlalu banyak titik tujuan dalam sekali perjalanan, karena menurut penelitian sebelumnya penggunaan algoritma genetika keefektifannya akan semakin menurun jika digunakan dalam skala kota besar \cite{inproceedings}. Dalam penelitian ini hal tersebut dapat diminimalisir dengan meningkatkan banyak populasi pada tahap algoritma genetika. Namun hal tersebut juga masih memiliki keterbatasan yaitu waktu pemrosesan algoritmanya yang semakin lama.
+Dalam penelitian ini terlihat bahwa hasil masih kurang optimal dalam penerapan algoritma genetika. Penyebabnya adalah terlalu banyak titik tujuan dalam sekali perjalanan, karena menurut penelitian sebelumnya penggunaan algoritma genetika keefektifannya akan semakin menurun jika digunakan dalam skala kota besar \cite{inproceedings}. Dalam penelitian ini hal tersebut dapat diminimalisasi dengan meningkatkan banyak populasi pada tahap algoritma genetika. Namun hal tersebut juga masih memiliki keterbatasan yaitu waktu pemrosesan algoritmanya yang semakin lama.
