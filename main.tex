@@ -8,19 +8,21 @@
 % Halaman depan
 \newpage
 \frontmatter
+
 \input{Halaman_Awal/cover dalam}
 
-%\includepdf[pages={1}]{Lain-lain/surat pernyataan.pdf}
+%\includepdf[pagecommand={\thispagestyle{plain}}]{Halaman_Awal/berita acara 1}
+%\includepdf[pagecommand={\thispagestyle{plain}}]{Halaman_Awal/berita acara 2}
+\includepdf[pagecommand={\thispagestyle{plain}}]{Halaman_Awal/nota pembimbing}
+\includepdf[pagecommand={\thispagestyle{plain}}]{Halaman_Awal/pernyataan keaslian}
 
 \input{Halaman_Awal/abstrak}
 \input{Halaman_Awal/kata pengantar}
 
 \newpage
-%\addcontentsline{toc}{chapter}{DAFTAR ISI}
 \tableofcontents
 
 \newpage
-%\addcontentsline{toc}{chapter}{DAFTAR GAMBAR}
 \listoffigures
 
 \newpage
