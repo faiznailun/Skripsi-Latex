@@ -33,6 +33,23 @@ Mayuliana, dkk., dalam artikelnya yang berjudul “Penyelesaian \textit{Multitra
 
 Maulana menyebutkan dalam artikelnya algoritma adalah kumpulan perintah untuk menyelesaikan suatu masalah dan diselesaikan dengan cara sistematis, terstruktur dan logis \cite{maulana2017pembelajaran}. Algoritma digunakan untuk memecahkan permasalahan yang dialami oleh seorang pengguna program.
 
+\subsection{\textit{Centroid}}
+
+\textit{Centroid} adalah nilai yang dijadikan sebagai titik awal dimulainya sebuah pengelompokan (\textit{clustering}) pada algoritma $k$-means \cite{retno2019peningkatan}. Untuk melakukan pengelompokan data, dimulai dengan menghitung jarak dari setiap titik tujuan menuju ke setiap titik \textit{centroid} sebagai awal pembentukan klaster, setelah itu titik-titik tujuan akan dikelompokkan menurut titik klaster terdekatnya. Dalam langkah tersebut akan dihitung titik-titik \textit{centroid} yang baru menggunakan nilai rata-rata titik dari tiap klaster.
+
+\subsection{\textit{Fitness}}
+\textit{Fitness} adalah suatu ukuran yang dijadikan acuan untuk mengetahui baik atau tidaknya suatu individu atau bisa disebut nilai dari fungsi tujuan \cite{basuki2003strategi}. Tujuan dari penggunaan algoritma genetika adalah untuk mengoptimalkan nilai tujuan dengan cara mencari nilai fitness yang paling maksimal atau minimal. Nilai \textit{fitness} suatu kromosom menggambarkan kualitas kromosom dalam populasi tersebut. Seperti dalam penelitian ini adalah mencari jarak yang paling minimal maka nilai \textit{fitness}nya yang dicari adalah yang paling minimal juga. Untuk mengghitung nilai \textit{fitness} dapat menggunakan Persamaan \ref{eq:fitness}.
+
+	\begin{equation}
+    fit=\sum (d_{ij})
+    \label{eq:fitness}
+    \end{equation}
+    
+    Keterangan:
+    \begin{itemize}
+	\item $d_{ij}$ adalah jarak \textit{Euclidean Distance} dapat dilihat pada Persamaan \ref{eq:euclidean}
+    \end{itemize}
+
 \subsection{Algoritma $k$-means}
 
 $K$-means adalah jenis metode klasifikasi tanpa pengawasan yang mempartisi item data menjadi satu atau lebih klaster \cite{agusta2007k}. $K$-means mencoba untuk memodelkan suatu dataset ke dalam beberapa klaster sehingga item-item data dalam suatu klaster memiliki karakteristik yang sama dan memiliki karakteristik yang berbeda dengan klaster lainnya.
@@ -52,10 +69,6 @@ Menurut S Monalisa \cite{monalisa2018klasterisasi} tahapan mengklaster menggunak
 
 \input{Gambar/flowchart kmeans}
 
-\subsection{\textit{Centroid}}
-
-\textit{Centroid} adalah nilai yang dijadikan sebagai titik awal dimulainya sebuah pengelompokan (\textit{clustering}) pada algoritma $k$-means \cite{retno2019peningkatan}. Untuk melakukan pengelompokan data, dimulai dengan menghitung jarak dari setiap titik tujuan menuju ke setiap titik \textit{centroid} sebagai awal pembentukan klaster, setelah itu titik-titik tujuan akan dikelompokkan menurut titik klaster terdekatnya. Dalam langkah tersebut akan dihitung titik-titik \textit{centroid} yang baru menggunakan nilai rata-rata titik dari tiap klaster.
-
 \subsection{Algoritma Genetika}
 
 Pada artikel Hermanto disebutkan bahwa algoritma genetika adalah algoritma yang digunakan untuk mencari solusi suatu permasalahan dengan cara yang lebih alami yang terispirasi dari teori evolusi  \cite{hermawanto2003algoritma}. Dalam hal ini, algoritma genetika dapat juga digunakan untuk pencarian sebuah rute terpendek dalam sebuah kasus perjalanan.
@@ -73,19 +86,6 @@ Menurut Armanda RS \cite{armanda2016penerapan} dalam artikelnya menyampaikan pen
 \noindent Secara garis besar tahapan-tahapan algoritma genetika seperti diagram alir pada Gambar \ref{fig:flowag}.
 
 \input{Gambar/flowchart ag}
-
-\subsection{\textit{Fitness}}
-\textit{Fitness} adalah suatu ukuran yang dijadikan acuan untuk mengetahui baik atau tidaknya suatu individu atau bisa disebut nilai dari fungsi tujuan \cite{basuki2003strategi}. Tujuan dari penggunaan algoritma genetika adalah untuk mengoptimalkan nilai tujuan dengan cara mencari nilai fitness yang paling maksimal atau minimal. Nilai \textit{fitness} suatu kromosom menggambarkan kualitas kromosom dalam populasi tersebut. Seperti dalam penelitian ini adalah mencari jarak yang paling minimal maka nilai \textit{fitness}nya yang dicari adalah yang paling minimal juga. Untuk mengghitung nilai \textit{fitness} dapat menggunakan Persamaan \ref{eq:fitness}.
-
-	\begin{equation}
-    fit=\sum (d_{ij})
-    \label{eq:fitness}
-    \end{equation}
-    
-    Keterangan:
-    \begin{itemize}
-	\item $d_{ij}$ adalah jarak \textit{Euclidean Distance} dapat dilihat pada Persamaan \ref{eq:euclidean}
-    \end{itemize}
 	
 \subsection{\textit{Euclidean distance}}
 

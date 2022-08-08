@@ -7,14 +7,17 @@
 
 % Halaman depan
 \newpage
-\frontmatter
+\frontmatter %mendefinisikan frontmatter
+\fancyhead{} %mengosongkan header
+\fancyfoot[C]{\thepage} %nomor halaman pada footer tengah
 
 \input{Halaman_Awal/cover dalam}
 
-\includepdf[pagecommand={\thispagestyle{plain}}]{Halaman_Awal/berita acara 1}
-\includepdf[pagecommand={\thispagestyle{plain}}]{Halaman_Awal/berita acara 2}
-\includepdf[pagecommand={\thispagestyle{plain}}]{Halaman_Awal/nota pembimbing}
-\includepdf[pagecommand={\thispagestyle{plain}}]{Halaman_Awal/pernyataan keaslian}
+\newpage
+\chapter*{SURAT PENGESAHAN}
+Masih proses minta tanda-tangan
+%\includepdf[pagecommand={\thispagestyle{fancy}}]{Halaman_Awal/surat pengesahan}
+\includepdf[pagecommand={\thispagestyle{fancy}}]{Halaman_Awal/pernyataan keaslian}
 
 \input{Halaman_Awal/abstrak}
 \input{Halaman_Awal/kata pengantar}
@@ -31,6 +34,8 @@
 % Halaman utama
 \newpage
 \mainmatter
+\fancyhead[R]{\thepage}  %nomor halaman pada header kanan
+\fancyfoot{} %mengosongkan footer
 
 {
 \linespread{2}
